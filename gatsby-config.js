@@ -9,15 +9,15 @@
  */
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Starter Blog`,
+    title: `The Road Goes Ever On`,
     author: {
-      name: `Kyle Mathews`,
-      summary: `who lives and works in San Francisco building useful things.`,
+      name: `Nathan Clonts`,
+      summary: `, a software engineer, AI enthusiast, and music lover.`,
     },
-    description: `A starter blog demonstrating what Gatsby can do.`,
-    siteUrl: `https://gatsbystarterblogsource.gatsbyjs.io/`,
+    description: `Portfolio and articles by Nathan Clonts`,
+    siteUrl: `https://nathanclonts.com/`,
     social: {
-      twitter: `kylemathews`,
+      linkedin: `nathan-clonts-a94711b6`,
     },
   },
   plugins: [
@@ -103,7 +103,7 @@ module.exports = {
               }
             }`,
             output: "/rss.xml",
-            title: "Gatsby Starter Blog RSS Feed",
+            title: "The Road Goes Ever On RSS Feed",
           },
         ],
       },
@@ -111,15 +111,15 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `Gatsby Starter Blog`,
-        short_name: `Gatsby`,
+        name: `The Road Goes Ever On`,
+        short_name: `Nathan Clonts`,
         start_url: `/`,
         background_color: `#ffffff`,
         // This will impact how browsers show your PWA/website
         // https://css-tricks.com/meta-theme-color-and-trickery/
         // theme_color: `#663399`,
         display: `minimal-ui`,
-        icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
+        icon: `src/images/mandelbrot-icon.png`, // This path is relative to the root of the site.
       },
     },
   ],

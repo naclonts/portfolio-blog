@@ -1,5 +1,5 @@
 ---
-title: Breadth First Search Algorithm in Clojure
+title: Breadth-First Search Algorithm in Clojure
 date: "2019-03-19T12:00:00.000Z"
 description: "Exploring Breadth-First Search algorithms through a functional programming approach with Clojure."
 ---

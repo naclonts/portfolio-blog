@@ -19,7 +19,7 @@ const Bio = () => {
             summary
           }
           social {
-            twitter
+            linkedin
           }
         }
       }
@@ -36,7 +36,7 @@ const Bio = () => {
         className="bio-avatar"
         layout="fixed"
         formats={["auto", "webp", "avif"]}
-        src="../images/profile-pic.png"
+        src="../images/nathan.jpeg"
         width={50}
         height={50}
         quality={95}
@@ -46,8 +46,8 @@ const Bio = () => {
         <p>
           Written by <strong>{author.name}</strong> {author?.summary || null}
           {` `}
-          <a href={`https://twitter.com/${social?.twitter || ``}`}>
-            You should follow them on Twitter
+          <a href={`https://linkedin.com/in/${social?.linkedin || ``}`}>
+            Find me on LinkedIn.
           </a>
         </p>
       )}
