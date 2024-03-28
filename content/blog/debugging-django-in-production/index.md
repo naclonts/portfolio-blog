@@ -1,7 +1,7 @@
 ---
 title: Debugging Django in Production
 date: "2017-05-17T12:00:00.000Z"
-description: "Exploring Breadth-First Search algorithms through a functional programming approach with Clojure."
+description: "An approach to debugging production issues as a Django admin."
 ---
 
 Django's debugger works great in a development environment, but one of the first rules of deployment is to set `DEBUG = false`: after all, you wouldn't want every friendly visitor to see a full stack trace any time something goes wrong. This can make debugging tricky, however, when an error occurs on your production site that isn't easily replicable in the development server.
