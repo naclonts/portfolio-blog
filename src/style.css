@@ -99,11 +99,15 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: var(--font-heading);
+  /* font-family: var(--font-heading); */
   margin-top: var(--spacing-12);
   margin-bottom: var(--spacing-6);
   line-height: var(--lineHeight-tight);
   letter-spacing: -0.025em;
+
+  font-family: "Exo 2", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
 }
 
 h2,
@@ -115,11 +119,6 @@ h6 {
   color: var(--color-heading);
 }
 
-h1 {
-  font-weight: var(--fontWeight-black);
-  font-size: var(--fontSize-6);
-  color: var(--color-heading-black);
-}
 
 h2 {
   font-size: var(--fontSize-5);
@@ -328,4 +327,15 @@ a:focus {
   ol {
     list-style-position: inside;
   }
+}
+
+
+/* Custom Fonts */
+
+/* Use Exo 2 family of open source typographical fonts */
+h1, .header-link-home, .headline {
+  font-family: "Exo 2", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
 }

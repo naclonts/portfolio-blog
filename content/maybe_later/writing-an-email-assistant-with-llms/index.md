@@ -117,14 +117,11 @@ This is a demonstration of one way to use AI in your daily workflow, but there a
 
 For example, you could use the Gmail API to label important emails in your inbox, adding a label that says “Important” to emails that rank 8 to 10 here. Then you could tag emails that were ranked only a 1 or 2 with a “Not Important” label. Then when you get to your Gmail account, you could see at a glance which messages to prioritize.
 
-Another idea, for those of us who want to spend less time in front of the computer screen, would be to send the results of this process into a Text To Speech model. You could then listen to the app read out loud the most important emails, while you clean your house, go on a walk, or whatever. So imagine your inbox basically turned into a podcast.
 
 ## Conclusion
 
 I wanted to show that making your own workflow that uses AI isn’t as hard as you might think. There are a ton of commercial products coming out every day that use AI models, including some for email management, and many of them might be very helpful. But it’s also valuable to be able to make your own app using a little bit of code, and a little bit of AI prompting. This gives you more control over how your data is used, and lets you customize the process to work better for your specific use case.
 
 Zooming out a little, I think one thing to keep in mind is that these AI tools are only going to keep getting better from here. Although that can be a little scary, as the unknown always is, by diving in and trying out these systems, you can start to understand how they work — what they’re good at, and not so good at. The goal shouldn’t be to replace people with AI, but to use AI to help us focus on the things that really matter — which might not be filtering out the noise in your email inbox!
-
-I’d love to hear any feedback or questions you have, please hit me up. It would really mean a lot to me. And if you have any ideas for some kind of project and  you’re wondering if AI could help with it, let me know! I’d love to discuss and potentially collaborate.
 
 Until then, keep on learning!
