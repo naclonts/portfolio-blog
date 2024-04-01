@@ -57,6 +57,9 @@ const BlogPostTemplate = ({
           </li>
         </ul>
       </nav>
+      <Link className="header-link-home" to="/">
+        {siteTitle}
+      </Link>
     </Layout>
   )
 }

@@ -121,19 +121,19 @@ h6 {
 
 
 h2 {
-  font-size: var(--fontSize-5);
-}
-
-h3 {
   font-size: var(--fontSize-4);
 }
 
-h4 {
+h3 {
   font-size: var(--fontSize-3);
 }
 
-h5 {
+h4 {
   font-size: var(--fontSize-2);
+}
+
+h5 {
+  font-size: var(--fontSize-1);
 }
 
 h6 {
@@ -199,7 +199,6 @@ blockquote {
   margin-right: var(--spacing-8);
   padding: var(--spacing-0) var(--spacing-0) var(--spacing-0) var(--spacing-6);
   border-left: var(--spacing-1) solid var(--color-primary);
-  font-size: var(--fontSize-2);
   font-style: italic;
   margin-bottom: var(--spacing-8);
 }

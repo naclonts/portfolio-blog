@@ -14,7 +14,7 @@ module.exports = {
       name: `Nathan Clonts`,
       summary: `, a software engineer, AI enthusiast, and music lover.`,
     },
-    description: `Portfolio and articles by Nathan Clonts`,
+    description: `Thoughts on software engineering, AI, and music.`,
     siteUrl: `https://nathanclonts.com/`,
     social: {
       linkedin: `nathan-clonts-a94711b6`,
