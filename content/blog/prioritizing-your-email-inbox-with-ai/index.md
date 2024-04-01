@@ -1,10 +1,10 @@
 ---
 title: Prioritizing your email inbox with AI
 date: "2024-03-31T12:00:00.000Z"
-description: "Discusses an application that uses AI to prioritizes a message inbox, using the Gmail API and prompt chaining with ChatGPT."
+description: "An email assistant that uses AI to prioritize a message inbox, using the Gmail API and prompt chaining with ChatGPT."
 ---
 
-> This article describes an application that uses AI to prioritizes a message inbox, using the Gmail API and prompt chaining with a Large Language Model.
+> This article describes an email assistant application that uses AI to prioritizes a message inbox, using the Gmail API and prompt chaining with a Large Language Model.
 
 - [Introduction](#introduction)
 - [Demo](#demo)
@@ -23,7 +23,7 @@ Ever had too many emails in your inbox?
 
 In many jobs, people deal with a flood of incoming messages via email or chat software. This can be overwhelming and difficult to keep a handle on. In this situation, it's key to organize and prioritize messages.
 
-Traditional programming techniques don't offer a great way to help with this problem. However, using Large Language Models (LLMs), we can easily tackle tasks like sorting messages by priority, categorizing emails, and analyzing customer sentiment.
+Traditional programming techniques don't offer a great way to help with this problem. However, using Large Language Models (LLMs), our apps can easily handle tasks like sorting messages by priority, categorizing emails, and analyzing customer sentiment.
 
 This article discusses a simple application built to prioritize emails. The demo here ranks emails from a Gmail inbox in order of importance. In practice, a tool like this might be useful in a shared inbox with many messages to help identify requests that need an immediate response.
 
