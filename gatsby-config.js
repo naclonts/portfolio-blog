@@ -9,12 +9,12 @@
  */
 module.exports = {
   siteMetadata: {
-    title: `The Road Goes Ever On`,
+    title: `Road Goes Ever On`,
     author: {
       name: `Nathan Clonts`,
-      summary: `, a software engineer, AI enthusiast, and music lover.`,
+      summary: `. I'm a software engineer, a student of intelligences artificial and organic, and a human.`,
     },
-    description: `Thoughts on software engineering, AI, and music.`,
+    description: `Thoughts on software engineering, artificial intelligence, and life.`,
     siteUrl: `https://nathanclonts.com/`,
     social: {
       linkedin: `nathan-clonts-a94711b6`,
