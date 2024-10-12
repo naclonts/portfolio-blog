@@ -4,13 +4,13 @@ date: "2024-10-12T12:00:00.000Z"
 description: "Writing database queries that know your DB schema with OpenAI's Assistants framework."
 ---
 
-Generative AI tools can make writing SQL very easy: you can write down a question and the LLM will translate it into a SQL query that provides the answer. This can save a lot of time for those who are less than fluent in SQL. For example, you can just write, "how many orders have been placed by each customer this month?" instead of looking up every table name and working out the `JOIN` and `GROUP BY` syntax. For me, this has been a huge time-saver when analyzing product usage.
+Generative AI tools can make writing SQL very easy: ask a question, and an LLM will translate it into a SQL query that provides the answer. This can save a lot of time for those who are less fluent in SQL. You can ask, "how many orders have been placed by each customer this month?" instead of looking up every table name and working out the `JOIN` and `GROUP BY` syntax. For me, this has been a huge time-saver when analyzing product usage.
 
 In order for this to work, you need to do 3 things:
 
 1) Provide your database schema to the LLM;
 2) ask questions in a way that makes sense; and
-3) validate that the results aren't hallucinated trash.
+3) validate that the results aren't hallucinated misinformation.
 
 This article discusses using OpenAI's Assistant Playground as a tool to take care of part 1. For now, 2 and 3 are still in human hands.
 
@@ -19,7 +19,7 @@ This article discusses using OpenAI's Assistant Playground as a tool to take car
 
 Before the LLM can generate queries, it needs to know our database structure. For this, we'll need a schema definition file.
 
-If you have a schema definition file already, use that (for example, the Prisma ORM has a `schema.prisma` file). If that's not convenient, you can save the existing DB structure to a file using a command like this for PostgreSQL:
+If you have a schema definition file already, use that. This doesn't have to be SQL: for example, the Prisma ORM has a `schema.prisma` file that you can use. If you don't have a schema file easily available, you can save the existing DB structure to a file using a command like this for PostgreSQL:
 
 ```sh
 $ pg_dump --schema-only my_db >> my_db_schema_dump.sql
@@ -59,8 +59,19 @@ Copy-pasting this into a SQL client, we get:
 
 ![Customer Volume Query Results](./playground-query-1-results.png)
 
+The LLM looks up the requested data, including joining the payments through the `invoices` table.
+
 Cool!
 
+Here's another example:
+
+> show sales by month, broken down by product category
+
+![Assistants Playground Sales by Product Category Query](./playground-query-2.png)
+
+And the results:
+
+![Sales by Product Category Query Results](./playground-query-2-results.png)
 
 ## Fact-Checking and Hallucinations
 
@@ -72,11 +83,11 @@ Documentation pays off here. If you have a schema definition file where each tab
 
 Before using AI for production data or code, you need to think about where that data is going.
 
-Is the AI provider training on your data? This could potentially lead to your IP being leaked. The OpenAI API, including the Assistants API and Playground, doesn't train on any data submitted to it. Per their [policies](https://openai.com/enterprise-privacy/) at the time of writing, inputs from the API are excluded from training by default. This includes the Assistants Playground, which is just a UI wrapper around the Assistants API.
+Is the AI provider training on your data? This could potentially lead to your IP being leaked. The OpenAI API, including the Assistants API and Playground, doesn't train on any data submitted to it. Per their [policies](https://openai.com/enterprise-privacy/) at the time of writing, inputs from the API are excluded from training by default. This includes the Assistants Playground, which is just a UI wrapper around the Assistants API. Check on their current policies before sharing any sensitive information.
 
-Even with those terms, most of us want to minimize -- or completely eliminate -- the exposure of actual database records to third-party providers. In some cases, this may be a contractual or regulatory requirement. With the approach described here, we aren't sending any actual data through the LLM, just the DB schema.
+Even with that assurance, most of us want to minimize — or completely eliminate — the exposure of actual database records to third-party providers. In some cases, this may even be a contractual or regulatory requirement. With the approach described here, we aren't sending any actual data through the LLM, just the DB schema.
 
-That being said, consider this carefully for your use case. The same techniques here can be used with an open-source, self-hosted LLM. Generate a little code for a UX or command-line interface, and you've built your own SQL data analyst.
+That being said, consider this carefully for your use case. These same techniques can be used with an open-source, self-hosted LLM for maximum privacy. Generate a little code for a UX or command-line interface, and you've built your own SQL data analyst.
 
 ## Let's Go Build (the right) Stuff 🚀
 
