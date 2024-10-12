@@ -4,20 +4,6 @@ date: "2024-03-31T12:00:00.000Z"
 description: "An email assistant that uses AI to prioritize a message inbox, using the Gmail API and prompt chaining with ChatGPT."
 ---
 
-> This article describes an email assistant application that uses AI to prioritizes a message inbox, using the Gmail API and prompt chaining with a Large Language Model.
-
-- [Introduction](#introduction)
-- [Demo](#demo)
-- [Architecture](#architecture)
-- [Implementation](#implementation)
-    - [User personalization and prompt config](#user-personalization-and-prompt-config)
-    - [Evaluating the email's content](#evaluating-the-emails-content)
-    - [Extracting the importance level number](#extracting-the-importance-level-number)
-- [Learnings](#learnings)
-- [Product improvement ideas](#product-improvement-ideas)
-- [Conclusion](#conclusion)
-
-## Introduction
 
 Ever had too many emails in your inbox?
 
@@ -29,6 +15,15 @@ This article discusses a simple application built to prioritize emails. The demo
 
 > [The code for this app is available on GitHub.](https://github.com/naclonts/inbox-eagle)
 
+- [Demo](#demo)
+- [Architecture](#architecture)
+- [Implementation](#implementation)
+    - [User personalization and prompt config](#user-personalization-and-prompt-config)
+    - [Evaluating the email's content](#evaluating-the-emails-content)
+    - [Extracting the importance level number](#extracting-the-importance-level-number)
+- [Learnings](#learnings)
+- [Product improvement ideas](#product-improvement-ideas)
+- [Conclusion](#conclusion)
 
 ## Demo
 
