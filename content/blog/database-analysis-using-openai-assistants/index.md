@@ -4,7 +4,7 @@ date: "2024-10-12T12:00:00.000Z"
 description: "Writing database queries that know your DB schema with OpenAI's Assistants framework."
 ---
 
-Generative AI tools can make writing SQL very easy: ask a question, and an LLM will translate it into a SQL query that provides the answer. This can save a lot of time for those who are less fluent in SQL. You can ask, "how many orders have been placed by each customer this month?" instead of looking up every table name and working out the `JOIN` and `GROUP BY` syntax. For me, this has been a huge time-saver when analyzing product usage.
+Generative AI tools can make writing SQL very easy: ask a question, and an LLM will translate it into a SQL query that provides the answer. This can save a lot of time for those who are less fluent in SQL. You can ask, "How many orders have been placed by each customer this month?" instead of looking up every table name and working out the `JOIN` and `GROUP BY` syntax. For me, this has been a huge time-saver when analyzing product usage.
 
 There's one annoying part of doing this with most chatbot interfaces, however: you need to provide the DB schema in each new conversation. This article discusses using OpenAI's <a href="https://platform.openai.com/docs/assistants/overview" target="_blank">Assistants Playground</a> to maintain knowledge of your DB schema, allowing you to quickly dive into query creation based on your data.
 
@@ -40,7 +40,7 @@ I've also added a system prompt with instructions to reference the schema file, 
 - "When adding up item costs, include the tax percentage in the total."
 - "Call out possible performance impacts. The `orders` table has 5 million records."
 
-> ⚙️ *One bug/feature of the Assistants UX is that it doesn't accept `.sql` files. Rename the schema file's extension to `.txt` to get around this.*
+> ⚙️ *One bug/feature of the Assistants UX is that it doesn't accept `.sql` files. Rename the schema file extension to `.txt` to get around this.*
 
 ## Ask Questions ➡️ Get SQL Queries
 
@@ -62,7 +62,7 @@ Cool!
 
 Here's another example:
 
-> show sales by month, broken down by product category
+> Show sales by month, broken down by product category.
 
 ![Assistants Playground Sales by Product Category Query](./playground-query-2.png)
 
@@ -72,7 +72,7 @@ And the results:
 
 ## Fact-Checking and Hallucinations
 
-As usual with AI tools, there can be hallucinations. This isn't a replacement for having a good understanding of your datamodel: the LLM can miss nuances that aren't explicitly called out.
+As usual with AI tools, there can be hallucinations. This tool isn't a replacement for having a good understanding of your data model: the LLM can miss nuances that aren't explicitly called out.
 
 Documentation pays off here. If you have a schema definition file where each table has a comment explaining its usage (and ideally, each field has the same), the LLM will use that to construct more accurate queries.
 
@@ -80,9 +80,9 @@ Documentation pays off here. If you have a schema definition file where each tab
 
 Before using AI for production data or code, you need to think about where the information is going.
 
-Is the AI provider training on your data? This could potentially lead to your IP being leaked. As of writing, the OpenAI API, including the Assistants API and Playground, doesn't train on any data per their <a href="https://openai.com/enterprise-privacy/" target="_blank">policies</a> at the time of writing. Check out current terms before sharing sensitive information on any platform!
+Is the AI provider training on your data? This could potentially lead to your IP being leaked. At the time of writing, the OpenAI API, including the Assistants API and Playground, doesn't train on any data per their <a href="https://openai.com/enterprise-privacy/" target="_blank">policies</a>. Check out current terms before sharing sensitive information on any platform!
 
-Even with that assurance, many of us want to minimize — or completely eliminate — the exposure of actual database records to third-party providers. In some cases, this may even be a contractual or regulatory requirement. With the approach described here, we aren't sending any actual data through the LLM. Only the DB schema is sent to OpenAI.
+Even with that assurance, many of us want to minimize — or completely eliminate — the exposure of actual database _records_ to third-party providers. In some cases, this may even be a contractual or regulatory requirement. With the approach described here, we aren't sending any actual data through the LLM. Only the DB schema is sent to OpenAI.
 
 That being said, consider privacy and security carefully for your use case. These same techniques can be used with an open-source, self-hosted LLM for maximum privacy. Generate a little code for a UX or command-line interface, and you've built your own SQL data analyst.
 
