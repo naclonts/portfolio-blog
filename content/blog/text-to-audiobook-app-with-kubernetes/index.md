@@ -1,7 +1,7 @@
 ---
 title: Building a Text-to-Audiobook Application with Kubernetes
 date: "2025-02-01T12:00:00.000Z"
-description: "Project notes from creating an app that generates audiobooks on demand using text-to-speech models."
+description: "Creating an app that generates audiobooks on demand using text-to-speech models."
 ---
 
 One of the more beautiful outcomes of AI development in recent years is the ability to quickly transform any written text into a spoken word format, almost instantly and for free. I love using the <a href="https://elevenlabs.io/" target="_blank">ElevenLabs</a> Android app to turn a long article or book into an audiobook and listen to it while driving or cleaning my house.
@@ -36,14 +36,14 @@ There are a couple of elements not covered in the above diagram. In addition to 
 
 ![Detailed architecture diagram](./Architecture-diagram---detailed.png)
 
-When a user uploads a PDF, the backend saves the PDF to the "PDF File Storage", a directory on our machine, in addition to notifying the worker of the task via Redis. Similarly, when the Worker finishes generating the audio, it saves the WAV file to the "Audio File Storage" in another directory. The SQL `task` table includes references to both the PDF and audio file paths.
+When a user uploads a PDF, the backend saves the PDF to the "PDF File Storage", a directory on our machine, in addition to notifying the worker of the task via Redis. Similarly, when the worker finishes generating the audio, it saves the WAV file to the "Audio File Storage" in another directory. The SQL `task` table includes references to both the PDF and audio file paths.
 
 
 ## Kubernetes Configuration
 
-Since this system has multiple components involved, running each component in a container can help reduce the overhead of setting everything up. Each of these components involves its own set of libraries that must be installed (for example, the Worker requires some hefty machine learning libaries like HuggingFace, and the Frontend needs a bunch of NPM packages). Instead of installing all these dependencies on our machine and dealing with any versioning conflicts, each component can be packaged as a container image with all of the libraries already installed.
+Since this system has multiple components involved, running each component in a container can help reduce the overhead of setting everything up. Each of these components involves its own set of libraries that must be installed (for example, the worker requires some hefty machine learning libaries like HuggingFace, and the frontend needs a bunch of NPM packages). Instead of installing all these dependencies on our machine and dealing with any versioning conflicts, each component can be packaged as a container image with all of the libraries already installed.
 
-I opted to organize these packages using Kubernetes, for the sake of learning. Kubernetes will also allow us to deploy this application to the cloud and enable stuff like auto-scaling. This could be very useful if multiple users are generating audiobooks, as each worker process can take quite a while.
+I opted to organize these packages using Kubernetes, mostly for the sake of doing a hands-on project with K8s. Kubernetes will also allow us to deploy this application to the cloud and enable stuff like auto-scaling. This could be very useful if multiple users are generating audiobooks, as each worker process can take quite a while.
 
 Translating our app architecture into Kubernetes component gives us this:
 
