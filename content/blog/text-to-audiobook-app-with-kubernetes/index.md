@@ -107,6 +107,6 @@ Deploying this to production could be a good follow-up project!
 
 This project helped me learn more about using Kubernetes in a use case that's beyond a toy example, although not quite production ready.
 
-It's also interesting to note that much of this code is AI generated, showing the utility of using LLMs for code generation to get a simple project running. Some assistance was also provided by GitHub Copilot chat in VSCode using Claude Sonnet and ChatGPT 4o, especially while configuring the Kubernetes templates. However, I was only able to get the LLMs' K8s code and templates to work making manual adjustments. There were a lot of small issues that the LLMs didn't catch and required some human attention.
+It's also interesting to note that much of this code is AI generated, showing the utility of using LLMs for code generation to get a simple project running. Some assistance was also provided by GitHub Copilot chat in VSCode using Claude Sonnet and ChatGPT 4o, especially while configuring the Kubernetes templates. However, I was only able to get the LLMs' code and K8s templates to work making manual adjustments. There were a lot of small issues that the LLMs didn't catch and required some human attention.
 
 
