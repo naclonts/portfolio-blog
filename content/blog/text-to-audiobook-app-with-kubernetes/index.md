@@ -27,7 +27,7 @@ There are five primary components of the system:
 1. __Frontend__: This is a NodeJS process that serves a webpage to the user, allowing them to upload a PDF file to convert to audio, see the status of the text-to-audio process, and then play or download the resulting audio file.
 2. __Backend/Server__: A Python Flask server that accepts the PDFs uploaded by the user and sends a message via Redis with the PDF details. The frontend polls this server for the text-to-audio job status, which the backend queries from the PostgreSQL database.
 3. __Redis__: This is the message broker allowing the backend server to communicate with the worker.
-4. __Worker__: This is where the magic happens. This is a Python Celery process that listens for messages sent from the backend via Redis. When received, it processes the PDF that the user uploaded, converting it into text, and rendering that text as audio. That audio is then saved, and the Worker updates the database to mark this job as complete.
+4. __Worker__: This is where the magic happens. This is a Python Celery process that listens for messages sent from the backend via Redis. When received, it processes the PDF that the user uploaded, converts it into text, and renders that text as audio. That audio is then saved, and the worker updates the database to mark this task as complete.
 5. __PostgreSQL Database__: When a PDF is uploaded, the backend creates a record in the `task` DB table. The worker then updates this with the `audio_path` when complete, allowing the server to return the audio file to the frontend.
 
 The backend and worker share the same codebase in <a href="https://github.com/naclonts/audiobookify/tree/main/backend" target="_blank">the backend directory</a> of the repo, but have different Dockerfiles.
@@ -64,9 +64,9 @@ To run the app locally, we need to:
 1. Run `minikube start` (Docker must be running first)
 2. From the `audiobookify` repo directory, run `helm install audiobookify ./kubernetes`
 
-The Helm install pulls all the images and spins up the Kubernetes cluster, running locally on Minikube.
+The Helm install pulls all the images and spins up the Kubernetes cluster, running locally on Minikube. This is all we need to do to install the application on a new system!
 
-After doing these steps, our local state looks like this (screenshot of `kubectl get all`):
+After doing these steps, the state of our local Kubernetes cluster looks like this:
 
 ![Screenshot of kubectl get all showing kubernetes processes running](./Kubectl-get-all-showing-processes-running.png)
 
