@@ -45,7 +45,7 @@ Since this system has multiple components involved, running each component in a 
 
 I opted to organize these packages using Kubernetes, mostly for the sake of doing a hands-on project with K8s. Kubernetes will also allow us to deploy this application to the cloud and enable stuff like auto-scaling. This could be very useful if multiple users are generating audiobooks, as each worker process can take quite a while.
 
-Translating our app architecture into Kubernetes component gives us this:
+Translating our app architecture into Kubernetes objects gives us this:
 
 ![Kubernetes system diagram](./Architecture-diagram---Kubernetes.png)
 
@@ -107,6 +107,6 @@ Deploying this to production could be a good follow-up project!
 
 This project helped me learn more about using Kubernetes in a use case that's beyond a toy example, although not quite production ready.
 
-It's also interesting to note that much of this code is AI generated, showing the utility of using LLMs for code generation to get a simple project running. Some assistance was also provided by GitHub Copilot chat in VSCode using Claude Sonnet and ChatGPT 4o, especially while configuring the Kubernetes templates. However, I was only able to get the LLMs' K8s templates working after studying the basics of Kubernetes and Helm and making manual adjustments. There were a lot of small issues that the LLMs didn't catch, and required some human attention.
+It's also interesting to note that much of this code is AI generated, showing the utility of using LLMs for code generation to get a simple project running. Some assistance was also provided by GitHub Copilot chat in VSCode using Claude Sonnet and ChatGPT 4o, especially while configuring the Kubernetes templates. However, I was only able to get the LLMs' K8s code and templates to work making manual adjustments. There were a lot of small issues that the LLMs didn't catch and required some human attention.
 
 
