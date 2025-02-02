@@ -1,7 +1,7 @@
 ---
-title: Deploying a Text-to-Audiobook Application with Kubernetes
+title: Building a Text-to-Audiobook Application with Kubernetes
 date: "2025-02-01T12:00:00.000Z"
-description: "My project notes from building an app that generates audiobooks on demand using text-to-speech models."
+description: "Project notes from creating an app that generates audiobooks on demand using text-to-speech models."
 ---
 
 One of the more beautiful outcomes of AI development in recent years is the ability to quickly transform any written text into a spoken word format, almost instantly and for free. I love using the [ElevenLabs](https://elevenlabs.io/) Android app to turn a long article or book into an audiobook and listen to it while driving or cleaning my house.
@@ -30,6 +30,8 @@ There are five primary components of the system:
 4. __Worker__: This is where the magic happens. This is a Python Celery process that listens for messages sent from the backend via Redis. When received, it processes the PDF that the user uploaded, converting it into text, and rendering that text as audio. That audio is then saved, and the Worker updates the database to mark this job as complete.
 5. __PostgreSQL Database__: When a PDF is uploaded, the backend creates a record in the `task` DB table. The worker then updates this with the `audio_path` when complete, allowing the server to return the audio file to the frontend.
 
+The backend and worker share the same codebase in [the backend directory](https://github.com/naclonts/audiobookify/tree/main/backend) of the repo, but have different Dockerfiles.
+
 There are a couple of elements not covered in the above diagram. In addition to the Redis and PostgreSQL instances, we also need a place to store the uploaded PDF files and generated audio files. We'll store those in directories located on our system. Adding those elements (and some comments), a more complete architecture diagram looks like this:
 
 ![Detailed architecture diagram](./Architecture%20diagram%20-%20detailed.png)
@@ -47,9 +49,11 @@ Translating our app architecture into Kubernetes component gives us this:
 
 ![Kubernetes system diagram](./Architecture%20diagram%20-%20Kubernetes.png)
 
-Each of the rectangles in the diagram is a Kubernetes deployment, which manages one or more pods running the pre-built image for that component. The exception to this are the file storage components, which are Kubernetes [Persistent Volumes](https://kubernetes.io/docs/concepts/storage/persistent-volumes/), not deployments.
+Each of the rectangles in the diagram is a Kubernetes deployment, which manages one or more pods running the pre-built image for that component. The exception to this are the file storage components, which are Kubernetes [Persistent Volumes](https://kubernetes.io/docs/concepts/storage/persistent-volumes/), not deployments. The code defining each of these resources is in the repo's [kubernetes/templates](https://github.com/naclonts/audiobookify/tree/main/kubernetes/templates) directory.
 
 Not shown in this image are the services associated with each Deployment, which allow communication between pods within the cluster -- and, in the case of the Frontend Load Balancer Service, allows communication with the user outside the cluster.
+
+Finally, I opted to use Helm to organize the Kubernetes, allowing us to install and run the cluster with a single command.
 
 ## Running the Things
 
