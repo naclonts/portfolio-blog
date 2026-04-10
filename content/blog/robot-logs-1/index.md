@@ -4,7 +4,7 @@ date: "2026-04-09T12:00:00.000Z"
 description: "Always blame the hardware"
 ---
 
-A low herz of emitting velocity commands can lead to poor behavior in a face tracking robot.
+> Emitting velocity commands too slowly can lead to poor behavior in a face tracking robot.
 
 Camera feed 15hz but robot only emitting `cmd_vel` at 2 to 3 hz resulted in a tracker that wandered around, often moving the face entirely out of frame, and getting stick in a "look up and to the right" position.
 
