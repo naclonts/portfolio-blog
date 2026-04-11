@@ -99,14 +99,11 @@ h3,
 h4,
 h5,
 h6 {
-  /* font-family: var(--font-heading); */
   margin-top: var(--spacing-12);
   margin-bottom: var(--spacing-6);
   line-height: var(--lineHeight-tight);
   letter-spacing: -0.025em;
-
-  font-family: "Exo 2", sans-serif;
-  font-optical-sizing: auto;
+  font-family: "Exo 2", var(--fontFamily-sans);
   font-style: normal;
 }
 
@@ -308,6 +305,13 @@ a:focus {
   font-family: var(--font-heading);
 }
 
+.blog-post section p > img {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+}
+
 .blog-post-nav ul {
   margin: var(--spacing-0);
 }
@@ -330,12 +334,9 @@ a:focus {
 }
 
 
-/* Custom Fonts */
-
-/* Use Exo 2 family of open source typographical fonts */
-h1, .header-link-home, .headline {
-  font-family: "Exo 2", sans-serif;
-  font-optical-sizing: auto;
+h1,
+.header-link-home,
+.headline {
+  font-family: "Exo 2", var(--fontFamily-sans);
   font-weight: 400;
-  font-style: normal;
 }

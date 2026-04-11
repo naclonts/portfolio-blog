@@ -1,12 +1,12 @@
 ---
 title: Robot Logs 0
 date: "2026-04-09T12:00:00.000Z"
-description: "Always blame the hardware"
+description: "Always blame the hardware."
 ---
 
 > Emitting velocity commands too slowly can lead to poor behavior in a face tracking robot.
 
-After deploying my face-tracker model to the physical robot (a camera mounted on a pan/tilt servo kit with a Raspberry Pi), performance was not pretty. In sim, the VLA did a great job following the face it was told to. In reality, the robot would vaguely follow a face, then drift until the face was entirely out of frame, and finally get stuck in a "look up and to the left" position.
+After deploying my face-tracker model to a physical robot (a camera mounted on a pan/tilt servo kit with a Raspberry Pi), performance was not pretty. In sim, the VLA did a great job following the face it was told to. In reality, the robot would vaguely follow a face, then drift until the face was entirely out of frame, and finally get stuck in a "look up and to the left" position.
 
 ![Pan-tilt servos on Raspberry Pi 5 with a camera attached](./ocelot-bot.jpg)
 *Our intrepid adventurer!*
@@ -27,7 +27,7 @@ Result: Solid face tracking, accurate for single and multiple faces. Even tracks
 
 ![Camera pointing at a bag with a picture of a beaver wearing a hat and chewing a toothpick](./camera_beaver_toothpick_hat.png)
 
-The robot's command here was "look at the person wearing a hat". It did track the beaver in a hat instead of me. Success! (Whether or not a beaver should be considered a "person" is beyond the scope of this article.)
+The robot's command here was to "look at the person wearing a hat." It did track the beaver in a hat instead of me. Success! (Whether or not a beaver should be considered a "person" is beyond the scope of this article.)
 
 ## Further reading
 

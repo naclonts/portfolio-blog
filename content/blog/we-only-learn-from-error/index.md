@@ -1,7 +1,7 @@
 ---
 title: We Only Learn from Error
 date: "2026-02-27T12:00:00.000Z"
-description: "Behavioral cloning needs an oracle with challenging scenarios"
+description: "Behavioral cloning needs an oracle with challenging scenarios."
 ---
 
 We only learn from error. The same could be said for neural networks.
@@ -11,8 +11,7 @@ I implemented a vision-language-action model trained to follow faces in its view
 The initial sim environment consisted of slowly moving face images. These were followed by the oracle node, which knew the positions, but recorded the "correct" movements to make to follow them.
 
 ![Camera following a face slowly moving in a simulated environment](./oracle-single-face-5s.gif)
-
-*I know -- it's so... beautiful...*
+*It's so... beautiful...*
 
 I recorded 10,000 episodes of various scenarios. Each scenario selected from about 500 face models that were AI-generated, some of which included specific attributes like glasses or hats. The movement patterns varied by scenario. Language command ranged from "track the person" for a single face, to "track the face with glasses" and "look at the right-most person" for multiple-face scenarios.
 
