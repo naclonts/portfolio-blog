@@ -22,12 +22,12 @@ I started with a hyperparameter sweep over 1,500 episodes. The results speak for
 
 ![Camera aimlessly moving around a face](./sweep-v0.0.2-seed102-single.gif)
 
-Not impressiv stuff! It had an average error of about 20 degrees for basic scenarios -- in a field of view of just 60 degrees!
+Not impressive stuff! It had an average error of about 20 degrees for basic scenarios -- in a field of view of just 60 degrees!
 
 One issue stood out: the VLA was often several degrees away from its face target. However, the oracle was almost always _directly on_ its target. Only 3% of the training data's frames had significant errors -- and these were exclusively during the first 3 to 5 frames of each episode. This was because at the beginning of each episode, the oracle started at a random position relative to the face. However, within a few frames, it had reached its target. From then on, it only moved slightly to keep up with the face as it moved.
 
-![Histogram of avg error per frame, showing velocity peaks at frame 1, then rapidly drops and stays constant through frame 100](./avg_oracle_vel_by_frame-pre_perturbation.png)
-_Average pan velocity of oracle per frame, where 0 is the first frame of the episode_
+![Histogram of avg velocity per frame, showing velocity peaks at frame 1, then rapidly drops and stays constant through frame 100](./avg_oracle_vel_by_frame-pre_perturbation.png)
+_Average oracle pan velocity per frame, where 0 is the first frame of the episode._
 
 The result: only ~3% of the frames in the dataset were relevant to the VLA's most common situation, where the face is far from the VLA's frame center. The other 97% of training frames reflected a state rarely seen by the VLA, where the face was in the very middle of the viewport.
 
@@ -35,15 +35,15 @@ How to solve this? We could scale: with 30x more simulated episodes in the datas
 
 **Or**, we could add error by perturbing the target throughout each episode.
 
-I added periodic perturbations: every 15 frames, the target face randomly teleports to a random offset, forcing the oracle to recover multiple times in each episode and greatly increasing the amount of large-error samples.
+I added periodic disturbances: every few frames, the target face teleports to a random offset, forcing the oracle to recover multiple times in each episode and greatly increasing the amount of large-error samples.
 
-[[GIF of oracle following face w periodic jumps]]
+![Camera following a face that randomly teleports every few seconds](./oracle-seed280-perturbed-default-10s.gif)
 
-I then ran another small training run of 1,500 episodes with the same hyperparameters.
+I then ran another experiment of 1,500 episodes with the same hyperparameters.
 
-The result - a much better model:
+The result was a model averaging less than 5 degrees error, a major improvement from the previous run:
 
-![](./v0.1.0-seed102-single.gif)
+![Camera following a face closely with some variance](./v0.1.0-seed102-single.gif)
 
 The lesson? VLAs learn from error, like we do. Perfect, simple training scenarios will create models which can't handle imperfect, complex reality.
 
