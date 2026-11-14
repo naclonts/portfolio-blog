@@ -11848,5 +11848,40 @@
     1,
     1,
     1
-  ]
+  ],
+  "color_legend": [
+    {
+      "rgb": [
+        83,
+        191,
+        207
+      ],
+      "label": "Text input + positional bias"
+    },
+    {
+      "rgb": [
+        102,
+        156,
+        229
+      ],
+      "label": "Text attention + conditioning"
+    },
+    {
+      "rgb": [
+        181,
+        143,
+        223
+      ],
+      "label": "Text FFN up / audio embeddings + attention"
+    },
+    {
+      "rgb": [
+        242,
+        181,
+        126
+      ],
+      "label": "FFN outputs / audio FFN + logits"
+    }
+  ],
+  "color_rule": "Learned routes use destination operation color; structural routes use source operation color; overlap and bloom blend colors."
 }

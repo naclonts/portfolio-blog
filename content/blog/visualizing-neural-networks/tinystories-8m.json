@@ -17,6 +17,8 @@
     7
   ],
   "sequence_length": 8,
+  "display_exposure": 1.8,
+  "display_transfer": "Clipped normalized bundle light raised to 1/exposure before bloom; zero stays zero",
   "scope": "Input token IDs [0, 1, 2, 3, 4, 5, 6, 7] across 8 positions; illustrative length, not the 2048-token context limit. Includes transformer blocks and full vocabulary logits.",
   "sequence_note": "IDs are an explicit illustrative tokenizer-ID sequence, not decoded story text; sequence length is chosen for this diagram and is not the model context limit.",
   "config_context_limit": 2048,
@@ -1759,5 +1761,5 @@
     "sampling": false,
     "semantics": "Every neuron is included in the reported node counts. Every displayed learned scalar weight use and every modeled structural dependency contributes to its source/target lane route before bundling. The raster aggregates routes into lane bins; it does not depict activations or individually resolvable edges."
   },
-  "image_sha256": "eb664f2b929efd5a41eb59ef69fcbb77253ab9c0c3a9ce3069499450312bca90"
+  "image_sha256": "66005571c3e52480a462ae6c5b519155c25296bd190d3a496a2f05e1ca399681"
 }

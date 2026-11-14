@@ -352,3 +352,20 @@ h1,
 .blog-post--wide-images .gatsby-resp-image-wrapper {
   max-width: none !important;
 }
+
+/* Article-specific theme follows the rendered page during navigation. */
+body:has(.blog-post--dark) {
+  color-scheme: dark;
+  --color-primary: #8ecbff;
+  --color-text: #dce3ed;
+  --color-text-light: #a5b1c2;
+  --color-heading: #f1f5fb;
+  --color-heading-black: #ffffff;
+  --color-accent: #2a3545;
+  background-color: #080b10;
+  color: var(--color-text);
+}
+
+body:has(.blog-post--dark) .blog-post header p {
+  color: var(--color-text-light);
+}

@@ -60,6 +60,9 @@ module.exports = {
               ignoreFileExtensions: [],
             },
           },
+          {
+            resolve: require.resolve("./plugins/gatsby-remark-article-new-tabs"),
+          },
           `gatsby-remark-autolink-headers`,
           `gatsby-remark-prismjs`,
         ],

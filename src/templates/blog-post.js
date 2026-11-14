@@ -14,7 +14,11 @@ const BlogPostTemplate = ({
   return (
     <Layout location={location} title={siteTitle}>
       <article
-        className={post.frontmatter.wideImages ? "blog-post blog-post--wide-images" : "blog-post"}
+        className={[
+          "blog-post",
+          post.frontmatter.wideImages && "blog-post--wide-images",
+          post.frontmatter.darkMode && "blog-post--dark",
+        ].filter(Boolean).join(" ")}
         itemScope
         itemType="http://schema.org/Article"
       >
@@ -95,6 +99,7 @@ export const pageQuery = graphql`
         date(formatString: "MMMM DD, YYYY")
         description
         wideImages
+        darkMode
       }
     }
     previous: markdownRemark(id: { eq: $previousPostId }) {
