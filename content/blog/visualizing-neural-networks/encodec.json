@@ -1,0 +1,7116 @@
+{
+  "renderer": "Datashader hammer_bundle",
+  "format_version": 2,
+  "model": "EnCodec 24 kHz",
+  "checkpoint": "data/models/encodec/model.safetensors",
+  "image": "encodec.png",
+  "width": 4800,
+  "height": 2200,
+  "column_count": 295,
+  "neuron_count": 624212,
+  "weighted_edge_count": 102613888,
+  "structural_edge_count": 8673024,
+  "scope": "Full finite-window graph for 640 samples at 24 kHz; every temporal convolution/LSTM/RVQ route is enumerated then aggregated into 24\u00d724 endpoint bins.",
+  "input_samples": 640,
+  "input_duration_ms": 26.666666666666668,
+  "latent_frames": 2,
+  "rvq_codebooks": 32,
+  "bandwidth_kbps": 24,
+  "omitted_constant_zero_uses": 1179648,
+  "checkpoint_tensor_count": 252,
+  "rendered_tensor_count": 156,
+  "omitted_tensor_count": 96,
+  "omitted_checkpoint_tensors": [
+    "quantizer.layers.0.codebook.cluster_size",
+    "quantizer.layers.0.codebook.embed_avg",
+    "quantizer.layers.0.codebook.inited",
+    "quantizer.layers.1.codebook.cluster_size",
+    "quantizer.layers.1.codebook.embed_avg",
+    "quantizer.layers.1.codebook.inited",
+    "quantizer.layers.10.codebook.cluster_size",
+    "quantizer.layers.10.codebook.embed_avg",
+    "quantizer.layers.10.codebook.inited",
+    "quantizer.layers.11.codebook.cluster_size",
+    "quantizer.layers.11.codebook.embed_avg",
+    "quantizer.layers.11.codebook.inited",
+    "quantizer.layers.12.codebook.cluster_size",
+    "quantizer.layers.12.codebook.embed_avg",
+    "quantizer.layers.12.codebook.inited",
+    "quantizer.layers.13.codebook.cluster_size",
+    "quantizer.layers.13.codebook.embed_avg",
+    "quantizer.layers.13.codebook.inited",
+    "quantizer.layers.14.codebook.cluster_size",
+    "quantizer.layers.14.codebook.embed_avg",
+    "quantizer.layers.14.codebook.inited",
+    "quantizer.layers.15.codebook.cluster_size",
+    "quantizer.layers.15.codebook.embed_avg",
+    "quantizer.layers.15.codebook.inited",
+    "quantizer.layers.16.codebook.cluster_size",
+    "quantizer.layers.16.codebook.embed_avg",
+    "quantizer.layers.16.codebook.inited",
+    "quantizer.layers.17.codebook.cluster_size",
+    "quantizer.layers.17.codebook.embed_avg",
+    "quantizer.layers.17.codebook.inited",
+    "quantizer.layers.18.codebook.cluster_size",
+    "quantizer.layers.18.codebook.embed_avg",
+    "quantizer.layers.18.codebook.inited",
+    "quantizer.layers.19.codebook.cluster_size",
+    "quantizer.layers.19.codebook.embed_avg",
+    "quantizer.layers.19.codebook.inited",
+    "quantizer.layers.2.codebook.cluster_size",
+    "quantizer.layers.2.codebook.embed_avg",
+    "quantizer.layers.2.codebook.inited",
+    "quantizer.layers.20.codebook.cluster_size",
+    "quantizer.layers.20.codebook.embed_avg",
+    "quantizer.layers.20.codebook.inited",
+    "quantizer.layers.21.codebook.cluster_size",
+    "quantizer.layers.21.codebook.embed_avg",
+    "quantizer.layers.21.codebook.inited",
+    "quantizer.layers.22.codebook.cluster_size",
+    "quantizer.layers.22.codebook.embed_avg",
+    "quantizer.layers.22.codebook.inited",
+    "quantizer.layers.23.codebook.cluster_size",
+    "quantizer.layers.23.codebook.embed_avg",
+    "quantizer.layers.23.codebook.inited",
+    "quantizer.layers.24.codebook.cluster_size",
+    "quantizer.layers.24.codebook.embed_avg",
+    "quantizer.layers.24.codebook.inited",
+    "quantizer.layers.25.codebook.cluster_size",
+    "quantizer.layers.25.codebook.embed_avg",
+    "quantizer.layers.25.codebook.inited",
+    "quantizer.layers.26.codebook.cluster_size",
+    "quantizer.layers.26.codebook.embed_avg",
+    "quantizer.layers.26.codebook.inited",
+    "quantizer.layers.27.codebook.cluster_size",
+    "quantizer.layers.27.codebook.embed_avg",
+    "quantizer.layers.27.codebook.inited",
+    "quantizer.layers.28.codebook.cluster_size",
+    "quantizer.layers.28.codebook.embed_avg",
+    "quantizer.layers.28.codebook.inited",
+    "quantizer.layers.29.codebook.cluster_size",
+    "quantizer.layers.29.codebook.embed_avg",
+    "quantizer.layers.29.codebook.inited",
+    "quantizer.layers.3.codebook.cluster_size",
+    "quantizer.layers.3.codebook.embed_avg",
+    "quantizer.layers.3.codebook.inited",
+    "quantizer.layers.30.codebook.cluster_size",
+    "quantizer.layers.30.codebook.embed_avg",
+    "quantizer.layers.30.codebook.inited",
+    "quantizer.layers.31.codebook.cluster_size",
+    "quantizer.layers.31.codebook.embed_avg",
+    "quantizer.layers.31.codebook.inited",
+    "quantizer.layers.4.codebook.cluster_size",
+    "quantizer.layers.4.codebook.embed_avg",
+    "quantizer.layers.4.codebook.inited",
+    "quantizer.layers.5.codebook.cluster_size",
+    "quantizer.layers.5.codebook.embed_avg",
+    "quantizer.layers.5.codebook.inited",
+    "quantizer.layers.6.codebook.cluster_size",
+    "quantizer.layers.6.codebook.embed_avg",
+    "quantizer.layers.6.codebook.inited",
+    "quantizer.layers.7.codebook.cluster_size",
+    "quantizer.layers.7.codebook.embed_avg",
+    "quantizer.layers.7.codebook.inited",
+    "quantizer.layers.8.codebook.cluster_size",
+    "quantizer.layers.8.codebook.embed_avg",
+    "quantizer.layers.8.codebook.inited",
+    "quantizer.layers.9.codebook.cluster_size",
+    "quantizer.layers.9.codebook.embed_avg",
+    "quantizer.layers.9.codebook.inited"
+  ],
+  "omitted_checkpoint_values": 4227104,
+  "layout": "Neuron-relative envelopes; occupied bins use the mean position of their actual neuron indices. Constants are centered. Labels are abbreviated; full labels are in nodes metadata.",
+  "sampling": false,
+  "spatial_bins_per_operator": 24,
+  "semantics": "Convolution padding and temporal positions follow Hugging Face Transformers EncodecModel 4.31.0. LSTM is unrolled across the finite latent frames. Every convolution, shortcut, recurrent matrix, bias, and all 32 RVQ embedding candidate-score/lookup alternatives contribute. RVQ argmax is input-dependent; all candidate lookup alternatives are shown. Constant-zero padded weight applications are counted separately and excluded from edge totals. Weight magnitude uses effective weight-normalized kernels; brightness is normalized per graph edge. No measured activations.",
+  "nodes": [
+    {
+      "id": 0,
+      "label": "waveform input",
+      "channels": 1,
+      "time_steps": 640,
+      "neurons": 640,
+      "phase": "encoder"
+    },
+    {
+      "id": 1,
+      "label": "enc stem conv",
+      "channels": 32,
+      "time_steps": 640,
+      "neurons": 20480,
+      "phase": "encoder"
+    },
+    {
+      "id": 2,
+      "label": "enc stem conv bias",
+      "channels": 1,
+      "time_steps": 1,
+      "neurons": 1,
+      "phase": "encoder"
+    },
+    {
+      "id": 3,
+      "label": "enc res 0 resconv 3",
+      "channels": 16,
+      "time_steps": 640,
+      "neurons": 10240,
+      "phase": "encoder"
+    },
+    {
+      "id": 4,
+      "label": "enc res 0 resconv 3 bias",
+      "channels": 1,
+      "time_steps": 1,
+      "neurons": 1,
+      "phase": "encoder"
+    },
+    {
+      "id": 5,
+      "label": "enc res 0 resconv 1",
+      "channels": 32,
+      "time_steps": 640,
+      "neurons": 20480,
+      "phase": "encoder"
+    },
+    {
+      "id": 6,
+      "label": "enc res 0 resconv 1 bias",
+      "channels": 1,
+      "time_steps": 1,
+      "neurons": 1,
+      "phase": "encoder"
+    },
+    {
+      "id": 7,
+      "label": "enc res 0 shortcut 1",
+      "channels": 32,
+      "time_steps": 640,
+      "neurons": 20480,
+      "phase": "encoder"
+    },
+    {
+      "id": 8,
+      "label": "enc res 0 shortcut 1 bias",
+      "channels": 1,
+      "time_steps": 1,
+      "neurons": 1,
+      "phase": "encoder"
+    },
+    {
+      "id": 9,
+      "label": "enc res 0 residual sum",
+      "channels": 32,
+      "time_steps": 640,
+      "neurons": 20480,
+      "phase": "encoder"
+    },
+    {
+      "id": 10,
+      "label": "enc down \u00d72",
+      "channels": 64,
+      "time_steps": 320,
+      "neurons": 20480,
+      "phase": "encoder"
+    },
+    {
+      "id": 11,
+      "label": "enc down \u00d72 bias",
+      "channels": 1,
+      "time_steps": 1,
+      "neurons": 1,
+      "phase": "encoder"
+    },
+    {
+      "id": 12,
+      "label": "enc res 1 resconv 3",
+      "channels": 32,
+      "time_steps": 320,
+      "neurons": 10240,
+      "phase": "encoder"
+    },
+    {
+      "id": 13,
+      "label": "enc res 1 resconv 3 bias",
+      "channels": 1,
+      "time_steps": 1,
+      "neurons": 1,
+      "phase": "encoder"
+    },
+    {
+      "id": 14,
+      "label": "enc res 1 resconv 1",
+      "channels": 64,
+      "time_steps": 320,
+      "neurons": 20480,
+      "phase": "encoder"
+    },
+    {
+      "id": 15,
+      "label": "enc res 1 resconv 1 bias",
+      "channels": 1,
+      "time_steps": 1,
+      "neurons": 1,
+      "phase": "encoder"
+    },
+    {
+      "id": 16,
+      "label": "enc res 1 shortcut 1",
+      "channels": 64,
+      "time_steps": 320,
+      "neurons": 20480,
+      "phase": "encoder"
+    },
+    {
+      "id": 17,
+      "label": "enc res 1 shortcut 1 bias",
+      "channels": 1,
+      "time_steps": 1,
+      "neurons": 1,
+      "phase": "encoder"
+    },
+    {
+      "id": 18,
+      "label": "enc res 1 residual sum",
+      "channels": 64,
+      "time_steps": 320,
+      "neurons": 20480,
+      "phase": "encoder"
+    },
+    {
+      "id": 19,
+      "label": "enc down \u00d74",
+      "channels": 128,
+      "time_steps": 80,
+      "neurons": 10240,
+      "phase": "encoder"
+    },
+    {
+      "id": 20,
+      "label": "enc down \u00d74 bias",
+      "channels": 1,
+      "time_steps": 1,
+      "neurons": 1,
+      "phase": "encoder"
+    },
+    {
+      "id": 21,
+      "label": "enc res 2 resconv 3",
+      "channels": 64,
+      "time_steps": 80,
+      "neurons": 5120,
+      "phase": "encoder"
+    },
+    {
+      "id": 22,
+      "label": "enc res 2 resconv 3 bias",
+      "channels": 1,
+      "time_steps": 1,
+      "neurons": 1,
+      "phase": "encoder"
+    },
+    {
+      "id": 23,
+      "label": "enc res 2 resconv 1",
+      "channels": 128,
+      "time_steps": 80,
+      "neurons": 10240,
+      "phase": "encoder"
+    },
+    {
+      "id": 24,
+      "label": "enc res 2 resconv 1 bias",
+      "channels": 1,
+      "time_steps": 1,
+      "neurons": 1,
+      "phase": "encoder"
+    },
+    {
+      "id": 25,
+      "label": "enc res 2 shortcut 1",
+      "channels": 128,
+      "time_steps": 80,
+      "neurons": 10240,
+      "phase": "encoder"
+    },
+    {
+      "id": 26,
+      "label": "enc res 2 shortcut 1 bias",
+      "channels": 1,
+      "time_steps": 1,
+      "neurons": 1,
+      "phase": "encoder"
+    },
+    {
+      "id": 27,
+      "label": "enc res 2 residual sum",
+      "channels": 128,
+      "time_steps": 80,
+      "neurons": 10240,
+      "phase": "encoder"
+    },
+    {
+      "id": 28,
+      "label": "enc down \u00d75",
+      "channels": 256,
+      "time_steps": 16,
+      "neurons": 4096,
+      "phase": "encoder"
+    },
+    {
+      "id": 29,
+      "label": "enc down \u00d75 bias",
+      "channels": 1,
+      "time_steps": 1,
+      "neurons": 1,
+      "phase": "encoder"
+    },
+    {
+      "id": 30,
+      "label": "enc res 3 resconv 3",
+      "channels": 128,
+      "time_steps": 16,
+      "neurons": 2048,
+      "phase": "encoder"
+    },
+    {
+      "id": 31,
+      "label": "enc res 3 resconv 3 bias",
+      "channels": 1,
+      "time_steps": 1,
+      "neurons": 1,
+      "phase": "encoder"
+    },
+    {
+      "id": 32,
+      "label": "enc res 3 resconv 1",
+      "channels": 256,
+      "time_steps": 16,
+      "neurons": 4096,
+      "phase": "encoder"
+    },
+    {
+      "id": 33,
+      "label": "enc res 3 resconv 1 bias",
+      "channels": 1,
+      "time_steps": 1,
+      "neurons": 1,
+      "phase": "encoder"
+    },
+    {
+      "id": 34,
+      "label": "enc res 3 shortcut 1",
+      "channels": 256,
+      "time_steps": 16,
+      "neurons": 4096,
+      "phase": "encoder"
+    },
+    {
+      "id": 35,
+      "label": "enc res 3 shortcut 1 bias",
+      "channels": 1,
+      "time_steps": 1,
+      "neurons": 1,
+      "phase": "encoder"
+    },
+    {
+      "id": 36,
+      "label": "enc res 3 residual sum",
+      "channels": 256,
+      "time_steps": 16,
+      "neurons": 4096,
+      "phase": "encoder"
+    },
+    {
+      "id": 37,
+      "label": "enc down \u00d78",
+      "channels": 512,
+      "time_steps": 2,
+      "neurons": 1024,
+      "phase": "encoder"
+    },
+    {
+      "id": 38,
+      "label": "enc down \u00d78 bias",
+      "channels": 1,
+      "time_steps": 1,
+      "neurons": 1,
+      "phase": "encoder"
+    },
+    {
+      "id": 39,
+      "label": "enc LSTM 0 h\u208b\u2081=0",
+      "channels": 512,
+      "time_steps": 1,
+      "neurons": 512,
+      "phase": "encoder"
+    },
+    {
+      "id": 40,
+      "label": "enc LSTM 0 c\u208b\u2081=0",
+      "channels": 512,
+      "time_steps": 1,
+      "neurons": 512,
+      "phase": "encoder"
+    },
+    {
+      "id": 41,
+      "label": "enc LSTM 1 h\u208b\u2081=0",
+      "channels": 512,
+      "time_steps": 1,
+      "neurons": 512,
+      "phase": "encoder"
+    },
+    {
+      "id": 42,
+      "label": "enc LSTM 1 c\u208b\u2081=0",
+      "channels": 512,
+      "time_steps": 1,
+      "neurons": 512,
+      "phase": "encoder"
+    },
+    {
+      "id": 43,
+      "label": "enc LSTM t0 layer0 gates",
+      "channels": 2048,
+      "time_steps": 1,
+      "neurons": 2048,
+      "phase": "encoder"
+    },
+    {
+      "id": 44,
+      "label": "LSTM bias t0 l0",
+      "channels": 1,
+      "time_steps": 1,
+      "neurons": 1,
+      "phase": "encoder"
+    },
+    {
+      "id": 45,
+      "label": "LSTM bias t0 l0",
+      "channels": 1,
+      "time_steps": 1,
+      "neurons": 1,
+      "phase": "encoder"
+    },
+    {
+      "id": 46,
+      "label": "enc LSTM t0 layer0 cell",
+      "channels": 512,
+      "time_steps": 1,
+      "neurons": 512,
+      "phase": "encoder"
+    },
+    {
+      "id": 47,
+      "label": "enc LSTM t0 layer0 hidden",
+      "channels": 512,
+      "time_steps": 1,
+      "neurons": 512,
+      "phase": "encoder"
+    },
+    {
+      "id": 48,
+      "label": "enc LSTM t0 layer1 gates",
+      "channels": 2048,
+      "time_steps": 1,
+      "neurons": 2048,
+      "phase": "encoder"
+    },
+    {
+      "id": 49,
+      "label": "LSTM bias t0 l1",
+      "channels": 1,
+      "time_steps": 1,
+      "neurons": 1,
+      "phase": "encoder"
+    },
+    {
+      "id": 50,
+      "label": "LSTM bias t0 l1",
+      "channels": 1,
+      "time_steps": 1,
+      "neurons": 1,
+      "phase": "encoder"
+    },
+    {
+      "id": 51,
+      "label": "enc LSTM t0 layer1 cell",
+      "channels": 512,
+      "time_steps": 1,
+      "neurons": 512,
+      "phase": "encoder"
+    },
+    {
+      "id": 52,
+      "label": "enc LSTM t0 layer1 hidden",
+      "channels": 512,
+      "time_steps": 1,
+      "neurons": 512,
+      "phase": "encoder"
+    },
+    {
+      "id": 53,
+      "label": "enc LSTM t0 residual output",
+      "channels": 512,
+      "time_steps": 1,
+      "neurons": 512,
+      "phase": "encoder"
+    },
+    {
+      "id": 54,
+      "label": "enc LSTM t1 layer0 gates",
+      "channels": 2048,
+      "time_steps": 1,
+      "neurons": 2048,
+      "phase": "encoder"
+    },
+    {
+      "id": 55,
+      "label": "LSTM bias t1 l0",
+      "channels": 1,
+      "time_steps": 1,
+      "neurons": 1,
+      "phase": "encoder"
+    },
+    {
+      "id": 56,
+      "label": "LSTM bias t1 l0",
+      "channels": 1,
+      "time_steps": 1,
+      "neurons": 1,
+      "phase": "encoder"
+    },
+    {
+      "id": 57,
+      "label": "enc LSTM t1 layer0 cell",
+      "channels": 512,
+      "time_steps": 1,
+      "neurons": 512,
+      "phase": "encoder"
+    },
+    {
+      "id": 58,
+      "label": "enc LSTM t1 layer0 hidden",
+      "channels": 512,
+      "time_steps": 1,
+      "neurons": 512,
+      "phase": "encoder"
+    },
+    {
+      "id": 59,
+      "label": "enc LSTM t1 layer1 gates",
+      "channels": 2048,
+      "time_steps": 1,
+      "neurons": 2048,
+      "phase": "encoder"
+    },
+    {
+      "id": 60,
+      "label": "LSTM bias t1 l1",
+      "channels": 1,
+      "time_steps": 1,
+      "neurons": 1,
+      "phase": "encoder"
+    },
+    {
+      "id": 61,
+      "label": "LSTM bias t1 l1",
+      "channels": 1,
+      "time_steps": 1,
+      "neurons": 1,
+      "phase": "encoder"
+    },
+    {
+      "id": 62,
+      "label": "enc LSTM t1 layer1 cell",
+      "channels": 512,
+      "time_steps": 1,
+      "neurons": 512,
+      "phase": "encoder"
+    },
+    {
+      "id": 63,
+      "label": "enc LSTM t1 layer1 hidden",
+      "channels": 512,
+      "time_steps": 1,
+      "neurons": 512,
+      "phase": "encoder"
+    },
+    {
+      "id": 64,
+      "label": "enc LSTM t1 residual output",
+      "channels": 512,
+      "time_steps": 1,
+      "neurons": 512,
+      "phase": "encoder"
+    },
+    {
+      "id": 65,
+      "label": "encoder LSTM output",
+      "channels": 512,
+      "time_steps": 2,
+      "neurons": 1024,
+      "phase": "encoder"
+    },
+    {
+      "id": 66,
+      "label": "enc latent conv",
+      "channels": 128,
+      "time_steps": 2,
+      "neurons": 256,
+      "phase": "encoder"
+    },
+    {
+      "id": 67,
+      "label": "enc latent conv bias",
+      "channels": 1,
+      "time_steps": 1,
+      "neurons": 1,
+      "phase": "encoder"
+    },
+    {
+      "id": 68,
+      "label": "RVQ q0 candidate scores",
+      "channels": 1024,
+      "time_steps": 2,
+      "neurons": 2048,
+      "phase": "quantizer"
+    },
+    {
+      "id": 69,
+      "label": "RVQ q0 code norm constants",
+      "channels": 1,
+      "time_steps": 1,
+      "neurons": 1,
+      "phase": "quantizer"
+    },
+    {
+      "id": 70,
+      "label": "RVQ q0 selected code vectors",
+      "channels": 128,
+      "time_steps": 2,
+      "neurons": 256,
+      "phase": "quantizer"
+    },
+    {
+      "id": 71,
+      "label": "RVQ q0 residual",
+      "channels": 128,
+      "time_steps": 2,
+      "neurons": 256,
+      "phase": "quantizer"
+    },
+    {
+      "id": 72,
+      "label": "RVQ accumulated code sum",
+      "channels": 128,
+      "time_steps": 2,
+      "neurons": 256,
+      "phase": "quantizer"
+    },
+    {
+      "id": 73,
+      "label": "RVQ q1 candidate scores",
+      "channels": 1024,
+      "time_steps": 2,
+      "neurons": 2048,
+      "phase": "quantizer"
+    },
+    {
+      "id": 74,
+      "label": "RVQ q1 code norm constants",
+      "channels": 1,
+      "time_steps": 1,
+      "neurons": 1,
+      "phase": "quantizer"
+    },
+    {
+      "id": 75,
+      "label": "RVQ q1 selected code vectors",
+      "channels": 128,
+      "time_steps": 2,
+      "neurons": 256,
+      "phase": "quantizer"
+    },
+    {
+      "id": 76,
+      "label": "RVQ q1 residual",
+      "channels": 128,
+      "time_steps": 2,
+      "neurons": 256,
+      "phase": "quantizer"
+    },
+    {
+      "id": 77,
+      "label": "RVQ accumulated sum q1",
+      "channels": 128,
+      "time_steps": 2,
+      "neurons": 256,
+      "phase": "quantizer"
+    },
+    {
+      "id": 78,
+      "label": "RVQ q2 candidate scores",
+      "channels": 1024,
+      "time_steps": 2,
+      "neurons": 2048,
+      "phase": "quantizer"
+    },
+    {
+      "id": 79,
+      "label": "RVQ q2 code norm constants",
+      "channels": 1,
+      "time_steps": 1,
+      "neurons": 1,
+      "phase": "quantizer"
+    },
+    {
+      "id": 80,
+      "label": "RVQ q2 selected code vectors",
+      "channels": 128,
+      "time_steps": 2,
+      "neurons": 256,
+      "phase": "quantizer"
+    },
+    {
+      "id": 81,
+      "label": "RVQ q2 residual",
+      "channels": 128,
+      "time_steps": 2,
+      "neurons": 256,
+      "phase": "quantizer"
+    },
+    {
+      "id": 82,
+      "label": "RVQ accumulated sum q2",
+      "channels": 128,
+      "time_steps": 2,
+      "neurons": 256,
+      "phase": "quantizer"
+    },
+    {
+      "id": 83,
+      "label": "RVQ q3 candidate scores",
+      "channels": 1024,
+      "time_steps": 2,
+      "neurons": 2048,
+      "phase": "quantizer"
+    },
+    {
+      "id": 84,
+      "label": "RVQ q3 code norm constants",
+      "channels": 1,
+      "time_steps": 1,
+      "neurons": 1,
+      "phase": "quantizer"
+    },
+    {
+      "id": 85,
+      "label": "RVQ q3 selected code vectors",
+      "channels": 128,
+      "time_steps": 2,
+      "neurons": 256,
+      "phase": "quantizer"
+    },
+    {
+      "id": 86,
+      "label": "RVQ q3 residual",
+      "channels": 128,
+      "time_steps": 2,
+      "neurons": 256,
+      "phase": "quantizer"
+    },
+    {
+      "id": 87,
+      "label": "RVQ accumulated sum q3",
+      "channels": 128,
+      "time_steps": 2,
+      "neurons": 256,
+      "phase": "quantizer"
+    },
+    {
+      "id": 88,
+      "label": "RVQ q4 candidate scores",
+      "channels": 1024,
+      "time_steps": 2,
+      "neurons": 2048,
+      "phase": "quantizer"
+    },
+    {
+      "id": 89,
+      "label": "RVQ q4 code norm constants",
+      "channels": 1,
+      "time_steps": 1,
+      "neurons": 1,
+      "phase": "quantizer"
+    },
+    {
+      "id": 90,
+      "label": "RVQ q4 selected code vectors",
+      "channels": 128,
+      "time_steps": 2,
+      "neurons": 256,
+      "phase": "quantizer"
+    },
+    {
+      "id": 91,
+      "label": "RVQ q4 residual",
+      "channels": 128,
+      "time_steps": 2,
+      "neurons": 256,
+      "phase": "quantizer"
+    },
+    {
+      "id": 92,
+      "label": "RVQ accumulated sum q4",
+      "channels": 128,
+      "time_steps": 2,
+      "neurons": 256,
+      "phase": "quantizer"
+    },
+    {
+      "id": 93,
+      "label": "RVQ q5 candidate scores",
+      "channels": 1024,
+      "time_steps": 2,
+      "neurons": 2048,
+      "phase": "quantizer"
+    },
+    {
+      "id": 94,
+      "label": "RVQ q5 code norm constants",
+      "channels": 1,
+      "time_steps": 1,
+      "neurons": 1,
+      "phase": "quantizer"
+    },
+    {
+      "id": 95,
+      "label": "RVQ q5 selected code vectors",
+      "channels": 128,
+      "time_steps": 2,
+      "neurons": 256,
+      "phase": "quantizer"
+    },
+    {
+      "id": 96,
+      "label": "RVQ q5 residual",
+      "channels": 128,
+      "time_steps": 2,
+      "neurons": 256,
+      "phase": "quantizer"
+    },
+    {
+      "id": 97,
+      "label": "RVQ accumulated sum q5",
+      "channels": 128,
+      "time_steps": 2,
+      "neurons": 256,
+      "phase": "quantizer"
+    },
+    {
+      "id": 98,
+      "label": "RVQ q6 candidate scores",
+      "channels": 1024,
+      "time_steps": 2,
+      "neurons": 2048,
+      "phase": "quantizer"
+    },
+    {
+      "id": 99,
+      "label": "RVQ q6 code norm constants",
+      "channels": 1,
+      "time_steps": 1,
+      "neurons": 1,
+      "phase": "quantizer"
+    },
+    {
+      "id": 100,
+      "label": "RVQ q6 selected code vectors",
+      "channels": 128,
+      "time_steps": 2,
+      "neurons": 256,
+      "phase": "quantizer"
+    },
+    {
+      "id": 101,
+      "label": "RVQ q6 residual",
+      "channels": 128,
+      "time_steps": 2,
+      "neurons": 256,
+      "phase": "quantizer"
+    },
+    {
+      "id": 102,
+      "label": "RVQ accumulated sum q6",
+      "channels": 128,
+      "time_steps": 2,
+      "neurons": 256,
+      "phase": "quantizer"
+    },
+    {
+      "id": 103,
+      "label": "RVQ q7 candidate scores",
+      "channels": 1024,
+      "time_steps": 2,
+      "neurons": 2048,
+      "phase": "quantizer"
+    },
+    {
+      "id": 104,
+      "label": "RVQ q7 code norm constants",
+      "channels": 1,
+      "time_steps": 1,
+      "neurons": 1,
+      "phase": "quantizer"
+    },
+    {
+      "id": 105,
+      "label": "RVQ q7 selected code vectors",
+      "channels": 128,
+      "time_steps": 2,
+      "neurons": 256,
+      "phase": "quantizer"
+    },
+    {
+      "id": 106,
+      "label": "RVQ q7 residual",
+      "channels": 128,
+      "time_steps": 2,
+      "neurons": 256,
+      "phase": "quantizer"
+    },
+    {
+      "id": 107,
+      "label": "RVQ accumulated sum q7",
+      "channels": 128,
+      "time_steps": 2,
+      "neurons": 256,
+      "phase": "quantizer"
+    },
+    {
+      "id": 108,
+      "label": "RVQ q8 candidate scores",
+      "channels": 1024,
+      "time_steps": 2,
+      "neurons": 2048,
+      "phase": "quantizer"
+    },
+    {
+      "id": 109,
+      "label": "RVQ q8 code norm constants",
+      "channels": 1,
+      "time_steps": 1,
+      "neurons": 1,
+      "phase": "quantizer"
+    },
+    {
+      "id": 110,
+      "label": "RVQ q8 selected code vectors",
+      "channels": 128,
+      "time_steps": 2,
+      "neurons": 256,
+      "phase": "quantizer"
+    },
+    {
+      "id": 111,
+      "label": "RVQ q8 residual",
+      "channels": 128,
+      "time_steps": 2,
+      "neurons": 256,
+      "phase": "quantizer"
+    },
+    {
+      "id": 112,
+      "label": "RVQ accumulated sum q8",
+      "channels": 128,
+      "time_steps": 2,
+      "neurons": 256,
+      "phase": "quantizer"
+    },
+    {
+      "id": 113,
+      "label": "RVQ q9 candidate scores",
+      "channels": 1024,
+      "time_steps": 2,
+      "neurons": 2048,
+      "phase": "quantizer"
+    },
+    {
+      "id": 114,
+      "label": "RVQ q9 code norm constants",
+      "channels": 1,
+      "time_steps": 1,
+      "neurons": 1,
+      "phase": "quantizer"
+    },
+    {
+      "id": 115,
+      "label": "RVQ q9 selected code vectors",
+      "channels": 128,
+      "time_steps": 2,
+      "neurons": 256,
+      "phase": "quantizer"
+    },
+    {
+      "id": 116,
+      "label": "RVQ q9 residual",
+      "channels": 128,
+      "time_steps": 2,
+      "neurons": 256,
+      "phase": "quantizer"
+    },
+    {
+      "id": 117,
+      "label": "RVQ accumulated sum q9",
+      "channels": 128,
+      "time_steps": 2,
+      "neurons": 256,
+      "phase": "quantizer"
+    },
+    {
+      "id": 118,
+      "label": "RVQ q10 candidate scores",
+      "channels": 1024,
+      "time_steps": 2,
+      "neurons": 2048,
+      "phase": "quantizer"
+    },
+    {
+      "id": 119,
+      "label": "RVQ q10 code norm constants",
+      "channels": 1,
+      "time_steps": 1,
+      "neurons": 1,
+      "phase": "quantizer"
+    },
+    {
+      "id": 120,
+      "label": "RVQ q10 selected code vectors",
+      "channels": 128,
+      "time_steps": 2,
+      "neurons": 256,
+      "phase": "quantizer"
+    },
+    {
+      "id": 121,
+      "label": "RVQ q10 residual",
+      "channels": 128,
+      "time_steps": 2,
+      "neurons": 256,
+      "phase": "quantizer"
+    },
+    {
+      "id": 122,
+      "label": "RVQ accumulated sum q10",
+      "channels": 128,
+      "time_steps": 2,
+      "neurons": 256,
+      "phase": "quantizer"
+    },
+    {
+      "id": 123,
+      "label": "RVQ q11 candidate scores",
+      "channels": 1024,
+      "time_steps": 2,
+      "neurons": 2048,
+      "phase": "quantizer"
+    },
+    {
+      "id": 124,
+      "label": "RVQ q11 code norm constants",
+      "channels": 1,
+      "time_steps": 1,
+      "neurons": 1,
+      "phase": "quantizer"
+    },
+    {
+      "id": 125,
+      "label": "RVQ q11 selected code vectors",
+      "channels": 128,
+      "time_steps": 2,
+      "neurons": 256,
+      "phase": "quantizer"
+    },
+    {
+      "id": 126,
+      "label": "RVQ q11 residual",
+      "channels": 128,
+      "time_steps": 2,
+      "neurons": 256,
+      "phase": "quantizer"
+    },
+    {
+      "id": 127,
+      "label": "RVQ accumulated sum q11",
+      "channels": 128,
+      "time_steps": 2,
+      "neurons": 256,
+      "phase": "quantizer"
+    },
+    {
+      "id": 128,
+      "label": "RVQ q12 candidate scores",
+      "channels": 1024,
+      "time_steps": 2,
+      "neurons": 2048,
+      "phase": "quantizer"
+    },
+    {
+      "id": 129,
+      "label": "RVQ q12 code norm constants",
+      "channels": 1,
+      "time_steps": 1,
+      "neurons": 1,
+      "phase": "quantizer"
+    },
+    {
+      "id": 130,
+      "label": "RVQ q12 selected code vectors",
+      "channels": 128,
+      "time_steps": 2,
+      "neurons": 256,
+      "phase": "quantizer"
+    },
+    {
+      "id": 131,
+      "label": "RVQ q12 residual",
+      "channels": 128,
+      "time_steps": 2,
+      "neurons": 256,
+      "phase": "quantizer"
+    },
+    {
+      "id": 132,
+      "label": "RVQ accumulated sum q12",
+      "channels": 128,
+      "time_steps": 2,
+      "neurons": 256,
+      "phase": "quantizer"
+    },
+    {
+      "id": 133,
+      "label": "RVQ q13 candidate scores",
+      "channels": 1024,
+      "time_steps": 2,
+      "neurons": 2048,
+      "phase": "quantizer"
+    },
+    {
+      "id": 134,
+      "label": "RVQ q13 code norm constants",
+      "channels": 1,
+      "time_steps": 1,
+      "neurons": 1,
+      "phase": "quantizer"
+    },
+    {
+      "id": 135,
+      "label": "RVQ q13 selected code vectors",
+      "channels": 128,
+      "time_steps": 2,
+      "neurons": 256,
+      "phase": "quantizer"
+    },
+    {
+      "id": 136,
+      "label": "RVQ q13 residual",
+      "channels": 128,
+      "time_steps": 2,
+      "neurons": 256,
+      "phase": "quantizer"
+    },
+    {
+      "id": 137,
+      "label": "RVQ accumulated sum q13",
+      "channels": 128,
+      "time_steps": 2,
+      "neurons": 256,
+      "phase": "quantizer"
+    },
+    {
+      "id": 138,
+      "label": "RVQ q14 candidate scores",
+      "channels": 1024,
+      "time_steps": 2,
+      "neurons": 2048,
+      "phase": "quantizer"
+    },
+    {
+      "id": 139,
+      "label": "RVQ q14 code norm constants",
+      "channels": 1,
+      "time_steps": 1,
+      "neurons": 1,
+      "phase": "quantizer"
+    },
+    {
+      "id": 140,
+      "label": "RVQ q14 selected code vectors",
+      "channels": 128,
+      "time_steps": 2,
+      "neurons": 256,
+      "phase": "quantizer"
+    },
+    {
+      "id": 141,
+      "label": "RVQ q14 residual",
+      "channels": 128,
+      "time_steps": 2,
+      "neurons": 256,
+      "phase": "quantizer"
+    },
+    {
+      "id": 142,
+      "label": "RVQ accumulated sum q14",
+      "channels": 128,
+      "time_steps": 2,
+      "neurons": 256,
+      "phase": "quantizer"
+    },
+    {
+      "id": 143,
+      "label": "RVQ q15 candidate scores",
+      "channels": 1024,
+      "time_steps": 2,
+      "neurons": 2048,
+      "phase": "quantizer"
+    },
+    {
+      "id": 144,
+      "label": "RVQ q15 code norm constants",
+      "channels": 1,
+      "time_steps": 1,
+      "neurons": 1,
+      "phase": "quantizer"
+    },
+    {
+      "id": 145,
+      "label": "RVQ q15 selected code vectors",
+      "channels": 128,
+      "time_steps": 2,
+      "neurons": 256,
+      "phase": "quantizer"
+    },
+    {
+      "id": 146,
+      "label": "RVQ q15 residual",
+      "channels": 128,
+      "time_steps": 2,
+      "neurons": 256,
+      "phase": "quantizer"
+    },
+    {
+      "id": 147,
+      "label": "RVQ accumulated sum q15",
+      "channels": 128,
+      "time_steps": 2,
+      "neurons": 256,
+      "phase": "quantizer"
+    },
+    {
+      "id": 148,
+      "label": "RVQ q16 candidate scores",
+      "channels": 1024,
+      "time_steps": 2,
+      "neurons": 2048,
+      "phase": "quantizer"
+    },
+    {
+      "id": 149,
+      "label": "RVQ q16 code norm constants",
+      "channels": 1,
+      "time_steps": 1,
+      "neurons": 1,
+      "phase": "quantizer"
+    },
+    {
+      "id": 150,
+      "label": "RVQ q16 selected code vectors",
+      "channels": 128,
+      "time_steps": 2,
+      "neurons": 256,
+      "phase": "quantizer"
+    },
+    {
+      "id": 151,
+      "label": "RVQ q16 residual",
+      "channels": 128,
+      "time_steps": 2,
+      "neurons": 256,
+      "phase": "quantizer"
+    },
+    {
+      "id": 152,
+      "label": "RVQ accumulated sum q16",
+      "channels": 128,
+      "time_steps": 2,
+      "neurons": 256,
+      "phase": "quantizer"
+    },
+    {
+      "id": 153,
+      "label": "RVQ q17 candidate scores",
+      "channels": 1024,
+      "time_steps": 2,
+      "neurons": 2048,
+      "phase": "quantizer"
+    },
+    {
+      "id": 154,
+      "label": "RVQ q17 code norm constants",
+      "channels": 1,
+      "time_steps": 1,
+      "neurons": 1,
+      "phase": "quantizer"
+    },
+    {
+      "id": 155,
+      "label": "RVQ q17 selected code vectors",
+      "channels": 128,
+      "time_steps": 2,
+      "neurons": 256,
+      "phase": "quantizer"
+    },
+    {
+      "id": 156,
+      "label": "RVQ q17 residual",
+      "channels": 128,
+      "time_steps": 2,
+      "neurons": 256,
+      "phase": "quantizer"
+    },
+    {
+      "id": 157,
+      "label": "RVQ accumulated sum q17",
+      "channels": 128,
+      "time_steps": 2,
+      "neurons": 256,
+      "phase": "quantizer"
+    },
+    {
+      "id": 158,
+      "label": "RVQ q18 candidate scores",
+      "channels": 1024,
+      "time_steps": 2,
+      "neurons": 2048,
+      "phase": "quantizer"
+    },
+    {
+      "id": 159,
+      "label": "RVQ q18 code norm constants",
+      "channels": 1,
+      "time_steps": 1,
+      "neurons": 1,
+      "phase": "quantizer"
+    },
+    {
+      "id": 160,
+      "label": "RVQ q18 selected code vectors",
+      "channels": 128,
+      "time_steps": 2,
+      "neurons": 256,
+      "phase": "quantizer"
+    },
+    {
+      "id": 161,
+      "label": "RVQ q18 residual",
+      "channels": 128,
+      "time_steps": 2,
+      "neurons": 256,
+      "phase": "quantizer"
+    },
+    {
+      "id": 162,
+      "label": "RVQ accumulated sum q18",
+      "channels": 128,
+      "time_steps": 2,
+      "neurons": 256,
+      "phase": "quantizer"
+    },
+    {
+      "id": 163,
+      "label": "RVQ q19 candidate scores",
+      "channels": 1024,
+      "time_steps": 2,
+      "neurons": 2048,
+      "phase": "quantizer"
+    },
+    {
+      "id": 164,
+      "label": "RVQ q19 code norm constants",
+      "channels": 1,
+      "time_steps": 1,
+      "neurons": 1,
+      "phase": "quantizer"
+    },
+    {
+      "id": 165,
+      "label": "RVQ q19 selected code vectors",
+      "channels": 128,
+      "time_steps": 2,
+      "neurons": 256,
+      "phase": "quantizer"
+    },
+    {
+      "id": 166,
+      "label": "RVQ q19 residual",
+      "channels": 128,
+      "time_steps": 2,
+      "neurons": 256,
+      "phase": "quantizer"
+    },
+    {
+      "id": 167,
+      "label": "RVQ accumulated sum q19",
+      "channels": 128,
+      "time_steps": 2,
+      "neurons": 256,
+      "phase": "quantizer"
+    },
+    {
+      "id": 168,
+      "label": "RVQ q20 candidate scores",
+      "channels": 1024,
+      "time_steps": 2,
+      "neurons": 2048,
+      "phase": "quantizer"
+    },
+    {
+      "id": 169,
+      "label": "RVQ q20 code norm constants",
+      "channels": 1,
+      "time_steps": 1,
+      "neurons": 1,
+      "phase": "quantizer"
+    },
+    {
+      "id": 170,
+      "label": "RVQ q20 selected code vectors",
+      "channels": 128,
+      "time_steps": 2,
+      "neurons": 256,
+      "phase": "quantizer"
+    },
+    {
+      "id": 171,
+      "label": "RVQ q20 residual",
+      "channels": 128,
+      "time_steps": 2,
+      "neurons": 256,
+      "phase": "quantizer"
+    },
+    {
+      "id": 172,
+      "label": "RVQ accumulated sum q20",
+      "channels": 128,
+      "time_steps": 2,
+      "neurons": 256,
+      "phase": "quantizer"
+    },
+    {
+      "id": 173,
+      "label": "RVQ q21 candidate scores",
+      "channels": 1024,
+      "time_steps": 2,
+      "neurons": 2048,
+      "phase": "quantizer"
+    },
+    {
+      "id": 174,
+      "label": "RVQ q21 code norm constants",
+      "channels": 1,
+      "time_steps": 1,
+      "neurons": 1,
+      "phase": "quantizer"
+    },
+    {
+      "id": 175,
+      "label": "RVQ q21 selected code vectors",
+      "channels": 128,
+      "time_steps": 2,
+      "neurons": 256,
+      "phase": "quantizer"
+    },
+    {
+      "id": 176,
+      "label": "RVQ q21 residual",
+      "channels": 128,
+      "time_steps": 2,
+      "neurons": 256,
+      "phase": "quantizer"
+    },
+    {
+      "id": 177,
+      "label": "RVQ accumulated sum q21",
+      "channels": 128,
+      "time_steps": 2,
+      "neurons": 256,
+      "phase": "quantizer"
+    },
+    {
+      "id": 178,
+      "label": "RVQ q22 candidate scores",
+      "channels": 1024,
+      "time_steps": 2,
+      "neurons": 2048,
+      "phase": "quantizer"
+    },
+    {
+      "id": 179,
+      "label": "RVQ q22 code norm constants",
+      "channels": 1,
+      "time_steps": 1,
+      "neurons": 1,
+      "phase": "quantizer"
+    },
+    {
+      "id": 180,
+      "label": "RVQ q22 selected code vectors",
+      "channels": 128,
+      "time_steps": 2,
+      "neurons": 256,
+      "phase": "quantizer"
+    },
+    {
+      "id": 181,
+      "label": "RVQ q22 residual",
+      "channels": 128,
+      "time_steps": 2,
+      "neurons": 256,
+      "phase": "quantizer"
+    },
+    {
+      "id": 182,
+      "label": "RVQ accumulated sum q22",
+      "channels": 128,
+      "time_steps": 2,
+      "neurons": 256,
+      "phase": "quantizer"
+    },
+    {
+      "id": 183,
+      "label": "RVQ q23 candidate scores",
+      "channels": 1024,
+      "time_steps": 2,
+      "neurons": 2048,
+      "phase": "quantizer"
+    },
+    {
+      "id": 184,
+      "label": "RVQ q23 code norm constants",
+      "channels": 1,
+      "time_steps": 1,
+      "neurons": 1,
+      "phase": "quantizer"
+    },
+    {
+      "id": 185,
+      "label": "RVQ q23 selected code vectors",
+      "channels": 128,
+      "time_steps": 2,
+      "neurons": 256,
+      "phase": "quantizer"
+    },
+    {
+      "id": 186,
+      "label": "RVQ q23 residual",
+      "channels": 128,
+      "time_steps": 2,
+      "neurons": 256,
+      "phase": "quantizer"
+    },
+    {
+      "id": 187,
+      "label": "RVQ accumulated sum q23",
+      "channels": 128,
+      "time_steps": 2,
+      "neurons": 256,
+      "phase": "quantizer"
+    },
+    {
+      "id": 188,
+      "label": "RVQ q24 candidate scores",
+      "channels": 1024,
+      "time_steps": 2,
+      "neurons": 2048,
+      "phase": "quantizer"
+    },
+    {
+      "id": 189,
+      "label": "RVQ q24 code norm constants",
+      "channels": 1,
+      "time_steps": 1,
+      "neurons": 1,
+      "phase": "quantizer"
+    },
+    {
+      "id": 190,
+      "label": "RVQ q24 selected code vectors",
+      "channels": 128,
+      "time_steps": 2,
+      "neurons": 256,
+      "phase": "quantizer"
+    },
+    {
+      "id": 191,
+      "label": "RVQ q24 residual",
+      "channels": 128,
+      "time_steps": 2,
+      "neurons": 256,
+      "phase": "quantizer"
+    },
+    {
+      "id": 192,
+      "label": "RVQ accumulated sum q24",
+      "channels": 128,
+      "time_steps": 2,
+      "neurons": 256,
+      "phase": "quantizer"
+    },
+    {
+      "id": 193,
+      "label": "RVQ q25 candidate scores",
+      "channels": 1024,
+      "time_steps": 2,
+      "neurons": 2048,
+      "phase": "quantizer"
+    },
+    {
+      "id": 194,
+      "label": "RVQ q25 code norm constants",
+      "channels": 1,
+      "time_steps": 1,
+      "neurons": 1,
+      "phase": "quantizer"
+    },
+    {
+      "id": 195,
+      "label": "RVQ q25 selected code vectors",
+      "channels": 128,
+      "time_steps": 2,
+      "neurons": 256,
+      "phase": "quantizer"
+    },
+    {
+      "id": 196,
+      "label": "RVQ q25 residual",
+      "channels": 128,
+      "time_steps": 2,
+      "neurons": 256,
+      "phase": "quantizer"
+    },
+    {
+      "id": 197,
+      "label": "RVQ accumulated sum q25",
+      "channels": 128,
+      "time_steps": 2,
+      "neurons": 256,
+      "phase": "quantizer"
+    },
+    {
+      "id": 198,
+      "label": "RVQ q26 candidate scores",
+      "channels": 1024,
+      "time_steps": 2,
+      "neurons": 2048,
+      "phase": "quantizer"
+    },
+    {
+      "id": 199,
+      "label": "RVQ q26 code norm constants",
+      "channels": 1,
+      "time_steps": 1,
+      "neurons": 1,
+      "phase": "quantizer"
+    },
+    {
+      "id": 200,
+      "label": "RVQ q26 selected code vectors",
+      "channels": 128,
+      "time_steps": 2,
+      "neurons": 256,
+      "phase": "quantizer"
+    },
+    {
+      "id": 201,
+      "label": "RVQ q26 residual",
+      "channels": 128,
+      "time_steps": 2,
+      "neurons": 256,
+      "phase": "quantizer"
+    },
+    {
+      "id": 202,
+      "label": "RVQ accumulated sum q26",
+      "channels": 128,
+      "time_steps": 2,
+      "neurons": 256,
+      "phase": "quantizer"
+    },
+    {
+      "id": 203,
+      "label": "RVQ q27 candidate scores",
+      "channels": 1024,
+      "time_steps": 2,
+      "neurons": 2048,
+      "phase": "quantizer"
+    },
+    {
+      "id": 204,
+      "label": "RVQ q27 code norm constants",
+      "channels": 1,
+      "time_steps": 1,
+      "neurons": 1,
+      "phase": "quantizer"
+    },
+    {
+      "id": 205,
+      "label": "RVQ q27 selected code vectors",
+      "channels": 128,
+      "time_steps": 2,
+      "neurons": 256,
+      "phase": "quantizer"
+    },
+    {
+      "id": 206,
+      "label": "RVQ q27 residual",
+      "channels": 128,
+      "time_steps": 2,
+      "neurons": 256,
+      "phase": "quantizer"
+    },
+    {
+      "id": 207,
+      "label": "RVQ accumulated sum q27",
+      "channels": 128,
+      "time_steps": 2,
+      "neurons": 256,
+      "phase": "quantizer"
+    },
+    {
+      "id": 208,
+      "label": "RVQ q28 candidate scores",
+      "channels": 1024,
+      "time_steps": 2,
+      "neurons": 2048,
+      "phase": "quantizer"
+    },
+    {
+      "id": 209,
+      "label": "RVQ q28 code norm constants",
+      "channels": 1,
+      "time_steps": 1,
+      "neurons": 1,
+      "phase": "quantizer"
+    },
+    {
+      "id": 210,
+      "label": "RVQ q28 selected code vectors",
+      "channels": 128,
+      "time_steps": 2,
+      "neurons": 256,
+      "phase": "quantizer"
+    },
+    {
+      "id": 211,
+      "label": "RVQ q28 residual",
+      "channels": 128,
+      "time_steps": 2,
+      "neurons": 256,
+      "phase": "quantizer"
+    },
+    {
+      "id": 212,
+      "label": "RVQ accumulated sum q28",
+      "channels": 128,
+      "time_steps": 2,
+      "neurons": 256,
+      "phase": "quantizer"
+    },
+    {
+      "id": 213,
+      "label": "RVQ q29 candidate scores",
+      "channels": 1024,
+      "time_steps": 2,
+      "neurons": 2048,
+      "phase": "quantizer"
+    },
+    {
+      "id": 214,
+      "label": "RVQ q29 code norm constants",
+      "channels": 1,
+      "time_steps": 1,
+      "neurons": 1,
+      "phase": "quantizer"
+    },
+    {
+      "id": 215,
+      "label": "RVQ q29 selected code vectors",
+      "channels": 128,
+      "time_steps": 2,
+      "neurons": 256,
+      "phase": "quantizer"
+    },
+    {
+      "id": 216,
+      "label": "RVQ q29 residual",
+      "channels": 128,
+      "time_steps": 2,
+      "neurons": 256,
+      "phase": "quantizer"
+    },
+    {
+      "id": 217,
+      "label": "RVQ accumulated sum q29",
+      "channels": 128,
+      "time_steps": 2,
+      "neurons": 256,
+      "phase": "quantizer"
+    },
+    {
+      "id": 218,
+      "label": "RVQ q30 candidate scores",
+      "channels": 1024,
+      "time_steps": 2,
+      "neurons": 2048,
+      "phase": "quantizer"
+    },
+    {
+      "id": 219,
+      "label": "RVQ q30 code norm constants",
+      "channels": 1,
+      "time_steps": 1,
+      "neurons": 1,
+      "phase": "quantizer"
+    },
+    {
+      "id": 220,
+      "label": "RVQ q30 selected code vectors",
+      "channels": 128,
+      "time_steps": 2,
+      "neurons": 256,
+      "phase": "quantizer"
+    },
+    {
+      "id": 221,
+      "label": "RVQ q30 residual",
+      "channels": 128,
+      "time_steps": 2,
+      "neurons": 256,
+      "phase": "quantizer"
+    },
+    {
+      "id": 222,
+      "label": "RVQ accumulated sum q30",
+      "channels": 128,
+      "time_steps": 2,
+      "neurons": 256,
+      "phase": "quantizer"
+    },
+    {
+      "id": 223,
+      "label": "RVQ q31 candidate scores",
+      "channels": 1024,
+      "time_steps": 2,
+      "neurons": 2048,
+      "phase": "quantizer"
+    },
+    {
+      "id": 224,
+      "label": "RVQ q31 code norm constants",
+      "channels": 1,
+      "time_steps": 1,
+      "neurons": 1,
+      "phase": "quantizer"
+    },
+    {
+      "id": 225,
+      "label": "RVQ q31 selected code vectors",
+      "channels": 128,
+      "time_steps": 2,
+      "neurons": 256,
+      "phase": "quantizer"
+    },
+    {
+      "id": 226,
+      "label": "RVQ q31 residual",
+      "channels": 128,
+      "time_steps": 2,
+      "neurons": 256,
+      "phase": "quantizer"
+    },
+    {
+      "id": 227,
+      "label": "RVQ accumulated sum q31",
+      "channels": 128,
+      "time_steps": 2,
+      "neurons": 256,
+      "phase": "quantizer"
+    },
+    {
+      "id": 228,
+      "label": "dec latent conv",
+      "channels": 512,
+      "time_steps": 2,
+      "neurons": 1024,
+      "phase": "decoder"
+    },
+    {
+      "id": 229,
+      "label": "dec latent conv bias",
+      "channels": 1,
+      "time_steps": 1,
+      "neurons": 1,
+      "phase": "decoder"
+    },
+    {
+      "id": 230,
+      "label": "dec LSTM 0 h\u208b\u2081=0",
+      "channels": 512,
+      "time_steps": 1,
+      "neurons": 512,
+      "phase": "decoder"
+    },
+    {
+      "id": 231,
+      "label": "dec LSTM 0 c\u208b\u2081=0",
+      "channels": 512,
+      "time_steps": 1,
+      "neurons": 512,
+      "phase": "decoder"
+    },
+    {
+      "id": 232,
+      "label": "dec LSTM 1 h\u208b\u2081=0",
+      "channels": 512,
+      "time_steps": 1,
+      "neurons": 512,
+      "phase": "decoder"
+    },
+    {
+      "id": 233,
+      "label": "dec LSTM 1 c\u208b\u2081=0",
+      "channels": 512,
+      "time_steps": 1,
+      "neurons": 512,
+      "phase": "decoder"
+    },
+    {
+      "id": 234,
+      "label": "dec LSTM t0 layer0 gates",
+      "channels": 2048,
+      "time_steps": 1,
+      "neurons": 2048,
+      "phase": "decoder"
+    },
+    {
+      "id": 235,
+      "label": "dec LSTM bias t0 l0",
+      "channels": 1,
+      "time_steps": 1,
+      "neurons": 1,
+      "phase": "decoder"
+    },
+    {
+      "id": 236,
+      "label": "dec LSTM bias t0 l0",
+      "channels": 1,
+      "time_steps": 1,
+      "neurons": 1,
+      "phase": "decoder"
+    },
+    {
+      "id": 237,
+      "label": "dec LSTM t0 layer0 cell",
+      "channels": 512,
+      "time_steps": 1,
+      "neurons": 512,
+      "phase": "decoder"
+    },
+    {
+      "id": 238,
+      "label": "dec LSTM t0 layer0 hidden",
+      "channels": 512,
+      "time_steps": 1,
+      "neurons": 512,
+      "phase": "decoder"
+    },
+    {
+      "id": 239,
+      "label": "dec LSTM t0 layer1 gates",
+      "channels": 2048,
+      "time_steps": 1,
+      "neurons": 2048,
+      "phase": "decoder"
+    },
+    {
+      "id": 240,
+      "label": "dec LSTM bias t0 l1",
+      "channels": 1,
+      "time_steps": 1,
+      "neurons": 1,
+      "phase": "decoder"
+    },
+    {
+      "id": 241,
+      "label": "dec LSTM bias t0 l1",
+      "channels": 1,
+      "time_steps": 1,
+      "neurons": 1,
+      "phase": "decoder"
+    },
+    {
+      "id": 242,
+      "label": "dec LSTM t0 layer1 cell",
+      "channels": 512,
+      "time_steps": 1,
+      "neurons": 512,
+      "phase": "decoder"
+    },
+    {
+      "id": 243,
+      "label": "dec LSTM t0 layer1 hidden",
+      "channels": 512,
+      "time_steps": 1,
+      "neurons": 512,
+      "phase": "decoder"
+    },
+    {
+      "id": 244,
+      "label": "dec LSTM t0 residual output",
+      "channels": 512,
+      "time_steps": 1,
+      "neurons": 512,
+      "phase": "decoder"
+    },
+    {
+      "id": 245,
+      "label": "dec LSTM t1 layer0 gates",
+      "channels": 2048,
+      "time_steps": 1,
+      "neurons": 2048,
+      "phase": "decoder"
+    },
+    {
+      "id": 246,
+      "label": "dec LSTM bias t1 l0",
+      "channels": 1,
+      "time_steps": 1,
+      "neurons": 1,
+      "phase": "decoder"
+    },
+    {
+      "id": 247,
+      "label": "dec LSTM bias t1 l0",
+      "channels": 1,
+      "time_steps": 1,
+      "neurons": 1,
+      "phase": "decoder"
+    },
+    {
+      "id": 248,
+      "label": "dec LSTM t1 layer0 cell",
+      "channels": 512,
+      "time_steps": 1,
+      "neurons": 512,
+      "phase": "decoder"
+    },
+    {
+      "id": 249,
+      "label": "dec LSTM t1 layer0 hidden",
+      "channels": 512,
+      "time_steps": 1,
+      "neurons": 512,
+      "phase": "decoder"
+    },
+    {
+      "id": 250,
+      "label": "dec LSTM t1 layer1 gates",
+      "channels": 2048,
+      "time_steps": 1,
+      "neurons": 2048,
+      "phase": "decoder"
+    },
+    {
+      "id": 251,
+      "label": "dec LSTM bias t1 l1",
+      "channels": 1,
+      "time_steps": 1,
+      "neurons": 1,
+      "phase": "decoder"
+    },
+    {
+      "id": 252,
+      "label": "dec LSTM bias t1 l1",
+      "channels": 1,
+      "time_steps": 1,
+      "neurons": 1,
+      "phase": "decoder"
+    },
+    {
+      "id": 253,
+      "label": "dec LSTM t1 layer1 cell",
+      "channels": 512,
+      "time_steps": 1,
+      "neurons": 512,
+      "phase": "decoder"
+    },
+    {
+      "id": 254,
+      "label": "dec LSTM t1 layer1 hidden",
+      "channels": 512,
+      "time_steps": 1,
+      "neurons": 512,
+      "phase": "decoder"
+    },
+    {
+      "id": 255,
+      "label": "dec LSTM t1 residual output",
+      "channels": 512,
+      "time_steps": 1,
+      "neurons": 512,
+      "phase": "decoder"
+    },
+    {
+      "id": 256,
+      "label": "decoder LSTM output",
+      "channels": 512,
+      "time_steps": 2,
+      "neurons": 1024,
+      "phase": "decoder"
+    },
+    {
+      "id": 257,
+      "label": "dec up \u00d78",
+      "channels": 256,
+      "time_steps": 16,
+      "neurons": 4096,
+      "phase": "decoder"
+    },
+    {
+      "id": 258,
+      "label": "dec up \u00d78 bias",
+      "channels": 1,
+      "time_steps": 1,
+      "neurons": 1,
+      "phase": "decoder"
+    },
+    {
+      "id": 259,
+      "label": "dec res 0 resconv 3",
+      "channels": 128,
+      "time_steps": 16,
+      "neurons": 2048,
+      "phase": "decoder"
+    },
+    {
+      "id": 260,
+      "label": "dec res 0 resconv 3 bias",
+      "channels": 1,
+      "time_steps": 1,
+      "neurons": 1,
+      "phase": "decoder"
+    },
+    {
+      "id": 261,
+      "label": "dec res 0 resconv 1",
+      "channels": 256,
+      "time_steps": 16,
+      "neurons": 4096,
+      "phase": "decoder"
+    },
+    {
+      "id": 262,
+      "label": "dec res 0 resconv 1 bias",
+      "channels": 1,
+      "time_steps": 1,
+      "neurons": 1,
+      "phase": "decoder"
+    },
+    {
+      "id": 263,
+      "label": "dec res 0 shortcut 1",
+      "channels": 256,
+      "time_steps": 16,
+      "neurons": 4096,
+      "phase": "decoder"
+    },
+    {
+      "id": 264,
+      "label": "dec res 0 shortcut 1 bias",
+      "channels": 1,
+      "time_steps": 1,
+      "neurons": 1,
+      "phase": "decoder"
+    },
+    {
+      "id": 265,
+      "label": "dec res 0 residual sum",
+      "channels": 256,
+      "time_steps": 16,
+      "neurons": 4096,
+      "phase": "decoder"
+    },
+    {
+      "id": 266,
+      "label": "dec up \u00d75",
+      "channels": 128,
+      "time_steps": 80,
+      "neurons": 10240,
+      "phase": "decoder"
+    },
+    {
+      "id": 267,
+      "label": "dec up \u00d75 bias",
+      "channels": 1,
+      "time_steps": 1,
+      "neurons": 1,
+      "phase": "decoder"
+    },
+    {
+      "id": 268,
+      "label": "dec res 1 resconv 3",
+      "channels": 64,
+      "time_steps": 80,
+      "neurons": 5120,
+      "phase": "decoder"
+    },
+    {
+      "id": 269,
+      "label": "dec res 1 resconv 3 bias",
+      "channels": 1,
+      "time_steps": 1,
+      "neurons": 1,
+      "phase": "decoder"
+    },
+    {
+      "id": 270,
+      "label": "dec res 1 resconv 1",
+      "channels": 128,
+      "time_steps": 80,
+      "neurons": 10240,
+      "phase": "decoder"
+    },
+    {
+      "id": 271,
+      "label": "dec res 1 resconv 1 bias",
+      "channels": 1,
+      "time_steps": 1,
+      "neurons": 1,
+      "phase": "decoder"
+    },
+    {
+      "id": 272,
+      "label": "dec res 1 shortcut 1",
+      "channels": 128,
+      "time_steps": 80,
+      "neurons": 10240,
+      "phase": "decoder"
+    },
+    {
+      "id": 273,
+      "label": "dec res 1 shortcut 1 bias",
+      "channels": 1,
+      "time_steps": 1,
+      "neurons": 1,
+      "phase": "decoder"
+    },
+    {
+      "id": 274,
+      "label": "dec res 1 residual sum",
+      "channels": 128,
+      "time_steps": 80,
+      "neurons": 10240,
+      "phase": "decoder"
+    },
+    {
+      "id": 275,
+      "label": "dec up \u00d74",
+      "channels": 64,
+      "time_steps": 320,
+      "neurons": 20480,
+      "phase": "decoder"
+    },
+    {
+      "id": 276,
+      "label": "dec up \u00d74 bias",
+      "channels": 1,
+      "time_steps": 1,
+      "neurons": 1,
+      "phase": "decoder"
+    },
+    {
+      "id": 277,
+      "label": "dec res 2 resconv 3",
+      "channels": 32,
+      "time_steps": 320,
+      "neurons": 10240,
+      "phase": "decoder"
+    },
+    {
+      "id": 278,
+      "label": "dec res 2 resconv 3 bias",
+      "channels": 1,
+      "time_steps": 1,
+      "neurons": 1,
+      "phase": "decoder"
+    },
+    {
+      "id": 279,
+      "label": "dec res 2 resconv 1",
+      "channels": 64,
+      "time_steps": 320,
+      "neurons": 20480,
+      "phase": "decoder"
+    },
+    {
+      "id": 280,
+      "label": "dec res 2 resconv 1 bias",
+      "channels": 1,
+      "time_steps": 1,
+      "neurons": 1,
+      "phase": "decoder"
+    },
+    {
+      "id": 281,
+      "label": "dec res 2 shortcut 1",
+      "channels": 64,
+      "time_steps": 320,
+      "neurons": 20480,
+      "phase": "decoder"
+    },
+    {
+      "id": 282,
+      "label": "dec res 2 shortcut 1 bias",
+      "channels": 1,
+      "time_steps": 1,
+      "neurons": 1,
+      "phase": "decoder"
+    },
+    {
+      "id": 283,
+      "label": "dec res 2 residual sum",
+      "channels": 64,
+      "time_steps": 320,
+      "neurons": 20480,
+      "phase": "decoder"
+    },
+    {
+      "id": 284,
+      "label": "dec up \u00d72",
+      "channels": 32,
+      "time_steps": 640,
+      "neurons": 20480,
+      "phase": "decoder"
+    },
+    {
+      "id": 285,
+      "label": "dec up \u00d72 bias",
+      "channels": 1,
+      "time_steps": 1,
+      "neurons": 1,
+      "phase": "decoder"
+    },
+    {
+      "id": 286,
+      "label": "dec res 3 resconv 3",
+      "channels": 16,
+      "time_steps": 640,
+      "neurons": 10240,
+      "phase": "decoder"
+    },
+    {
+      "id": 287,
+      "label": "dec res 3 resconv 3 bias",
+      "channels": 1,
+      "time_steps": 1,
+      "neurons": 1,
+      "phase": "decoder"
+    },
+    {
+      "id": 288,
+      "label": "dec res 3 resconv 1",
+      "channels": 32,
+      "time_steps": 640,
+      "neurons": 20480,
+      "phase": "decoder"
+    },
+    {
+      "id": 289,
+      "label": "dec res 3 resconv 1 bias",
+      "channels": 1,
+      "time_steps": 1,
+      "neurons": 1,
+      "phase": "decoder"
+    },
+    {
+      "id": 290,
+      "label": "dec res 3 shortcut 1",
+      "channels": 32,
+      "time_steps": 640,
+      "neurons": 20480,
+      "phase": "decoder"
+    },
+    {
+      "id": 291,
+      "label": "dec res 3 shortcut 1 bias",
+      "channels": 1,
+      "time_steps": 1,
+      "neurons": 1,
+      "phase": "decoder"
+    },
+    {
+      "id": 292,
+      "label": "dec res 3 residual sum",
+      "channels": 32,
+      "time_steps": 640,
+      "neurons": 20480,
+      "phase": "decoder"
+    },
+    {
+      "id": 293,
+      "label": "waveform output",
+      "channels": 1,
+      "time_steps": 640,
+      "neurons": 640,
+      "phase": "decoder"
+    },
+    {
+      "id": 294,
+      "label": "waveform output bias",
+      "channels": 1,
+      "time_steps": 1,
+      "neurons": 1,
+      "phase": "decoder"
+    }
+  ],
+  "edges": [
+    {
+      "source_index": 0,
+      "target_index": 1,
+      "weight_tensors": [
+        "encoder.layers.0.conv.weight_v",
+        "encoder.layers.0.conv.weight_g"
+      ],
+      "connections": 143360,
+      "routes": 576,
+      "source_endpoint_bins": 24,
+      "target_endpoint_bins": 24,
+      "description": "causal reflect Conv1d k=7, dilation=1, stride=1, input=640, output=640"
+    },
+    {
+      "source_index": 2,
+      "target_index": 1,
+      "weight_tensors": [
+        "encoder.layers.0.conv.bias"
+      ],
+      "connections": 20480,
+      "routes": 24,
+      "source_endpoint_bins": 1,
+      "target_endpoint_bins": 24,
+      "description": "bias broadcast over 640 time steps"
+    },
+    {
+      "source_index": 1,
+      "target_index": 3,
+      "weight_tensors": [
+        "encoder.layers.1.block.1.conv.weight_v",
+        "encoder.layers.1.block.1.conv.weight_g"
+      ],
+      "connections": 983040,
+      "routes": 576,
+      "source_endpoint_bins": 24,
+      "target_endpoint_bins": 24,
+      "description": "causal reflect Conv1d k=3, dilation=1, stride=1, input=640, output=640"
+    },
+    {
+      "source_index": 4,
+      "target_index": 3,
+      "weight_tensors": [
+        "encoder.layers.1.block.1.conv.bias"
+      ],
+      "connections": 10240,
+      "routes": 24,
+      "source_endpoint_bins": 1,
+      "target_endpoint_bins": 24,
+      "description": "bias broadcast over 640 time steps"
+    },
+    {
+      "source_index": 3,
+      "target_index": 5,
+      "weight_tensors": [
+        "encoder.layers.1.block.3.conv.weight_v",
+        "encoder.layers.1.block.3.conv.weight_g"
+      ],
+      "connections": 327680,
+      "routes": 576,
+      "source_endpoint_bins": 24,
+      "target_endpoint_bins": 24,
+      "description": "causal reflect Conv1d k=1, dilation=1, stride=1, input=640, output=640"
+    },
+    {
+      "source_index": 6,
+      "target_index": 5,
+      "weight_tensors": [
+        "encoder.layers.1.block.3.conv.bias"
+      ],
+      "connections": 20480,
+      "routes": 24,
+      "source_endpoint_bins": 1,
+      "target_endpoint_bins": 24,
+      "description": "bias broadcast over 640 time steps"
+    },
+    {
+      "source_index": 1,
+      "target_index": 7,
+      "weight_tensors": [
+        "encoder.layers.1.shortcut.conv.weight_v",
+        "encoder.layers.1.shortcut.conv.weight_g"
+      ],
+      "connections": 655360,
+      "routes": 576,
+      "source_endpoint_bins": 24,
+      "target_endpoint_bins": 24,
+      "description": "causal reflect Conv1d k=1, dilation=1, stride=1, input=640, output=640"
+    },
+    {
+      "source_index": 8,
+      "target_index": 7,
+      "weight_tensors": [
+        "encoder.layers.1.shortcut.conv.bias"
+      ],
+      "connections": 20480,
+      "routes": 24,
+      "source_endpoint_bins": 1,
+      "target_endpoint_bins": 24,
+      "description": "bias broadcast over 640 time steps"
+    },
+    {
+      "source_index": 7,
+      "target_index": 9,
+      "weight_tensors": [],
+      "connections": 20480,
+      "routes": 24,
+      "source_endpoint_bins": 24,
+      "target_endpoint_bins": 24,
+      "description": "residual shortcut projection branch"
+    },
+    {
+      "source_index": 5,
+      "target_index": 9,
+      "weight_tensors": [],
+      "connections": 20480,
+      "routes": 24,
+      "source_endpoint_bins": 24,
+      "target_endpoint_bins": 24,
+      "description": "residual conv branch"
+    },
+    {
+      "source_index": 9,
+      "target_index": 10,
+      "weight_tensors": [
+        "encoder.layers.3.conv.weight_v",
+        "encoder.layers.3.conv.weight_g"
+      ],
+      "connections": 2621440,
+      "routes": 576,
+      "source_endpoint_bins": 24,
+      "target_endpoint_bins": 24,
+      "description": "causal reflect Conv1d k=4, dilation=1, stride=2, input=640, output=320"
+    },
+    {
+      "source_index": 11,
+      "target_index": 10,
+      "weight_tensors": [
+        "encoder.layers.3.conv.bias"
+      ],
+      "connections": 20480,
+      "routes": 24,
+      "source_endpoint_bins": 1,
+      "target_endpoint_bins": 24,
+      "description": "bias broadcast over 320 time steps"
+    },
+    {
+      "source_index": 10,
+      "target_index": 12,
+      "weight_tensors": [
+        "encoder.layers.4.block.1.conv.weight_v",
+        "encoder.layers.4.block.1.conv.weight_g"
+      ],
+      "connections": 1966080,
+      "routes": 576,
+      "source_endpoint_bins": 24,
+      "target_endpoint_bins": 24,
+      "description": "causal reflect Conv1d k=3, dilation=1, stride=1, input=320, output=320"
+    },
+    {
+      "source_index": 13,
+      "target_index": 12,
+      "weight_tensors": [
+        "encoder.layers.4.block.1.conv.bias"
+      ],
+      "connections": 10240,
+      "routes": 24,
+      "source_endpoint_bins": 1,
+      "target_endpoint_bins": 24,
+      "description": "bias broadcast over 320 time steps"
+    },
+    {
+      "source_index": 12,
+      "target_index": 14,
+      "weight_tensors": [
+        "encoder.layers.4.block.3.conv.weight_v",
+        "encoder.layers.4.block.3.conv.weight_g"
+      ],
+      "connections": 655360,
+      "routes": 576,
+      "source_endpoint_bins": 24,
+      "target_endpoint_bins": 24,
+      "description": "causal reflect Conv1d k=1, dilation=1, stride=1, input=320, output=320"
+    },
+    {
+      "source_index": 15,
+      "target_index": 14,
+      "weight_tensors": [
+        "encoder.layers.4.block.3.conv.bias"
+      ],
+      "connections": 20480,
+      "routes": 24,
+      "source_endpoint_bins": 1,
+      "target_endpoint_bins": 24,
+      "description": "bias broadcast over 320 time steps"
+    },
+    {
+      "source_index": 10,
+      "target_index": 16,
+      "weight_tensors": [
+        "encoder.layers.4.shortcut.conv.weight_v",
+        "encoder.layers.4.shortcut.conv.weight_g"
+      ],
+      "connections": 1310720,
+      "routes": 576,
+      "source_endpoint_bins": 24,
+      "target_endpoint_bins": 24,
+      "description": "causal reflect Conv1d k=1, dilation=1, stride=1, input=320, output=320"
+    },
+    {
+      "source_index": 17,
+      "target_index": 16,
+      "weight_tensors": [
+        "encoder.layers.4.shortcut.conv.bias"
+      ],
+      "connections": 20480,
+      "routes": 24,
+      "source_endpoint_bins": 1,
+      "target_endpoint_bins": 24,
+      "description": "bias broadcast over 320 time steps"
+    },
+    {
+      "source_index": 16,
+      "target_index": 18,
+      "weight_tensors": [],
+      "connections": 20480,
+      "routes": 24,
+      "source_endpoint_bins": 24,
+      "target_endpoint_bins": 24,
+      "description": "residual shortcut projection branch"
+    },
+    {
+      "source_index": 14,
+      "target_index": 18,
+      "weight_tensors": [],
+      "connections": 20480,
+      "routes": 24,
+      "source_endpoint_bins": 24,
+      "target_endpoint_bins": 24,
+      "description": "residual conv branch"
+    },
+    {
+      "source_index": 18,
+      "target_index": 19,
+      "weight_tensors": [
+        "encoder.layers.6.conv.weight_v",
+        "encoder.layers.6.conv.weight_g"
+      ],
+      "connections": 5242880,
+      "routes": 576,
+      "source_endpoint_bins": 24,
+      "target_endpoint_bins": 24,
+      "description": "causal reflect Conv1d k=8, dilation=1, stride=4, input=320, output=80"
+    },
+    {
+      "source_index": 20,
+      "target_index": 19,
+      "weight_tensors": [
+        "encoder.layers.6.conv.bias"
+      ],
+      "connections": 10240,
+      "routes": 24,
+      "source_endpoint_bins": 1,
+      "target_endpoint_bins": 24,
+      "description": "bias broadcast over 80 time steps"
+    },
+    {
+      "source_index": 19,
+      "target_index": 21,
+      "weight_tensors": [
+        "encoder.layers.7.block.1.conv.weight_v",
+        "encoder.layers.7.block.1.conv.weight_g"
+      ],
+      "connections": 1966080,
+      "routes": 576,
+      "source_endpoint_bins": 24,
+      "target_endpoint_bins": 24,
+      "description": "causal reflect Conv1d k=3, dilation=1, stride=1, input=80, output=80"
+    },
+    {
+      "source_index": 22,
+      "target_index": 21,
+      "weight_tensors": [
+        "encoder.layers.7.block.1.conv.bias"
+      ],
+      "connections": 5120,
+      "routes": 24,
+      "source_endpoint_bins": 1,
+      "target_endpoint_bins": 24,
+      "description": "bias broadcast over 80 time steps"
+    },
+    {
+      "source_index": 21,
+      "target_index": 23,
+      "weight_tensors": [
+        "encoder.layers.7.block.3.conv.weight_v",
+        "encoder.layers.7.block.3.conv.weight_g"
+      ],
+      "connections": 655360,
+      "routes": 576,
+      "source_endpoint_bins": 24,
+      "target_endpoint_bins": 24,
+      "description": "causal reflect Conv1d k=1, dilation=1, stride=1, input=80, output=80"
+    },
+    {
+      "source_index": 24,
+      "target_index": 23,
+      "weight_tensors": [
+        "encoder.layers.7.block.3.conv.bias"
+      ],
+      "connections": 10240,
+      "routes": 24,
+      "source_endpoint_bins": 1,
+      "target_endpoint_bins": 24,
+      "description": "bias broadcast over 80 time steps"
+    },
+    {
+      "source_index": 19,
+      "target_index": 25,
+      "weight_tensors": [
+        "encoder.layers.7.shortcut.conv.weight_v",
+        "encoder.layers.7.shortcut.conv.weight_g"
+      ],
+      "connections": 1310720,
+      "routes": 576,
+      "source_endpoint_bins": 24,
+      "target_endpoint_bins": 24,
+      "description": "causal reflect Conv1d k=1, dilation=1, stride=1, input=80, output=80"
+    },
+    {
+      "source_index": 26,
+      "target_index": 25,
+      "weight_tensors": [
+        "encoder.layers.7.shortcut.conv.bias"
+      ],
+      "connections": 10240,
+      "routes": 24,
+      "source_endpoint_bins": 1,
+      "target_endpoint_bins": 24,
+      "description": "bias broadcast over 80 time steps"
+    },
+    {
+      "source_index": 25,
+      "target_index": 27,
+      "weight_tensors": [],
+      "connections": 10240,
+      "routes": 24,
+      "source_endpoint_bins": 24,
+      "target_endpoint_bins": 24,
+      "description": "residual shortcut projection branch"
+    },
+    {
+      "source_index": 23,
+      "target_index": 27,
+      "weight_tensors": [],
+      "connections": 10240,
+      "routes": 24,
+      "source_endpoint_bins": 24,
+      "target_endpoint_bins": 24,
+      "description": "residual conv branch"
+    },
+    {
+      "source_index": 27,
+      "target_index": 28,
+      "weight_tensors": [
+        "encoder.layers.9.conv.weight_v",
+        "encoder.layers.9.conv.weight_g"
+      ],
+      "connections": 5242880,
+      "routes": 576,
+      "source_endpoint_bins": 24,
+      "target_endpoint_bins": 24,
+      "description": "causal reflect Conv1d k=10, dilation=1, stride=5, input=80, output=16"
+    },
+    {
+      "source_index": 29,
+      "target_index": 28,
+      "weight_tensors": [
+        "encoder.layers.9.conv.bias"
+      ],
+      "connections": 4096,
+      "routes": 24,
+      "source_endpoint_bins": 1,
+      "target_endpoint_bins": 24,
+      "description": "bias broadcast over 16 time steps"
+    },
+    {
+      "source_index": 28,
+      "target_index": 30,
+      "weight_tensors": [
+        "encoder.layers.10.block.1.conv.weight_v",
+        "encoder.layers.10.block.1.conv.weight_g"
+      ],
+      "connections": 1572864,
+      "routes": 576,
+      "source_endpoint_bins": 24,
+      "target_endpoint_bins": 24,
+      "description": "causal reflect Conv1d k=3, dilation=1, stride=1, input=16, output=16"
+    },
+    {
+      "source_index": 31,
+      "target_index": 30,
+      "weight_tensors": [
+        "encoder.layers.10.block.1.conv.bias"
+      ],
+      "connections": 2048,
+      "routes": 24,
+      "source_endpoint_bins": 1,
+      "target_endpoint_bins": 24,
+      "description": "bias broadcast over 16 time steps"
+    },
+    {
+      "source_index": 30,
+      "target_index": 32,
+      "weight_tensors": [
+        "encoder.layers.10.block.3.conv.weight_v",
+        "encoder.layers.10.block.3.conv.weight_g"
+      ],
+      "connections": 524288,
+      "routes": 576,
+      "source_endpoint_bins": 24,
+      "target_endpoint_bins": 24,
+      "description": "causal reflect Conv1d k=1, dilation=1, stride=1, input=16, output=16"
+    },
+    {
+      "source_index": 33,
+      "target_index": 32,
+      "weight_tensors": [
+        "encoder.layers.10.block.3.conv.bias"
+      ],
+      "connections": 4096,
+      "routes": 24,
+      "source_endpoint_bins": 1,
+      "target_endpoint_bins": 24,
+      "description": "bias broadcast over 16 time steps"
+    },
+    {
+      "source_index": 28,
+      "target_index": 34,
+      "weight_tensors": [
+        "encoder.layers.10.shortcut.conv.weight_v",
+        "encoder.layers.10.shortcut.conv.weight_g"
+      ],
+      "connections": 1048576,
+      "routes": 576,
+      "source_endpoint_bins": 24,
+      "target_endpoint_bins": 24,
+      "description": "causal reflect Conv1d k=1, dilation=1, stride=1, input=16, output=16"
+    },
+    {
+      "source_index": 35,
+      "target_index": 34,
+      "weight_tensors": [
+        "encoder.layers.10.shortcut.conv.bias"
+      ],
+      "connections": 4096,
+      "routes": 24,
+      "source_endpoint_bins": 1,
+      "target_endpoint_bins": 24,
+      "description": "bias broadcast over 16 time steps"
+    },
+    {
+      "source_index": 34,
+      "target_index": 36,
+      "weight_tensors": [],
+      "connections": 4096,
+      "routes": 24,
+      "source_endpoint_bins": 24,
+      "target_endpoint_bins": 24,
+      "description": "residual shortcut projection branch"
+    },
+    {
+      "source_index": 32,
+      "target_index": 36,
+      "weight_tensors": [],
+      "connections": 4096,
+      "routes": 24,
+      "source_endpoint_bins": 24,
+      "target_endpoint_bins": 24,
+      "description": "residual conv branch"
+    },
+    {
+      "source_index": 36,
+      "target_index": 37,
+      "weight_tensors": [
+        "encoder.layers.12.conv.weight_v",
+        "encoder.layers.12.conv.weight_g"
+      ],
+      "connections": 4194304,
+      "routes": 576,
+      "source_endpoint_bins": 24,
+      "target_endpoint_bins": 24,
+      "description": "causal reflect Conv1d k=16, dilation=1, stride=8, input=16, output=2"
+    },
+    {
+      "source_index": 38,
+      "target_index": 37,
+      "weight_tensors": [
+        "encoder.layers.12.conv.bias"
+      ],
+      "connections": 1024,
+      "routes": 24,
+      "source_endpoint_bins": 1,
+      "target_endpoint_bins": 24,
+      "description": "bias broadcast over 2 time steps"
+    },
+    {
+      "source_index": 37,
+      "target_index": 43,
+      "weight_tensors": [
+        "encoder.layers.13.lstm.weight_ih_l0"
+      ],
+      "connections": 1048576,
+      "routes": 576,
+      "source_endpoint_bins": 24,
+      "target_endpoint_bins": 24,
+      "description": "LSTM input matrix at t=0, layer=0"
+    },
+    {
+      "source_index": 39,
+      "target_index": 43,
+      "weight_tensors": [
+        "encoder.layers.13.lstm.weight_hh_l0"
+      ],
+      "connections": 1048576,
+      "routes": 576,
+      "source_endpoint_bins": 24,
+      "target_endpoint_bins": 24,
+      "description": "LSTM recurrent matrix at t=0, layer=0"
+    },
+    {
+      "source_index": 44,
+      "target_index": 43,
+      "weight_tensors": [
+        "encoder.layers.13.lstm.bias_ih_l0"
+      ],
+      "connections": 2048,
+      "routes": 24,
+      "source_endpoint_bins": 1,
+      "target_endpoint_bins": 24,
+      "description": "LSTM bias"
+    },
+    {
+      "source_index": 45,
+      "target_index": 43,
+      "weight_tensors": [
+        "encoder.layers.13.lstm.bias_hh_l0"
+      ],
+      "connections": 2048,
+      "routes": 24,
+      "source_endpoint_bins": 1,
+      "target_endpoint_bins": 24,
+      "description": "LSTM bias"
+    },
+    {
+      "source_index": 43,
+      "target_index": 46,
+      "weight_tensors": [],
+      "connections": 1536,
+      "routes": 72,
+      "source_endpoint_bins": 18,
+      "target_endpoint_bins": 24,
+      "description": "LSTM gate-to-cell operations"
+    },
+    {
+      "source_index": 40,
+      "target_index": 46,
+      "weight_tensors": [],
+      "connections": 512,
+      "routes": 24,
+      "source_endpoint_bins": 24,
+      "target_endpoint_bins": 24,
+      "description": "previous cell-state recurrence"
+    },
+    {
+      "source_index": 43,
+      "target_index": 47,
+      "weight_tensors": [],
+      "connections": 512,
+      "routes": 24,
+      "source_endpoint_bins": 6,
+      "target_endpoint_bins": 24,
+      "description": "output gate"
+    },
+    {
+      "source_index": 46,
+      "target_index": 47,
+      "weight_tensors": [],
+      "connections": 512,
+      "routes": 24,
+      "source_endpoint_bins": 24,
+      "target_endpoint_bins": 24,
+      "description": "cell-to-hidden tanh"
+    },
+    {
+      "source_index": 47,
+      "target_index": 48,
+      "weight_tensors": [
+        "encoder.layers.13.lstm.weight_ih_l1"
+      ],
+      "connections": 1048576,
+      "routes": 576,
+      "source_endpoint_bins": 24,
+      "target_endpoint_bins": 24,
+      "description": "LSTM input matrix at t=0, layer=1"
+    },
+    {
+      "source_index": 41,
+      "target_index": 48,
+      "weight_tensors": [
+        "encoder.layers.13.lstm.weight_hh_l1"
+      ],
+      "connections": 1048576,
+      "routes": 576,
+      "source_endpoint_bins": 24,
+      "target_endpoint_bins": 24,
+      "description": "LSTM recurrent matrix at t=0, layer=1"
+    },
+    {
+      "source_index": 49,
+      "target_index": 48,
+      "weight_tensors": [
+        "encoder.layers.13.lstm.bias_ih_l1"
+      ],
+      "connections": 2048,
+      "routes": 24,
+      "source_endpoint_bins": 1,
+      "target_endpoint_bins": 24,
+      "description": "LSTM bias"
+    },
+    {
+      "source_index": 50,
+      "target_index": 48,
+      "weight_tensors": [
+        "encoder.layers.13.lstm.bias_hh_l1"
+      ],
+      "connections": 2048,
+      "routes": 24,
+      "source_endpoint_bins": 1,
+      "target_endpoint_bins": 24,
+      "description": "LSTM bias"
+    },
+    {
+      "source_index": 48,
+      "target_index": 51,
+      "weight_tensors": [],
+      "connections": 1536,
+      "routes": 72,
+      "source_endpoint_bins": 18,
+      "target_endpoint_bins": 24,
+      "description": "LSTM gate-to-cell operations"
+    },
+    {
+      "source_index": 42,
+      "target_index": 51,
+      "weight_tensors": [],
+      "connections": 512,
+      "routes": 24,
+      "source_endpoint_bins": 24,
+      "target_endpoint_bins": 24,
+      "description": "previous cell-state recurrence"
+    },
+    {
+      "source_index": 48,
+      "target_index": 52,
+      "weight_tensors": [],
+      "connections": 512,
+      "routes": 24,
+      "source_endpoint_bins": 6,
+      "target_endpoint_bins": 24,
+      "description": "output gate"
+    },
+    {
+      "source_index": 51,
+      "target_index": 52,
+      "weight_tensors": [],
+      "connections": 512,
+      "routes": 24,
+      "source_endpoint_bins": 24,
+      "target_endpoint_bins": 24,
+      "description": "cell-to-hidden tanh"
+    },
+    {
+      "source_index": 37,
+      "target_index": 53,
+      "weight_tensors": [],
+      "connections": 512,
+      "routes": 24,
+      "source_endpoint_bins": 24,
+      "target_endpoint_bins": 24,
+      "description": "LSTM residual input"
+    },
+    {
+      "source_index": 52,
+      "target_index": 53,
+      "weight_tensors": [],
+      "connections": 512,
+      "routes": 24,
+      "source_endpoint_bins": 24,
+      "target_endpoint_bins": 24,
+      "description": "LSTM residual output"
+    },
+    {
+      "source_index": 37,
+      "target_index": 54,
+      "weight_tensors": [
+        "encoder.layers.13.lstm.weight_ih_l0"
+      ],
+      "connections": 1048576,
+      "routes": 576,
+      "source_endpoint_bins": 24,
+      "target_endpoint_bins": 24,
+      "description": "LSTM input matrix at t=1, layer=0"
+    },
+    {
+      "source_index": 47,
+      "target_index": 54,
+      "weight_tensors": [
+        "encoder.layers.13.lstm.weight_hh_l0"
+      ],
+      "connections": 1048576,
+      "routes": 576,
+      "source_endpoint_bins": 24,
+      "target_endpoint_bins": 24,
+      "description": "LSTM recurrent matrix at t=1, layer=0"
+    },
+    {
+      "source_index": 55,
+      "target_index": 54,
+      "weight_tensors": [
+        "encoder.layers.13.lstm.bias_ih_l0"
+      ],
+      "connections": 2048,
+      "routes": 24,
+      "source_endpoint_bins": 1,
+      "target_endpoint_bins": 24,
+      "description": "LSTM bias"
+    },
+    {
+      "source_index": 56,
+      "target_index": 54,
+      "weight_tensors": [
+        "encoder.layers.13.lstm.bias_hh_l0"
+      ],
+      "connections": 2048,
+      "routes": 24,
+      "source_endpoint_bins": 1,
+      "target_endpoint_bins": 24,
+      "description": "LSTM bias"
+    },
+    {
+      "source_index": 54,
+      "target_index": 57,
+      "weight_tensors": [],
+      "connections": 1536,
+      "routes": 72,
+      "source_endpoint_bins": 18,
+      "target_endpoint_bins": 24,
+      "description": "LSTM gate-to-cell operations"
+    },
+    {
+      "source_index": 46,
+      "target_index": 57,
+      "weight_tensors": [],
+      "connections": 512,
+      "routes": 24,
+      "source_endpoint_bins": 24,
+      "target_endpoint_bins": 24,
+      "description": "previous cell-state recurrence"
+    },
+    {
+      "source_index": 54,
+      "target_index": 58,
+      "weight_tensors": [],
+      "connections": 512,
+      "routes": 24,
+      "source_endpoint_bins": 6,
+      "target_endpoint_bins": 24,
+      "description": "output gate"
+    },
+    {
+      "source_index": 57,
+      "target_index": 58,
+      "weight_tensors": [],
+      "connections": 512,
+      "routes": 24,
+      "source_endpoint_bins": 24,
+      "target_endpoint_bins": 24,
+      "description": "cell-to-hidden tanh"
+    },
+    {
+      "source_index": 58,
+      "target_index": 59,
+      "weight_tensors": [
+        "encoder.layers.13.lstm.weight_ih_l1"
+      ],
+      "connections": 1048576,
+      "routes": 576,
+      "source_endpoint_bins": 24,
+      "target_endpoint_bins": 24,
+      "description": "LSTM input matrix at t=1, layer=1"
+    },
+    {
+      "source_index": 52,
+      "target_index": 59,
+      "weight_tensors": [
+        "encoder.layers.13.lstm.weight_hh_l1"
+      ],
+      "connections": 1048576,
+      "routes": 576,
+      "source_endpoint_bins": 24,
+      "target_endpoint_bins": 24,
+      "description": "LSTM recurrent matrix at t=1, layer=1"
+    },
+    {
+      "source_index": 60,
+      "target_index": 59,
+      "weight_tensors": [
+        "encoder.layers.13.lstm.bias_ih_l1"
+      ],
+      "connections": 2048,
+      "routes": 24,
+      "source_endpoint_bins": 1,
+      "target_endpoint_bins": 24,
+      "description": "LSTM bias"
+    },
+    {
+      "source_index": 61,
+      "target_index": 59,
+      "weight_tensors": [
+        "encoder.layers.13.lstm.bias_hh_l1"
+      ],
+      "connections": 2048,
+      "routes": 24,
+      "source_endpoint_bins": 1,
+      "target_endpoint_bins": 24,
+      "description": "LSTM bias"
+    },
+    {
+      "source_index": 59,
+      "target_index": 62,
+      "weight_tensors": [],
+      "connections": 1536,
+      "routes": 72,
+      "source_endpoint_bins": 18,
+      "target_endpoint_bins": 24,
+      "description": "LSTM gate-to-cell operations"
+    },
+    {
+      "source_index": 51,
+      "target_index": 62,
+      "weight_tensors": [],
+      "connections": 512,
+      "routes": 24,
+      "source_endpoint_bins": 24,
+      "target_endpoint_bins": 24,
+      "description": "previous cell-state recurrence"
+    },
+    {
+      "source_index": 59,
+      "target_index": 63,
+      "weight_tensors": [],
+      "connections": 512,
+      "routes": 24,
+      "source_endpoint_bins": 6,
+      "target_endpoint_bins": 24,
+      "description": "output gate"
+    },
+    {
+      "source_index": 62,
+      "target_index": 63,
+      "weight_tensors": [],
+      "connections": 512,
+      "routes": 24,
+      "source_endpoint_bins": 24,
+      "target_endpoint_bins": 24,
+      "description": "cell-to-hidden tanh"
+    },
+    {
+      "source_index": 37,
+      "target_index": 64,
+      "weight_tensors": [],
+      "connections": 512,
+      "routes": 32,
+      "source_endpoint_bins": 24,
+      "target_endpoint_bins": 24,
+      "description": "LSTM residual input"
+    },
+    {
+      "source_index": 63,
+      "target_index": 64,
+      "weight_tensors": [],
+      "connections": 512,
+      "routes": 24,
+      "source_endpoint_bins": 24,
+      "target_endpoint_bins": 24,
+      "description": "LSTM residual output"
+    },
+    {
+      "source_index": 53,
+      "target_index": 65,
+      "weight_tensors": [],
+      "connections": 512,
+      "routes": 24,
+      "source_endpoint_bins": 24,
+      "target_endpoint_bins": 24,
+      "description": "time-slot assembly"
+    },
+    {
+      "source_index": 64,
+      "target_index": 65,
+      "weight_tensors": [],
+      "connections": 512,
+      "routes": 32,
+      "source_endpoint_bins": 24,
+      "target_endpoint_bins": 24,
+      "description": "time-slot assembly"
+    },
+    {
+      "source_index": 65,
+      "target_index": 66,
+      "weight_tensors": [
+        "encoder.layers.15.conv.weight_v",
+        "encoder.layers.15.conv.weight_g"
+      ],
+      "connections": 327680,
+      "routes": 576,
+      "source_endpoint_bins": 24,
+      "target_endpoint_bins": 24,
+      "description": "causal reflect Conv1d k=7, dilation=1, stride=1, input=2, output=2"
+    },
+    {
+      "source_index": 67,
+      "target_index": 66,
+      "weight_tensors": [
+        "encoder.layers.15.conv.bias"
+      ],
+      "connections": 256,
+      "routes": 24,
+      "source_endpoint_bins": 1,
+      "target_endpoint_bins": 24,
+      "description": "bias broadcast over 2 time steps"
+    },
+    {
+      "source_index": 66,
+      "target_index": 68,
+      "weight_tensors": [
+        "quantizer.layers.0.codebook.embed"
+      ],
+      "connections": 262144,
+      "routes": 576,
+      "source_endpoint_bins": 24,
+      "target_endpoint_bins": 24,
+      "description": "Euclidean score dot product, framewise, q=0; all 1024 candidates"
+    },
+    {
+      "source_index": 66,
+      "target_index": 68,
+      "weight_tensors": [],
+      "connections": 262144,
+      "routes": 576,
+      "source_endpoint_bins": 24,
+      "target_endpoint_bins": 24,
+      "description": "shared squared-input norm across all code candidates"
+    },
+    {
+      "source_index": 69,
+      "target_index": 68,
+      "weight_tensors": [
+        "quantizer.layers.0.codebook.embed"
+      ],
+      "connections": 262144,
+      "routes": 24,
+      "source_endpoint_bins": 1,
+      "target_endpoint_bins": 24,
+      "description": "candidate squared-code norms q=0"
+    },
+    {
+      "source_index": 68,
+      "target_index": 70,
+      "weight_tensors": [
+        "quantizer.layers.0.codebook.embed"
+      ],
+      "connections": 262144,
+      "routes": 576,
+      "source_endpoint_bins": 24,
+      "target_endpoint_bins": 24,
+      "description": "input-dependent argmax lookup alternatives, q=0"
+    },
+    {
+      "source_index": 66,
+      "target_index": 71,
+      "weight_tensors": [],
+      "connections": 256,
+      "routes": 24,
+      "source_endpoint_bins": 24,
+      "target_endpoint_bins": 24,
+      "description": "residual subtraction path"
+    },
+    {
+      "source_index": 70,
+      "target_index": 71,
+      "weight_tensors": [],
+      "connections": 256,
+      "routes": 24,
+      "source_endpoint_bins": 24,
+      "target_endpoint_bins": 24,
+      "description": "selected code subtraction after input-dependent lookup"
+    },
+    {
+      "source_index": 70,
+      "target_index": 72,
+      "weight_tensors": [],
+      "connections": 256,
+      "routes": 24,
+      "source_endpoint_bins": 24,
+      "target_endpoint_bins": 24,
+      "description": "first selected code contribution"
+    },
+    {
+      "source_index": 71,
+      "target_index": 73,
+      "weight_tensors": [
+        "quantizer.layers.1.codebook.embed"
+      ],
+      "connections": 262144,
+      "routes": 576,
+      "source_endpoint_bins": 24,
+      "target_endpoint_bins": 24,
+      "description": "Euclidean score dot product, framewise, q=1; all 1024 candidates"
+    },
+    {
+      "source_index": 71,
+      "target_index": 73,
+      "weight_tensors": [],
+      "connections": 262144,
+      "routes": 576,
+      "source_endpoint_bins": 24,
+      "target_endpoint_bins": 24,
+      "description": "shared squared-input norm across all code candidates"
+    },
+    {
+      "source_index": 74,
+      "target_index": 73,
+      "weight_tensors": [
+        "quantizer.layers.1.codebook.embed"
+      ],
+      "connections": 262144,
+      "routes": 24,
+      "source_endpoint_bins": 1,
+      "target_endpoint_bins": 24,
+      "description": "candidate squared-code norms q=1"
+    },
+    {
+      "source_index": 73,
+      "target_index": 75,
+      "weight_tensors": [
+        "quantizer.layers.1.codebook.embed"
+      ],
+      "connections": 262144,
+      "routes": 576,
+      "source_endpoint_bins": 24,
+      "target_endpoint_bins": 24,
+      "description": "input-dependent argmax lookup alternatives, q=1"
+    },
+    {
+      "source_index": 71,
+      "target_index": 76,
+      "weight_tensors": [],
+      "connections": 256,
+      "routes": 24,
+      "source_endpoint_bins": 24,
+      "target_endpoint_bins": 24,
+      "description": "residual subtraction path"
+    },
+    {
+      "source_index": 75,
+      "target_index": 76,
+      "weight_tensors": [],
+      "connections": 256,
+      "routes": 24,
+      "source_endpoint_bins": 24,
+      "target_endpoint_bins": 24,
+      "description": "selected code subtraction after input-dependent lookup"
+    },
+    {
+      "source_index": 72,
+      "target_index": 77,
+      "weight_tensors": [],
+      "connections": 256,
+      "routes": 24,
+      "source_endpoint_bins": 24,
+      "target_endpoint_bins": 24,
+      "description": "quantized sum carry"
+    },
+    {
+      "source_index": 75,
+      "target_index": 77,
+      "weight_tensors": [],
+      "connections": 256,
+      "routes": 24,
+      "source_endpoint_bins": 24,
+      "target_endpoint_bins": 24,
+      "description": "selected code contribution"
+    },
+    {
+      "source_index": 76,
+      "target_index": 78,
+      "weight_tensors": [
+        "quantizer.layers.2.codebook.embed"
+      ],
+      "connections": 262144,
+      "routes": 576,
+      "source_endpoint_bins": 24,
+      "target_endpoint_bins": 24,
+      "description": "Euclidean score dot product, framewise, q=2; all 1024 candidates"
+    },
+    {
+      "source_index": 76,
+      "target_index": 78,
+      "weight_tensors": [],
+      "connections": 262144,
+      "routes": 576,
+      "source_endpoint_bins": 24,
+      "target_endpoint_bins": 24,
+      "description": "shared squared-input norm across all code candidates"
+    },
+    {
+      "source_index": 79,
+      "target_index": 78,
+      "weight_tensors": [
+        "quantizer.layers.2.codebook.embed"
+      ],
+      "connections": 262144,
+      "routes": 24,
+      "source_endpoint_bins": 1,
+      "target_endpoint_bins": 24,
+      "description": "candidate squared-code norms q=2"
+    },
+    {
+      "source_index": 78,
+      "target_index": 80,
+      "weight_tensors": [
+        "quantizer.layers.2.codebook.embed"
+      ],
+      "connections": 262144,
+      "routes": 576,
+      "source_endpoint_bins": 24,
+      "target_endpoint_bins": 24,
+      "description": "input-dependent argmax lookup alternatives, q=2"
+    },
+    {
+      "source_index": 76,
+      "target_index": 81,
+      "weight_tensors": [],
+      "connections": 256,
+      "routes": 24,
+      "source_endpoint_bins": 24,
+      "target_endpoint_bins": 24,
+      "description": "residual subtraction path"
+    },
+    {
+      "source_index": 80,
+      "target_index": 81,
+      "weight_tensors": [],
+      "connections": 256,
+      "routes": 24,
+      "source_endpoint_bins": 24,
+      "target_endpoint_bins": 24,
+      "description": "selected code subtraction after input-dependent lookup"
+    },
+    {
+      "source_index": 77,
+      "target_index": 82,
+      "weight_tensors": [],
+      "connections": 256,
+      "routes": 24,
+      "source_endpoint_bins": 24,
+      "target_endpoint_bins": 24,
+      "description": "quantized sum carry"
+    },
+    {
+      "source_index": 80,
+      "target_index": 82,
+      "weight_tensors": [],
+      "connections": 256,
+      "routes": 24,
+      "source_endpoint_bins": 24,
+      "target_endpoint_bins": 24,
+      "description": "selected code contribution"
+    },
+    {
+      "source_index": 81,
+      "target_index": 83,
+      "weight_tensors": [
+        "quantizer.layers.3.codebook.embed"
+      ],
+      "connections": 262144,
+      "routes": 576,
+      "source_endpoint_bins": 24,
+      "target_endpoint_bins": 24,
+      "description": "Euclidean score dot product, framewise, q=3; all 1024 candidates"
+    },
+    {
+      "source_index": 81,
+      "target_index": 83,
+      "weight_tensors": [],
+      "connections": 262144,
+      "routes": 576,
+      "source_endpoint_bins": 24,
+      "target_endpoint_bins": 24,
+      "description": "shared squared-input norm across all code candidates"
+    },
+    {
+      "source_index": 84,
+      "target_index": 83,
+      "weight_tensors": [
+        "quantizer.layers.3.codebook.embed"
+      ],
+      "connections": 262144,
+      "routes": 24,
+      "source_endpoint_bins": 1,
+      "target_endpoint_bins": 24,
+      "description": "candidate squared-code norms q=3"
+    },
+    {
+      "source_index": 83,
+      "target_index": 85,
+      "weight_tensors": [
+        "quantizer.layers.3.codebook.embed"
+      ],
+      "connections": 262144,
+      "routes": 576,
+      "source_endpoint_bins": 24,
+      "target_endpoint_bins": 24,
+      "description": "input-dependent argmax lookup alternatives, q=3"
+    },
+    {
+      "source_index": 81,
+      "target_index": 86,
+      "weight_tensors": [],
+      "connections": 256,
+      "routes": 24,
+      "source_endpoint_bins": 24,
+      "target_endpoint_bins": 24,
+      "description": "residual subtraction path"
+    },
+    {
+      "source_index": 85,
+      "target_index": 86,
+      "weight_tensors": [],
+      "connections": 256,
+      "routes": 24,
+      "source_endpoint_bins": 24,
+      "target_endpoint_bins": 24,
+      "description": "selected code subtraction after input-dependent lookup"
+    },
+    {
+      "source_index": 82,
+      "target_index": 87,
+      "weight_tensors": [],
+      "connections": 256,
+      "routes": 24,
+      "source_endpoint_bins": 24,
+      "target_endpoint_bins": 24,
+      "description": "quantized sum carry"
+    },
+    {
+      "source_index": 85,
+      "target_index": 87,
+      "weight_tensors": [],
+      "connections": 256,
+      "routes": 24,
+      "source_endpoint_bins": 24,
+      "target_endpoint_bins": 24,
+      "description": "selected code contribution"
+    },
+    {
+      "source_index": 86,
+      "target_index": 88,
+      "weight_tensors": [
+        "quantizer.layers.4.codebook.embed"
+      ],
+      "connections": 262144,
+      "routes": 576,
+      "source_endpoint_bins": 24,
+      "target_endpoint_bins": 24,
+      "description": "Euclidean score dot product, framewise, q=4; all 1024 candidates"
+    },
+    {
+      "source_index": 86,
+      "target_index": 88,
+      "weight_tensors": [],
+      "connections": 262144,
+      "routes": 576,
+      "source_endpoint_bins": 24,
+      "target_endpoint_bins": 24,
+      "description": "shared squared-input norm across all code candidates"
+    },
+    {
+      "source_index": 89,
+      "target_index": 88,
+      "weight_tensors": [
+        "quantizer.layers.4.codebook.embed"
+      ],
+      "connections": 262144,
+      "routes": 24,
+      "source_endpoint_bins": 1,
+      "target_endpoint_bins": 24,
+      "description": "candidate squared-code norms q=4"
+    },
+    {
+      "source_index": 88,
+      "target_index": 90,
+      "weight_tensors": [
+        "quantizer.layers.4.codebook.embed"
+      ],
+      "connections": 262144,
+      "routes": 576,
+      "source_endpoint_bins": 24,
+      "target_endpoint_bins": 24,
+      "description": "input-dependent argmax lookup alternatives, q=4"
+    },
+    {
+      "source_index": 86,
+      "target_index": 91,
+      "weight_tensors": [],
+      "connections": 256,
+      "routes": 24,
+      "source_endpoint_bins": 24,
+      "target_endpoint_bins": 24,
+      "description": "residual subtraction path"
+    },
+    {
+      "source_index": 90,
+      "target_index": 91,
+      "weight_tensors": [],
+      "connections": 256,
+      "routes": 24,
+      "source_endpoint_bins": 24,
+      "target_endpoint_bins": 24,
+      "description": "selected code subtraction after input-dependent lookup"
+    },
+    {
+      "source_index": 87,
+      "target_index": 92,
+      "weight_tensors": [],
+      "connections": 256,
+      "routes": 24,
+      "source_endpoint_bins": 24,
+      "target_endpoint_bins": 24,
+      "description": "quantized sum carry"
+    },
+    {
+      "source_index": 90,
+      "target_index": 92,
+      "weight_tensors": [],
+      "connections": 256,
+      "routes": 24,
+      "source_endpoint_bins": 24,
+      "target_endpoint_bins": 24,
+      "description": "selected code contribution"
+    },
+    {
+      "source_index": 91,
+      "target_index": 93,
+      "weight_tensors": [
+        "quantizer.layers.5.codebook.embed"
+      ],
+      "connections": 262144,
+      "routes": 576,
+      "source_endpoint_bins": 24,
+      "target_endpoint_bins": 24,
+      "description": "Euclidean score dot product, framewise, q=5; all 1024 candidates"
+    },
+    {
+      "source_index": 91,
+      "target_index": 93,
+      "weight_tensors": [],
+      "connections": 262144,
+      "routes": 576,
+      "source_endpoint_bins": 24,
+      "target_endpoint_bins": 24,
+      "description": "shared squared-input norm across all code candidates"
+    },
+    {
+      "source_index": 94,
+      "target_index": 93,
+      "weight_tensors": [
+        "quantizer.layers.5.codebook.embed"
+      ],
+      "connections": 262144,
+      "routes": 24,
+      "source_endpoint_bins": 1,
+      "target_endpoint_bins": 24,
+      "description": "candidate squared-code norms q=5"
+    },
+    {
+      "source_index": 93,
+      "target_index": 95,
+      "weight_tensors": [
+        "quantizer.layers.5.codebook.embed"
+      ],
+      "connections": 262144,
+      "routes": 576,
+      "source_endpoint_bins": 24,
+      "target_endpoint_bins": 24,
+      "description": "input-dependent argmax lookup alternatives, q=5"
+    },
+    {
+      "source_index": 91,
+      "target_index": 96,
+      "weight_tensors": [],
+      "connections": 256,
+      "routes": 24,
+      "source_endpoint_bins": 24,
+      "target_endpoint_bins": 24,
+      "description": "residual subtraction path"
+    },
+    {
+      "source_index": 95,
+      "target_index": 96,
+      "weight_tensors": [],
+      "connections": 256,
+      "routes": 24,
+      "source_endpoint_bins": 24,
+      "target_endpoint_bins": 24,
+      "description": "selected code subtraction after input-dependent lookup"
+    },
+    {
+      "source_index": 92,
+      "target_index": 97,
+      "weight_tensors": [],
+      "connections": 256,
+      "routes": 24,
+      "source_endpoint_bins": 24,
+      "target_endpoint_bins": 24,
+      "description": "quantized sum carry"
+    },
+    {
+      "source_index": 95,
+      "target_index": 97,
+      "weight_tensors": [],
+      "connections": 256,
+      "routes": 24,
+      "source_endpoint_bins": 24,
+      "target_endpoint_bins": 24,
+      "description": "selected code contribution"
+    },
+    {
+      "source_index": 96,
+      "target_index": 98,
+      "weight_tensors": [
+        "quantizer.layers.6.codebook.embed"
+      ],
+      "connections": 262144,
+      "routes": 576,
+      "source_endpoint_bins": 24,
+      "target_endpoint_bins": 24,
+      "description": "Euclidean score dot product, framewise, q=6; all 1024 candidates"
+    },
+    {
+      "source_index": 96,
+      "target_index": 98,
+      "weight_tensors": [],
+      "connections": 262144,
+      "routes": 576,
+      "source_endpoint_bins": 24,
+      "target_endpoint_bins": 24,
+      "description": "shared squared-input norm across all code candidates"
+    },
+    {
+      "source_index": 99,
+      "target_index": 98,
+      "weight_tensors": [
+        "quantizer.layers.6.codebook.embed"
+      ],
+      "connections": 262144,
+      "routes": 24,
+      "source_endpoint_bins": 1,
+      "target_endpoint_bins": 24,
+      "description": "candidate squared-code norms q=6"
+    },
+    {
+      "source_index": 98,
+      "target_index": 100,
+      "weight_tensors": [
+        "quantizer.layers.6.codebook.embed"
+      ],
+      "connections": 262144,
+      "routes": 576,
+      "source_endpoint_bins": 24,
+      "target_endpoint_bins": 24,
+      "description": "input-dependent argmax lookup alternatives, q=6"
+    },
+    {
+      "source_index": 96,
+      "target_index": 101,
+      "weight_tensors": [],
+      "connections": 256,
+      "routes": 24,
+      "source_endpoint_bins": 24,
+      "target_endpoint_bins": 24,
+      "description": "residual subtraction path"
+    },
+    {
+      "source_index": 100,
+      "target_index": 101,
+      "weight_tensors": [],
+      "connections": 256,
+      "routes": 24,
+      "source_endpoint_bins": 24,
+      "target_endpoint_bins": 24,
+      "description": "selected code subtraction after input-dependent lookup"
+    },
+    {
+      "source_index": 97,
+      "target_index": 102,
+      "weight_tensors": [],
+      "connections": 256,
+      "routes": 24,
+      "source_endpoint_bins": 24,
+      "target_endpoint_bins": 24,
+      "description": "quantized sum carry"
+    },
+    {
+      "source_index": 100,
+      "target_index": 102,
+      "weight_tensors": [],
+      "connections": 256,
+      "routes": 24,
+      "source_endpoint_bins": 24,
+      "target_endpoint_bins": 24,
+      "description": "selected code contribution"
+    },
+    {
+      "source_index": 101,
+      "target_index": 103,
+      "weight_tensors": [
+        "quantizer.layers.7.codebook.embed"
+      ],
+      "connections": 262144,
+      "routes": 576,
+      "source_endpoint_bins": 24,
+      "target_endpoint_bins": 24,
+      "description": "Euclidean score dot product, framewise, q=7; all 1024 candidates"
+    },
+    {
+      "source_index": 101,
+      "target_index": 103,
+      "weight_tensors": [],
+      "connections": 262144,
+      "routes": 576,
+      "source_endpoint_bins": 24,
+      "target_endpoint_bins": 24,
+      "description": "shared squared-input norm across all code candidates"
+    },
+    {
+      "source_index": 104,
+      "target_index": 103,
+      "weight_tensors": [
+        "quantizer.layers.7.codebook.embed"
+      ],
+      "connections": 262144,
+      "routes": 24,
+      "source_endpoint_bins": 1,
+      "target_endpoint_bins": 24,
+      "description": "candidate squared-code norms q=7"
+    },
+    {
+      "source_index": 103,
+      "target_index": 105,
+      "weight_tensors": [
+        "quantizer.layers.7.codebook.embed"
+      ],
+      "connections": 262144,
+      "routes": 576,
+      "source_endpoint_bins": 24,
+      "target_endpoint_bins": 24,
+      "description": "input-dependent argmax lookup alternatives, q=7"
+    },
+    {
+      "source_index": 101,
+      "target_index": 106,
+      "weight_tensors": [],
+      "connections": 256,
+      "routes": 24,
+      "source_endpoint_bins": 24,
+      "target_endpoint_bins": 24,
+      "description": "residual subtraction path"
+    },
+    {
+      "source_index": 105,
+      "target_index": 106,
+      "weight_tensors": [],
+      "connections": 256,
+      "routes": 24,
+      "source_endpoint_bins": 24,
+      "target_endpoint_bins": 24,
+      "description": "selected code subtraction after input-dependent lookup"
+    },
+    {
+      "source_index": 102,
+      "target_index": 107,
+      "weight_tensors": [],
+      "connections": 256,
+      "routes": 24,
+      "source_endpoint_bins": 24,
+      "target_endpoint_bins": 24,
+      "description": "quantized sum carry"
+    },
+    {
+      "source_index": 105,
+      "target_index": 107,
+      "weight_tensors": [],
+      "connections": 256,
+      "routes": 24,
+      "source_endpoint_bins": 24,
+      "target_endpoint_bins": 24,
+      "description": "selected code contribution"
+    },
+    {
+      "source_index": 106,
+      "target_index": 108,
+      "weight_tensors": [
+        "quantizer.layers.8.codebook.embed"
+      ],
+      "connections": 262144,
+      "routes": 576,
+      "source_endpoint_bins": 24,
+      "target_endpoint_bins": 24,
+      "description": "Euclidean score dot product, framewise, q=8; all 1024 candidates"
+    },
+    {
+      "source_index": 106,
+      "target_index": 108,
+      "weight_tensors": [],
+      "connections": 262144,
+      "routes": 576,
+      "source_endpoint_bins": 24,
+      "target_endpoint_bins": 24,
+      "description": "shared squared-input norm across all code candidates"
+    },
+    {
+      "source_index": 109,
+      "target_index": 108,
+      "weight_tensors": [
+        "quantizer.layers.8.codebook.embed"
+      ],
+      "connections": 262144,
+      "routes": 24,
+      "source_endpoint_bins": 1,
+      "target_endpoint_bins": 24,
+      "description": "candidate squared-code norms q=8"
+    },
+    {
+      "source_index": 108,
+      "target_index": 110,
+      "weight_tensors": [
+        "quantizer.layers.8.codebook.embed"
+      ],
+      "connections": 262144,
+      "routes": 576,
+      "source_endpoint_bins": 24,
+      "target_endpoint_bins": 24,
+      "description": "input-dependent argmax lookup alternatives, q=8"
+    },
+    {
+      "source_index": 106,
+      "target_index": 111,
+      "weight_tensors": [],
+      "connections": 256,
+      "routes": 24,
+      "source_endpoint_bins": 24,
+      "target_endpoint_bins": 24,
+      "description": "residual subtraction path"
+    },
+    {
+      "source_index": 110,
+      "target_index": 111,
+      "weight_tensors": [],
+      "connections": 256,
+      "routes": 24,
+      "source_endpoint_bins": 24,
+      "target_endpoint_bins": 24,
+      "description": "selected code subtraction after input-dependent lookup"
+    },
+    {
+      "source_index": 107,
+      "target_index": 112,
+      "weight_tensors": [],
+      "connections": 256,
+      "routes": 24,
+      "source_endpoint_bins": 24,
+      "target_endpoint_bins": 24,
+      "description": "quantized sum carry"
+    },
+    {
+      "source_index": 110,
+      "target_index": 112,
+      "weight_tensors": [],
+      "connections": 256,
+      "routes": 24,
+      "source_endpoint_bins": 24,
+      "target_endpoint_bins": 24,
+      "description": "selected code contribution"
+    },
+    {
+      "source_index": 111,
+      "target_index": 113,
+      "weight_tensors": [
+        "quantizer.layers.9.codebook.embed"
+      ],
+      "connections": 262144,
+      "routes": 576,
+      "source_endpoint_bins": 24,
+      "target_endpoint_bins": 24,
+      "description": "Euclidean score dot product, framewise, q=9; all 1024 candidates"
+    },
+    {
+      "source_index": 111,
+      "target_index": 113,
+      "weight_tensors": [],
+      "connections": 262144,
+      "routes": 576,
+      "source_endpoint_bins": 24,
+      "target_endpoint_bins": 24,
+      "description": "shared squared-input norm across all code candidates"
+    },
+    {
+      "source_index": 114,
+      "target_index": 113,
+      "weight_tensors": [
+        "quantizer.layers.9.codebook.embed"
+      ],
+      "connections": 262144,
+      "routes": 24,
+      "source_endpoint_bins": 1,
+      "target_endpoint_bins": 24,
+      "description": "candidate squared-code norms q=9"
+    },
+    {
+      "source_index": 113,
+      "target_index": 115,
+      "weight_tensors": [
+        "quantizer.layers.9.codebook.embed"
+      ],
+      "connections": 262144,
+      "routes": 576,
+      "source_endpoint_bins": 24,
+      "target_endpoint_bins": 24,
+      "description": "input-dependent argmax lookup alternatives, q=9"
+    },
+    {
+      "source_index": 111,
+      "target_index": 116,
+      "weight_tensors": [],
+      "connections": 256,
+      "routes": 24,
+      "source_endpoint_bins": 24,
+      "target_endpoint_bins": 24,
+      "description": "residual subtraction path"
+    },
+    {
+      "source_index": 115,
+      "target_index": 116,
+      "weight_tensors": [],
+      "connections": 256,
+      "routes": 24,
+      "source_endpoint_bins": 24,
+      "target_endpoint_bins": 24,
+      "description": "selected code subtraction after input-dependent lookup"
+    },
+    {
+      "source_index": 112,
+      "target_index": 117,
+      "weight_tensors": [],
+      "connections": 256,
+      "routes": 24,
+      "source_endpoint_bins": 24,
+      "target_endpoint_bins": 24,
+      "description": "quantized sum carry"
+    },
+    {
+      "source_index": 115,
+      "target_index": 117,
+      "weight_tensors": [],
+      "connections": 256,
+      "routes": 24,
+      "source_endpoint_bins": 24,
+      "target_endpoint_bins": 24,
+      "description": "selected code contribution"
+    },
+    {
+      "source_index": 116,
+      "target_index": 118,
+      "weight_tensors": [
+        "quantizer.layers.10.codebook.embed"
+      ],
+      "connections": 262144,
+      "routes": 576,
+      "source_endpoint_bins": 24,
+      "target_endpoint_bins": 24,
+      "description": "Euclidean score dot product, framewise, q=10; all 1024 candidates"
+    },
+    {
+      "source_index": 116,
+      "target_index": 118,
+      "weight_tensors": [],
+      "connections": 262144,
+      "routes": 576,
+      "source_endpoint_bins": 24,
+      "target_endpoint_bins": 24,
+      "description": "shared squared-input norm across all code candidates"
+    },
+    {
+      "source_index": 119,
+      "target_index": 118,
+      "weight_tensors": [
+        "quantizer.layers.10.codebook.embed"
+      ],
+      "connections": 262144,
+      "routes": 24,
+      "source_endpoint_bins": 1,
+      "target_endpoint_bins": 24,
+      "description": "candidate squared-code norms q=10"
+    },
+    {
+      "source_index": 118,
+      "target_index": 120,
+      "weight_tensors": [
+        "quantizer.layers.10.codebook.embed"
+      ],
+      "connections": 262144,
+      "routes": 576,
+      "source_endpoint_bins": 24,
+      "target_endpoint_bins": 24,
+      "description": "input-dependent argmax lookup alternatives, q=10"
+    },
+    {
+      "source_index": 116,
+      "target_index": 121,
+      "weight_tensors": [],
+      "connections": 256,
+      "routes": 24,
+      "source_endpoint_bins": 24,
+      "target_endpoint_bins": 24,
+      "description": "residual subtraction path"
+    },
+    {
+      "source_index": 120,
+      "target_index": 121,
+      "weight_tensors": [],
+      "connections": 256,
+      "routes": 24,
+      "source_endpoint_bins": 24,
+      "target_endpoint_bins": 24,
+      "description": "selected code subtraction after input-dependent lookup"
+    },
+    {
+      "source_index": 117,
+      "target_index": 122,
+      "weight_tensors": [],
+      "connections": 256,
+      "routes": 24,
+      "source_endpoint_bins": 24,
+      "target_endpoint_bins": 24,
+      "description": "quantized sum carry"
+    },
+    {
+      "source_index": 120,
+      "target_index": 122,
+      "weight_tensors": [],
+      "connections": 256,
+      "routes": 24,
+      "source_endpoint_bins": 24,
+      "target_endpoint_bins": 24,
+      "description": "selected code contribution"
+    },
+    {
+      "source_index": 121,
+      "target_index": 123,
+      "weight_tensors": [
+        "quantizer.layers.11.codebook.embed"
+      ],
+      "connections": 262144,
+      "routes": 576,
+      "source_endpoint_bins": 24,
+      "target_endpoint_bins": 24,
+      "description": "Euclidean score dot product, framewise, q=11; all 1024 candidates"
+    },
+    {
+      "source_index": 121,
+      "target_index": 123,
+      "weight_tensors": [],
+      "connections": 262144,
+      "routes": 576,
+      "source_endpoint_bins": 24,
+      "target_endpoint_bins": 24,
+      "description": "shared squared-input norm across all code candidates"
+    },
+    {
+      "source_index": 124,
+      "target_index": 123,
+      "weight_tensors": [
+        "quantizer.layers.11.codebook.embed"
+      ],
+      "connections": 262144,
+      "routes": 24,
+      "source_endpoint_bins": 1,
+      "target_endpoint_bins": 24,
+      "description": "candidate squared-code norms q=11"
+    },
+    {
+      "source_index": 123,
+      "target_index": 125,
+      "weight_tensors": [
+        "quantizer.layers.11.codebook.embed"
+      ],
+      "connections": 262144,
+      "routes": 576,
+      "source_endpoint_bins": 24,
+      "target_endpoint_bins": 24,
+      "description": "input-dependent argmax lookup alternatives, q=11"
+    },
+    {
+      "source_index": 121,
+      "target_index": 126,
+      "weight_tensors": [],
+      "connections": 256,
+      "routes": 24,
+      "source_endpoint_bins": 24,
+      "target_endpoint_bins": 24,
+      "description": "residual subtraction path"
+    },
+    {
+      "source_index": 125,
+      "target_index": 126,
+      "weight_tensors": [],
+      "connections": 256,
+      "routes": 24,
+      "source_endpoint_bins": 24,
+      "target_endpoint_bins": 24,
+      "description": "selected code subtraction after input-dependent lookup"
+    },
+    {
+      "source_index": 122,
+      "target_index": 127,
+      "weight_tensors": [],
+      "connections": 256,
+      "routes": 24,
+      "source_endpoint_bins": 24,
+      "target_endpoint_bins": 24,
+      "description": "quantized sum carry"
+    },
+    {
+      "source_index": 125,
+      "target_index": 127,
+      "weight_tensors": [],
+      "connections": 256,
+      "routes": 24,
+      "source_endpoint_bins": 24,
+      "target_endpoint_bins": 24,
+      "description": "selected code contribution"
+    },
+    {
+      "source_index": 126,
+      "target_index": 128,
+      "weight_tensors": [
+        "quantizer.layers.12.codebook.embed"
+      ],
+      "connections": 262144,
+      "routes": 576,
+      "source_endpoint_bins": 24,
+      "target_endpoint_bins": 24,
+      "description": "Euclidean score dot product, framewise, q=12; all 1024 candidates"
+    },
+    {
+      "source_index": 126,
+      "target_index": 128,
+      "weight_tensors": [],
+      "connections": 262144,
+      "routes": 576,
+      "source_endpoint_bins": 24,
+      "target_endpoint_bins": 24,
+      "description": "shared squared-input norm across all code candidates"
+    },
+    {
+      "source_index": 129,
+      "target_index": 128,
+      "weight_tensors": [
+        "quantizer.layers.12.codebook.embed"
+      ],
+      "connections": 262144,
+      "routes": 24,
+      "source_endpoint_bins": 1,
+      "target_endpoint_bins": 24,
+      "description": "candidate squared-code norms q=12"
+    },
+    {
+      "source_index": 128,
+      "target_index": 130,
+      "weight_tensors": [
+        "quantizer.layers.12.codebook.embed"
+      ],
+      "connections": 262144,
+      "routes": 576,
+      "source_endpoint_bins": 24,
+      "target_endpoint_bins": 24,
+      "description": "input-dependent argmax lookup alternatives, q=12"
+    },
+    {
+      "source_index": 126,
+      "target_index": 131,
+      "weight_tensors": [],
+      "connections": 256,
+      "routes": 24,
+      "source_endpoint_bins": 24,
+      "target_endpoint_bins": 24,
+      "description": "residual subtraction path"
+    },
+    {
+      "source_index": 130,
+      "target_index": 131,
+      "weight_tensors": [],
+      "connections": 256,
+      "routes": 24,
+      "source_endpoint_bins": 24,
+      "target_endpoint_bins": 24,
+      "description": "selected code subtraction after input-dependent lookup"
+    },
+    {
+      "source_index": 127,
+      "target_index": 132,
+      "weight_tensors": [],
+      "connections": 256,
+      "routes": 24,
+      "source_endpoint_bins": 24,
+      "target_endpoint_bins": 24,
+      "description": "quantized sum carry"
+    },
+    {
+      "source_index": 130,
+      "target_index": 132,
+      "weight_tensors": [],
+      "connections": 256,
+      "routes": 24,
+      "source_endpoint_bins": 24,
+      "target_endpoint_bins": 24,
+      "description": "selected code contribution"
+    },
+    {
+      "source_index": 131,
+      "target_index": 133,
+      "weight_tensors": [
+        "quantizer.layers.13.codebook.embed"
+      ],
+      "connections": 262144,
+      "routes": 576,
+      "source_endpoint_bins": 24,
+      "target_endpoint_bins": 24,
+      "description": "Euclidean score dot product, framewise, q=13; all 1024 candidates"
+    },
+    {
+      "source_index": 131,
+      "target_index": 133,
+      "weight_tensors": [],
+      "connections": 262144,
+      "routes": 576,
+      "source_endpoint_bins": 24,
+      "target_endpoint_bins": 24,
+      "description": "shared squared-input norm across all code candidates"
+    },
+    {
+      "source_index": 134,
+      "target_index": 133,
+      "weight_tensors": [
+        "quantizer.layers.13.codebook.embed"
+      ],
+      "connections": 262144,
+      "routes": 24,
+      "source_endpoint_bins": 1,
+      "target_endpoint_bins": 24,
+      "description": "candidate squared-code norms q=13"
+    },
+    {
+      "source_index": 133,
+      "target_index": 135,
+      "weight_tensors": [
+        "quantizer.layers.13.codebook.embed"
+      ],
+      "connections": 262144,
+      "routes": 576,
+      "source_endpoint_bins": 24,
+      "target_endpoint_bins": 24,
+      "description": "input-dependent argmax lookup alternatives, q=13"
+    },
+    {
+      "source_index": 131,
+      "target_index": 136,
+      "weight_tensors": [],
+      "connections": 256,
+      "routes": 24,
+      "source_endpoint_bins": 24,
+      "target_endpoint_bins": 24,
+      "description": "residual subtraction path"
+    },
+    {
+      "source_index": 135,
+      "target_index": 136,
+      "weight_tensors": [],
+      "connections": 256,
+      "routes": 24,
+      "source_endpoint_bins": 24,
+      "target_endpoint_bins": 24,
+      "description": "selected code subtraction after input-dependent lookup"
+    },
+    {
+      "source_index": 132,
+      "target_index": 137,
+      "weight_tensors": [],
+      "connections": 256,
+      "routes": 24,
+      "source_endpoint_bins": 24,
+      "target_endpoint_bins": 24,
+      "description": "quantized sum carry"
+    },
+    {
+      "source_index": 135,
+      "target_index": 137,
+      "weight_tensors": [],
+      "connections": 256,
+      "routes": 24,
+      "source_endpoint_bins": 24,
+      "target_endpoint_bins": 24,
+      "description": "selected code contribution"
+    },
+    {
+      "source_index": 136,
+      "target_index": 138,
+      "weight_tensors": [
+        "quantizer.layers.14.codebook.embed"
+      ],
+      "connections": 262144,
+      "routes": 576,
+      "source_endpoint_bins": 24,
+      "target_endpoint_bins": 24,
+      "description": "Euclidean score dot product, framewise, q=14; all 1024 candidates"
+    },
+    {
+      "source_index": 136,
+      "target_index": 138,
+      "weight_tensors": [],
+      "connections": 262144,
+      "routes": 576,
+      "source_endpoint_bins": 24,
+      "target_endpoint_bins": 24,
+      "description": "shared squared-input norm across all code candidates"
+    },
+    {
+      "source_index": 139,
+      "target_index": 138,
+      "weight_tensors": [
+        "quantizer.layers.14.codebook.embed"
+      ],
+      "connections": 262144,
+      "routes": 24,
+      "source_endpoint_bins": 1,
+      "target_endpoint_bins": 24,
+      "description": "candidate squared-code norms q=14"
+    },
+    {
+      "source_index": 138,
+      "target_index": 140,
+      "weight_tensors": [
+        "quantizer.layers.14.codebook.embed"
+      ],
+      "connections": 262144,
+      "routes": 576,
+      "source_endpoint_bins": 24,
+      "target_endpoint_bins": 24,
+      "description": "input-dependent argmax lookup alternatives, q=14"
+    },
+    {
+      "source_index": 136,
+      "target_index": 141,
+      "weight_tensors": [],
+      "connections": 256,
+      "routes": 24,
+      "source_endpoint_bins": 24,
+      "target_endpoint_bins": 24,
+      "description": "residual subtraction path"
+    },
+    {
+      "source_index": 140,
+      "target_index": 141,
+      "weight_tensors": [],
+      "connections": 256,
+      "routes": 24,
+      "source_endpoint_bins": 24,
+      "target_endpoint_bins": 24,
+      "description": "selected code subtraction after input-dependent lookup"
+    },
+    {
+      "source_index": 137,
+      "target_index": 142,
+      "weight_tensors": [],
+      "connections": 256,
+      "routes": 24,
+      "source_endpoint_bins": 24,
+      "target_endpoint_bins": 24,
+      "description": "quantized sum carry"
+    },
+    {
+      "source_index": 140,
+      "target_index": 142,
+      "weight_tensors": [],
+      "connections": 256,
+      "routes": 24,
+      "source_endpoint_bins": 24,
+      "target_endpoint_bins": 24,
+      "description": "selected code contribution"
+    },
+    {
+      "source_index": 141,
+      "target_index": 143,
+      "weight_tensors": [
+        "quantizer.layers.15.codebook.embed"
+      ],
+      "connections": 262144,
+      "routes": 576,
+      "source_endpoint_bins": 24,
+      "target_endpoint_bins": 24,
+      "description": "Euclidean score dot product, framewise, q=15; all 1024 candidates"
+    },
+    {
+      "source_index": 141,
+      "target_index": 143,
+      "weight_tensors": [],
+      "connections": 262144,
+      "routes": 576,
+      "source_endpoint_bins": 24,
+      "target_endpoint_bins": 24,
+      "description": "shared squared-input norm across all code candidates"
+    },
+    {
+      "source_index": 144,
+      "target_index": 143,
+      "weight_tensors": [
+        "quantizer.layers.15.codebook.embed"
+      ],
+      "connections": 262144,
+      "routes": 24,
+      "source_endpoint_bins": 1,
+      "target_endpoint_bins": 24,
+      "description": "candidate squared-code norms q=15"
+    },
+    {
+      "source_index": 143,
+      "target_index": 145,
+      "weight_tensors": [
+        "quantizer.layers.15.codebook.embed"
+      ],
+      "connections": 262144,
+      "routes": 576,
+      "source_endpoint_bins": 24,
+      "target_endpoint_bins": 24,
+      "description": "input-dependent argmax lookup alternatives, q=15"
+    },
+    {
+      "source_index": 141,
+      "target_index": 146,
+      "weight_tensors": [],
+      "connections": 256,
+      "routes": 24,
+      "source_endpoint_bins": 24,
+      "target_endpoint_bins": 24,
+      "description": "residual subtraction path"
+    },
+    {
+      "source_index": 145,
+      "target_index": 146,
+      "weight_tensors": [],
+      "connections": 256,
+      "routes": 24,
+      "source_endpoint_bins": 24,
+      "target_endpoint_bins": 24,
+      "description": "selected code subtraction after input-dependent lookup"
+    },
+    {
+      "source_index": 142,
+      "target_index": 147,
+      "weight_tensors": [],
+      "connections": 256,
+      "routes": 24,
+      "source_endpoint_bins": 24,
+      "target_endpoint_bins": 24,
+      "description": "quantized sum carry"
+    },
+    {
+      "source_index": 145,
+      "target_index": 147,
+      "weight_tensors": [],
+      "connections": 256,
+      "routes": 24,
+      "source_endpoint_bins": 24,
+      "target_endpoint_bins": 24,
+      "description": "selected code contribution"
+    },
+    {
+      "source_index": 146,
+      "target_index": 148,
+      "weight_tensors": [
+        "quantizer.layers.16.codebook.embed"
+      ],
+      "connections": 262144,
+      "routes": 576,
+      "source_endpoint_bins": 24,
+      "target_endpoint_bins": 24,
+      "description": "Euclidean score dot product, framewise, q=16; all 1024 candidates"
+    },
+    {
+      "source_index": 146,
+      "target_index": 148,
+      "weight_tensors": [],
+      "connections": 262144,
+      "routes": 576,
+      "source_endpoint_bins": 24,
+      "target_endpoint_bins": 24,
+      "description": "shared squared-input norm across all code candidates"
+    },
+    {
+      "source_index": 149,
+      "target_index": 148,
+      "weight_tensors": [
+        "quantizer.layers.16.codebook.embed"
+      ],
+      "connections": 262144,
+      "routes": 24,
+      "source_endpoint_bins": 1,
+      "target_endpoint_bins": 24,
+      "description": "candidate squared-code norms q=16"
+    },
+    {
+      "source_index": 148,
+      "target_index": 150,
+      "weight_tensors": [
+        "quantizer.layers.16.codebook.embed"
+      ],
+      "connections": 262144,
+      "routes": 576,
+      "source_endpoint_bins": 24,
+      "target_endpoint_bins": 24,
+      "description": "input-dependent argmax lookup alternatives, q=16"
+    },
+    {
+      "source_index": 146,
+      "target_index": 151,
+      "weight_tensors": [],
+      "connections": 256,
+      "routes": 24,
+      "source_endpoint_bins": 24,
+      "target_endpoint_bins": 24,
+      "description": "residual subtraction path"
+    },
+    {
+      "source_index": 150,
+      "target_index": 151,
+      "weight_tensors": [],
+      "connections": 256,
+      "routes": 24,
+      "source_endpoint_bins": 24,
+      "target_endpoint_bins": 24,
+      "description": "selected code subtraction after input-dependent lookup"
+    },
+    {
+      "source_index": 147,
+      "target_index": 152,
+      "weight_tensors": [],
+      "connections": 256,
+      "routes": 24,
+      "source_endpoint_bins": 24,
+      "target_endpoint_bins": 24,
+      "description": "quantized sum carry"
+    },
+    {
+      "source_index": 150,
+      "target_index": 152,
+      "weight_tensors": [],
+      "connections": 256,
+      "routes": 24,
+      "source_endpoint_bins": 24,
+      "target_endpoint_bins": 24,
+      "description": "selected code contribution"
+    },
+    {
+      "source_index": 151,
+      "target_index": 153,
+      "weight_tensors": [
+        "quantizer.layers.17.codebook.embed"
+      ],
+      "connections": 262144,
+      "routes": 576,
+      "source_endpoint_bins": 24,
+      "target_endpoint_bins": 24,
+      "description": "Euclidean score dot product, framewise, q=17; all 1024 candidates"
+    },
+    {
+      "source_index": 151,
+      "target_index": 153,
+      "weight_tensors": [],
+      "connections": 262144,
+      "routes": 576,
+      "source_endpoint_bins": 24,
+      "target_endpoint_bins": 24,
+      "description": "shared squared-input norm across all code candidates"
+    },
+    {
+      "source_index": 154,
+      "target_index": 153,
+      "weight_tensors": [
+        "quantizer.layers.17.codebook.embed"
+      ],
+      "connections": 262144,
+      "routes": 24,
+      "source_endpoint_bins": 1,
+      "target_endpoint_bins": 24,
+      "description": "candidate squared-code norms q=17"
+    },
+    {
+      "source_index": 153,
+      "target_index": 155,
+      "weight_tensors": [
+        "quantizer.layers.17.codebook.embed"
+      ],
+      "connections": 262144,
+      "routes": 576,
+      "source_endpoint_bins": 24,
+      "target_endpoint_bins": 24,
+      "description": "input-dependent argmax lookup alternatives, q=17"
+    },
+    {
+      "source_index": 151,
+      "target_index": 156,
+      "weight_tensors": [],
+      "connections": 256,
+      "routes": 24,
+      "source_endpoint_bins": 24,
+      "target_endpoint_bins": 24,
+      "description": "residual subtraction path"
+    },
+    {
+      "source_index": 155,
+      "target_index": 156,
+      "weight_tensors": [],
+      "connections": 256,
+      "routes": 24,
+      "source_endpoint_bins": 24,
+      "target_endpoint_bins": 24,
+      "description": "selected code subtraction after input-dependent lookup"
+    },
+    {
+      "source_index": 152,
+      "target_index": 157,
+      "weight_tensors": [],
+      "connections": 256,
+      "routes": 24,
+      "source_endpoint_bins": 24,
+      "target_endpoint_bins": 24,
+      "description": "quantized sum carry"
+    },
+    {
+      "source_index": 155,
+      "target_index": 157,
+      "weight_tensors": [],
+      "connections": 256,
+      "routes": 24,
+      "source_endpoint_bins": 24,
+      "target_endpoint_bins": 24,
+      "description": "selected code contribution"
+    },
+    {
+      "source_index": 156,
+      "target_index": 158,
+      "weight_tensors": [
+        "quantizer.layers.18.codebook.embed"
+      ],
+      "connections": 262144,
+      "routes": 576,
+      "source_endpoint_bins": 24,
+      "target_endpoint_bins": 24,
+      "description": "Euclidean score dot product, framewise, q=18; all 1024 candidates"
+    },
+    {
+      "source_index": 156,
+      "target_index": 158,
+      "weight_tensors": [],
+      "connections": 262144,
+      "routes": 576,
+      "source_endpoint_bins": 24,
+      "target_endpoint_bins": 24,
+      "description": "shared squared-input norm across all code candidates"
+    },
+    {
+      "source_index": 159,
+      "target_index": 158,
+      "weight_tensors": [
+        "quantizer.layers.18.codebook.embed"
+      ],
+      "connections": 262144,
+      "routes": 24,
+      "source_endpoint_bins": 1,
+      "target_endpoint_bins": 24,
+      "description": "candidate squared-code norms q=18"
+    },
+    {
+      "source_index": 158,
+      "target_index": 160,
+      "weight_tensors": [
+        "quantizer.layers.18.codebook.embed"
+      ],
+      "connections": 262144,
+      "routes": 576,
+      "source_endpoint_bins": 24,
+      "target_endpoint_bins": 24,
+      "description": "input-dependent argmax lookup alternatives, q=18"
+    },
+    {
+      "source_index": 156,
+      "target_index": 161,
+      "weight_tensors": [],
+      "connections": 256,
+      "routes": 24,
+      "source_endpoint_bins": 24,
+      "target_endpoint_bins": 24,
+      "description": "residual subtraction path"
+    },
+    {
+      "source_index": 160,
+      "target_index": 161,
+      "weight_tensors": [],
+      "connections": 256,
+      "routes": 24,
+      "source_endpoint_bins": 24,
+      "target_endpoint_bins": 24,
+      "description": "selected code subtraction after input-dependent lookup"
+    },
+    {
+      "source_index": 157,
+      "target_index": 162,
+      "weight_tensors": [],
+      "connections": 256,
+      "routes": 24,
+      "source_endpoint_bins": 24,
+      "target_endpoint_bins": 24,
+      "description": "quantized sum carry"
+    },
+    {
+      "source_index": 160,
+      "target_index": 162,
+      "weight_tensors": [],
+      "connections": 256,
+      "routes": 24,
+      "source_endpoint_bins": 24,
+      "target_endpoint_bins": 24,
+      "description": "selected code contribution"
+    },
+    {
+      "source_index": 161,
+      "target_index": 163,
+      "weight_tensors": [
+        "quantizer.layers.19.codebook.embed"
+      ],
+      "connections": 262144,
+      "routes": 576,
+      "source_endpoint_bins": 24,
+      "target_endpoint_bins": 24,
+      "description": "Euclidean score dot product, framewise, q=19; all 1024 candidates"
+    },
+    {
+      "source_index": 161,
+      "target_index": 163,
+      "weight_tensors": [],
+      "connections": 262144,
+      "routes": 576,
+      "source_endpoint_bins": 24,
+      "target_endpoint_bins": 24,
+      "description": "shared squared-input norm across all code candidates"
+    },
+    {
+      "source_index": 164,
+      "target_index": 163,
+      "weight_tensors": [
+        "quantizer.layers.19.codebook.embed"
+      ],
+      "connections": 262144,
+      "routes": 24,
+      "source_endpoint_bins": 1,
+      "target_endpoint_bins": 24,
+      "description": "candidate squared-code norms q=19"
+    },
+    {
+      "source_index": 163,
+      "target_index": 165,
+      "weight_tensors": [
+        "quantizer.layers.19.codebook.embed"
+      ],
+      "connections": 262144,
+      "routes": 576,
+      "source_endpoint_bins": 24,
+      "target_endpoint_bins": 24,
+      "description": "input-dependent argmax lookup alternatives, q=19"
+    },
+    {
+      "source_index": 161,
+      "target_index": 166,
+      "weight_tensors": [],
+      "connections": 256,
+      "routes": 24,
+      "source_endpoint_bins": 24,
+      "target_endpoint_bins": 24,
+      "description": "residual subtraction path"
+    },
+    {
+      "source_index": 165,
+      "target_index": 166,
+      "weight_tensors": [],
+      "connections": 256,
+      "routes": 24,
+      "source_endpoint_bins": 24,
+      "target_endpoint_bins": 24,
+      "description": "selected code subtraction after input-dependent lookup"
+    },
+    {
+      "source_index": 162,
+      "target_index": 167,
+      "weight_tensors": [],
+      "connections": 256,
+      "routes": 24,
+      "source_endpoint_bins": 24,
+      "target_endpoint_bins": 24,
+      "description": "quantized sum carry"
+    },
+    {
+      "source_index": 165,
+      "target_index": 167,
+      "weight_tensors": [],
+      "connections": 256,
+      "routes": 24,
+      "source_endpoint_bins": 24,
+      "target_endpoint_bins": 24,
+      "description": "selected code contribution"
+    },
+    {
+      "source_index": 166,
+      "target_index": 168,
+      "weight_tensors": [
+        "quantizer.layers.20.codebook.embed"
+      ],
+      "connections": 262144,
+      "routes": 576,
+      "source_endpoint_bins": 24,
+      "target_endpoint_bins": 24,
+      "description": "Euclidean score dot product, framewise, q=20; all 1024 candidates"
+    },
+    {
+      "source_index": 166,
+      "target_index": 168,
+      "weight_tensors": [],
+      "connections": 262144,
+      "routes": 576,
+      "source_endpoint_bins": 24,
+      "target_endpoint_bins": 24,
+      "description": "shared squared-input norm across all code candidates"
+    },
+    {
+      "source_index": 169,
+      "target_index": 168,
+      "weight_tensors": [
+        "quantizer.layers.20.codebook.embed"
+      ],
+      "connections": 262144,
+      "routes": 24,
+      "source_endpoint_bins": 1,
+      "target_endpoint_bins": 24,
+      "description": "candidate squared-code norms q=20"
+    },
+    {
+      "source_index": 168,
+      "target_index": 170,
+      "weight_tensors": [
+        "quantizer.layers.20.codebook.embed"
+      ],
+      "connections": 262144,
+      "routes": 576,
+      "source_endpoint_bins": 24,
+      "target_endpoint_bins": 24,
+      "description": "input-dependent argmax lookup alternatives, q=20"
+    },
+    {
+      "source_index": 166,
+      "target_index": 171,
+      "weight_tensors": [],
+      "connections": 256,
+      "routes": 24,
+      "source_endpoint_bins": 24,
+      "target_endpoint_bins": 24,
+      "description": "residual subtraction path"
+    },
+    {
+      "source_index": 170,
+      "target_index": 171,
+      "weight_tensors": [],
+      "connections": 256,
+      "routes": 24,
+      "source_endpoint_bins": 24,
+      "target_endpoint_bins": 24,
+      "description": "selected code subtraction after input-dependent lookup"
+    },
+    {
+      "source_index": 167,
+      "target_index": 172,
+      "weight_tensors": [],
+      "connections": 256,
+      "routes": 24,
+      "source_endpoint_bins": 24,
+      "target_endpoint_bins": 24,
+      "description": "quantized sum carry"
+    },
+    {
+      "source_index": 170,
+      "target_index": 172,
+      "weight_tensors": [],
+      "connections": 256,
+      "routes": 24,
+      "source_endpoint_bins": 24,
+      "target_endpoint_bins": 24,
+      "description": "selected code contribution"
+    },
+    {
+      "source_index": 171,
+      "target_index": 173,
+      "weight_tensors": [
+        "quantizer.layers.21.codebook.embed"
+      ],
+      "connections": 262144,
+      "routes": 576,
+      "source_endpoint_bins": 24,
+      "target_endpoint_bins": 24,
+      "description": "Euclidean score dot product, framewise, q=21; all 1024 candidates"
+    },
+    {
+      "source_index": 171,
+      "target_index": 173,
+      "weight_tensors": [],
+      "connections": 262144,
+      "routes": 576,
+      "source_endpoint_bins": 24,
+      "target_endpoint_bins": 24,
+      "description": "shared squared-input norm across all code candidates"
+    },
+    {
+      "source_index": 174,
+      "target_index": 173,
+      "weight_tensors": [
+        "quantizer.layers.21.codebook.embed"
+      ],
+      "connections": 262144,
+      "routes": 24,
+      "source_endpoint_bins": 1,
+      "target_endpoint_bins": 24,
+      "description": "candidate squared-code norms q=21"
+    },
+    {
+      "source_index": 173,
+      "target_index": 175,
+      "weight_tensors": [
+        "quantizer.layers.21.codebook.embed"
+      ],
+      "connections": 262144,
+      "routes": 576,
+      "source_endpoint_bins": 24,
+      "target_endpoint_bins": 24,
+      "description": "input-dependent argmax lookup alternatives, q=21"
+    },
+    {
+      "source_index": 171,
+      "target_index": 176,
+      "weight_tensors": [],
+      "connections": 256,
+      "routes": 24,
+      "source_endpoint_bins": 24,
+      "target_endpoint_bins": 24,
+      "description": "residual subtraction path"
+    },
+    {
+      "source_index": 175,
+      "target_index": 176,
+      "weight_tensors": [],
+      "connections": 256,
+      "routes": 24,
+      "source_endpoint_bins": 24,
+      "target_endpoint_bins": 24,
+      "description": "selected code subtraction after input-dependent lookup"
+    },
+    {
+      "source_index": 172,
+      "target_index": 177,
+      "weight_tensors": [],
+      "connections": 256,
+      "routes": 24,
+      "source_endpoint_bins": 24,
+      "target_endpoint_bins": 24,
+      "description": "quantized sum carry"
+    },
+    {
+      "source_index": 175,
+      "target_index": 177,
+      "weight_tensors": [],
+      "connections": 256,
+      "routes": 24,
+      "source_endpoint_bins": 24,
+      "target_endpoint_bins": 24,
+      "description": "selected code contribution"
+    },
+    {
+      "source_index": 176,
+      "target_index": 178,
+      "weight_tensors": [
+        "quantizer.layers.22.codebook.embed"
+      ],
+      "connections": 262144,
+      "routes": 576,
+      "source_endpoint_bins": 24,
+      "target_endpoint_bins": 24,
+      "description": "Euclidean score dot product, framewise, q=22; all 1024 candidates"
+    },
+    {
+      "source_index": 176,
+      "target_index": 178,
+      "weight_tensors": [],
+      "connections": 262144,
+      "routes": 576,
+      "source_endpoint_bins": 24,
+      "target_endpoint_bins": 24,
+      "description": "shared squared-input norm across all code candidates"
+    },
+    {
+      "source_index": 179,
+      "target_index": 178,
+      "weight_tensors": [
+        "quantizer.layers.22.codebook.embed"
+      ],
+      "connections": 262144,
+      "routes": 24,
+      "source_endpoint_bins": 1,
+      "target_endpoint_bins": 24,
+      "description": "candidate squared-code norms q=22"
+    },
+    {
+      "source_index": 178,
+      "target_index": 180,
+      "weight_tensors": [
+        "quantizer.layers.22.codebook.embed"
+      ],
+      "connections": 262144,
+      "routes": 576,
+      "source_endpoint_bins": 24,
+      "target_endpoint_bins": 24,
+      "description": "input-dependent argmax lookup alternatives, q=22"
+    },
+    {
+      "source_index": 176,
+      "target_index": 181,
+      "weight_tensors": [],
+      "connections": 256,
+      "routes": 24,
+      "source_endpoint_bins": 24,
+      "target_endpoint_bins": 24,
+      "description": "residual subtraction path"
+    },
+    {
+      "source_index": 180,
+      "target_index": 181,
+      "weight_tensors": [],
+      "connections": 256,
+      "routes": 24,
+      "source_endpoint_bins": 24,
+      "target_endpoint_bins": 24,
+      "description": "selected code subtraction after input-dependent lookup"
+    },
+    {
+      "source_index": 177,
+      "target_index": 182,
+      "weight_tensors": [],
+      "connections": 256,
+      "routes": 24,
+      "source_endpoint_bins": 24,
+      "target_endpoint_bins": 24,
+      "description": "quantized sum carry"
+    },
+    {
+      "source_index": 180,
+      "target_index": 182,
+      "weight_tensors": [],
+      "connections": 256,
+      "routes": 24,
+      "source_endpoint_bins": 24,
+      "target_endpoint_bins": 24,
+      "description": "selected code contribution"
+    },
+    {
+      "source_index": 181,
+      "target_index": 183,
+      "weight_tensors": [
+        "quantizer.layers.23.codebook.embed"
+      ],
+      "connections": 262144,
+      "routes": 576,
+      "source_endpoint_bins": 24,
+      "target_endpoint_bins": 24,
+      "description": "Euclidean score dot product, framewise, q=23; all 1024 candidates"
+    },
+    {
+      "source_index": 181,
+      "target_index": 183,
+      "weight_tensors": [],
+      "connections": 262144,
+      "routes": 576,
+      "source_endpoint_bins": 24,
+      "target_endpoint_bins": 24,
+      "description": "shared squared-input norm across all code candidates"
+    },
+    {
+      "source_index": 184,
+      "target_index": 183,
+      "weight_tensors": [
+        "quantizer.layers.23.codebook.embed"
+      ],
+      "connections": 262144,
+      "routes": 24,
+      "source_endpoint_bins": 1,
+      "target_endpoint_bins": 24,
+      "description": "candidate squared-code norms q=23"
+    },
+    {
+      "source_index": 183,
+      "target_index": 185,
+      "weight_tensors": [
+        "quantizer.layers.23.codebook.embed"
+      ],
+      "connections": 262144,
+      "routes": 576,
+      "source_endpoint_bins": 24,
+      "target_endpoint_bins": 24,
+      "description": "input-dependent argmax lookup alternatives, q=23"
+    },
+    {
+      "source_index": 181,
+      "target_index": 186,
+      "weight_tensors": [],
+      "connections": 256,
+      "routes": 24,
+      "source_endpoint_bins": 24,
+      "target_endpoint_bins": 24,
+      "description": "residual subtraction path"
+    },
+    {
+      "source_index": 185,
+      "target_index": 186,
+      "weight_tensors": [],
+      "connections": 256,
+      "routes": 24,
+      "source_endpoint_bins": 24,
+      "target_endpoint_bins": 24,
+      "description": "selected code subtraction after input-dependent lookup"
+    },
+    {
+      "source_index": 182,
+      "target_index": 187,
+      "weight_tensors": [],
+      "connections": 256,
+      "routes": 24,
+      "source_endpoint_bins": 24,
+      "target_endpoint_bins": 24,
+      "description": "quantized sum carry"
+    },
+    {
+      "source_index": 185,
+      "target_index": 187,
+      "weight_tensors": [],
+      "connections": 256,
+      "routes": 24,
+      "source_endpoint_bins": 24,
+      "target_endpoint_bins": 24,
+      "description": "selected code contribution"
+    },
+    {
+      "source_index": 186,
+      "target_index": 188,
+      "weight_tensors": [
+        "quantizer.layers.24.codebook.embed"
+      ],
+      "connections": 262144,
+      "routes": 576,
+      "source_endpoint_bins": 24,
+      "target_endpoint_bins": 24,
+      "description": "Euclidean score dot product, framewise, q=24; all 1024 candidates"
+    },
+    {
+      "source_index": 186,
+      "target_index": 188,
+      "weight_tensors": [],
+      "connections": 262144,
+      "routes": 576,
+      "source_endpoint_bins": 24,
+      "target_endpoint_bins": 24,
+      "description": "shared squared-input norm across all code candidates"
+    },
+    {
+      "source_index": 189,
+      "target_index": 188,
+      "weight_tensors": [
+        "quantizer.layers.24.codebook.embed"
+      ],
+      "connections": 262144,
+      "routes": 24,
+      "source_endpoint_bins": 1,
+      "target_endpoint_bins": 24,
+      "description": "candidate squared-code norms q=24"
+    },
+    {
+      "source_index": 188,
+      "target_index": 190,
+      "weight_tensors": [
+        "quantizer.layers.24.codebook.embed"
+      ],
+      "connections": 262144,
+      "routes": 576,
+      "source_endpoint_bins": 24,
+      "target_endpoint_bins": 24,
+      "description": "input-dependent argmax lookup alternatives, q=24"
+    },
+    {
+      "source_index": 186,
+      "target_index": 191,
+      "weight_tensors": [],
+      "connections": 256,
+      "routes": 24,
+      "source_endpoint_bins": 24,
+      "target_endpoint_bins": 24,
+      "description": "residual subtraction path"
+    },
+    {
+      "source_index": 190,
+      "target_index": 191,
+      "weight_tensors": [],
+      "connections": 256,
+      "routes": 24,
+      "source_endpoint_bins": 24,
+      "target_endpoint_bins": 24,
+      "description": "selected code subtraction after input-dependent lookup"
+    },
+    {
+      "source_index": 187,
+      "target_index": 192,
+      "weight_tensors": [],
+      "connections": 256,
+      "routes": 24,
+      "source_endpoint_bins": 24,
+      "target_endpoint_bins": 24,
+      "description": "quantized sum carry"
+    },
+    {
+      "source_index": 190,
+      "target_index": 192,
+      "weight_tensors": [],
+      "connections": 256,
+      "routes": 24,
+      "source_endpoint_bins": 24,
+      "target_endpoint_bins": 24,
+      "description": "selected code contribution"
+    },
+    {
+      "source_index": 191,
+      "target_index": 193,
+      "weight_tensors": [
+        "quantizer.layers.25.codebook.embed"
+      ],
+      "connections": 262144,
+      "routes": 576,
+      "source_endpoint_bins": 24,
+      "target_endpoint_bins": 24,
+      "description": "Euclidean score dot product, framewise, q=25; all 1024 candidates"
+    },
+    {
+      "source_index": 191,
+      "target_index": 193,
+      "weight_tensors": [],
+      "connections": 262144,
+      "routes": 576,
+      "source_endpoint_bins": 24,
+      "target_endpoint_bins": 24,
+      "description": "shared squared-input norm across all code candidates"
+    },
+    {
+      "source_index": 194,
+      "target_index": 193,
+      "weight_tensors": [
+        "quantizer.layers.25.codebook.embed"
+      ],
+      "connections": 262144,
+      "routes": 24,
+      "source_endpoint_bins": 1,
+      "target_endpoint_bins": 24,
+      "description": "candidate squared-code norms q=25"
+    },
+    {
+      "source_index": 193,
+      "target_index": 195,
+      "weight_tensors": [
+        "quantizer.layers.25.codebook.embed"
+      ],
+      "connections": 262144,
+      "routes": 576,
+      "source_endpoint_bins": 24,
+      "target_endpoint_bins": 24,
+      "description": "input-dependent argmax lookup alternatives, q=25"
+    },
+    {
+      "source_index": 191,
+      "target_index": 196,
+      "weight_tensors": [],
+      "connections": 256,
+      "routes": 24,
+      "source_endpoint_bins": 24,
+      "target_endpoint_bins": 24,
+      "description": "residual subtraction path"
+    },
+    {
+      "source_index": 195,
+      "target_index": 196,
+      "weight_tensors": [],
+      "connections": 256,
+      "routes": 24,
+      "source_endpoint_bins": 24,
+      "target_endpoint_bins": 24,
+      "description": "selected code subtraction after input-dependent lookup"
+    },
+    {
+      "source_index": 192,
+      "target_index": 197,
+      "weight_tensors": [],
+      "connections": 256,
+      "routes": 24,
+      "source_endpoint_bins": 24,
+      "target_endpoint_bins": 24,
+      "description": "quantized sum carry"
+    },
+    {
+      "source_index": 195,
+      "target_index": 197,
+      "weight_tensors": [],
+      "connections": 256,
+      "routes": 24,
+      "source_endpoint_bins": 24,
+      "target_endpoint_bins": 24,
+      "description": "selected code contribution"
+    },
+    {
+      "source_index": 196,
+      "target_index": 198,
+      "weight_tensors": [
+        "quantizer.layers.26.codebook.embed"
+      ],
+      "connections": 262144,
+      "routes": 576,
+      "source_endpoint_bins": 24,
+      "target_endpoint_bins": 24,
+      "description": "Euclidean score dot product, framewise, q=26; all 1024 candidates"
+    },
+    {
+      "source_index": 196,
+      "target_index": 198,
+      "weight_tensors": [],
+      "connections": 262144,
+      "routes": 576,
+      "source_endpoint_bins": 24,
+      "target_endpoint_bins": 24,
+      "description": "shared squared-input norm across all code candidates"
+    },
+    {
+      "source_index": 199,
+      "target_index": 198,
+      "weight_tensors": [
+        "quantizer.layers.26.codebook.embed"
+      ],
+      "connections": 262144,
+      "routes": 24,
+      "source_endpoint_bins": 1,
+      "target_endpoint_bins": 24,
+      "description": "candidate squared-code norms q=26"
+    },
+    {
+      "source_index": 198,
+      "target_index": 200,
+      "weight_tensors": [
+        "quantizer.layers.26.codebook.embed"
+      ],
+      "connections": 262144,
+      "routes": 576,
+      "source_endpoint_bins": 24,
+      "target_endpoint_bins": 24,
+      "description": "input-dependent argmax lookup alternatives, q=26"
+    },
+    {
+      "source_index": 196,
+      "target_index": 201,
+      "weight_tensors": [],
+      "connections": 256,
+      "routes": 24,
+      "source_endpoint_bins": 24,
+      "target_endpoint_bins": 24,
+      "description": "residual subtraction path"
+    },
+    {
+      "source_index": 200,
+      "target_index": 201,
+      "weight_tensors": [],
+      "connections": 256,
+      "routes": 24,
+      "source_endpoint_bins": 24,
+      "target_endpoint_bins": 24,
+      "description": "selected code subtraction after input-dependent lookup"
+    },
+    {
+      "source_index": 197,
+      "target_index": 202,
+      "weight_tensors": [],
+      "connections": 256,
+      "routes": 24,
+      "source_endpoint_bins": 24,
+      "target_endpoint_bins": 24,
+      "description": "quantized sum carry"
+    },
+    {
+      "source_index": 200,
+      "target_index": 202,
+      "weight_tensors": [],
+      "connections": 256,
+      "routes": 24,
+      "source_endpoint_bins": 24,
+      "target_endpoint_bins": 24,
+      "description": "selected code contribution"
+    },
+    {
+      "source_index": 201,
+      "target_index": 203,
+      "weight_tensors": [
+        "quantizer.layers.27.codebook.embed"
+      ],
+      "connections": 262144,
+      "routes": 576,
+      "source_endpoint_bins": 24,
+      "target_endpoint_bins": 24,
+      "description": "Euclidean score dot product, framewise, q=27; all 1024 candidates"
+    },
+    {
+      "source_index": 201,
+      "target_index": 203,
+      "weight_tensors": [],
+      "connections": 262144,
+      "routes": 576,
+      "source_endpoint_bins": 24,
+      "target_endpoint_bins": 24,
+      "description": "shared squared-input norm across all code candidates"
+    },
+    {
+      "source_index": 204,
+      "target_index": 203,
+      "weight_tensors": [
+        "quantizer.layers.27.codebook.embed"
+      ],
+      "connections": 262144,
+      "routes": 24,
+      "source_endpoint_bins": 1,
+      "target_endpoint_bins": 24,
+      "description": "candidate squared-code norms q=27"
+    },
+    {
+      "source_index": 203,
+      "target_index": 205,
+      "weight_tensors": [
+        "quantizer.layers.27.codebook.embed"
+      ],
+      "connections": 262144,
+      "routes": 576,
+      "source_endpoint_bins": 24,
+      "target_endpoint_bins": 24,
+      "description": "input-dependent argmax lookup alternatives, q=27"
+    },
+    {
+      "source_index": 201,
+      "target_index": 206,
+      "weight_tensors": [],
+      "connections": 256,
+      "routes": 24,
+      "source_endpoint_bins": 24,
+      "target_endpoint_bins": 24,
+      "description": "residual subtraction path"
+    },
+    {
+      "source_index": 205,
+      "target_index": 206,
+      "weight_tensors": [],
+      "connections": 256,
+      "routes": 24,
+      "source_endpoint_bins": 24,
+      "target_endpoint_bins": 24,
+      "description": "selected code subtraction after input-dependent lookup"
+    },
+    {
+      "source_index": 202,
+      "target_index": 207,
+      "weight_tensors": [],
+      "connections": 256,
+      "routes": 24,
+      "source_endpoint_bins": 24,
+      "target_endpoint_bins": 24,
+      "description": "quantized sum carry"
+    },
+    {
+      "source_index": 205,
+      "target_index": 207,
+      "weight_tensors": [],
+      "connections": 256,
+      "routes": 24,
+      "source_endpoint_bins": 24,
+      "target_endpoint_bins": 24,
+      "description": "selected code contribution"
+    },
+    {
+      "source_index": 206,
+      "target_index": 208,
+      "weight_tensors": [
+        "quantizer.layers.28.codebook.embed"
+      ],
+      "connections": 262144,
+      "routes": 576,
+      "source_endpoint_bins": 24,
+      "target_endpoint_bins": 24,
+      "description": "Euclidean score dot product, framewise, q=28; all 1024 candidates"
+    },
+    {
+      "source_index": 206,
+      "target_index": 208,
+      "weight_tensors": [],
+      "connections": 262144,
+      "routes": 576,
+      "source_endpoint_bins": 24,
+      "target_endpoint_bins": 24,
+      "description": "shared squared-input norm across all code candidates"
+    },
+    {
+      "source_index": 209,
+      "target_index": 208,
+      "weight_tensors": [
+        "quantizer.layers.28.codebook.embed"
+      ],
+      "connections": 262144,
+      "routes": 24,
+      "source_endpoint_bins": 1,
+      "target_endpoint_bins": 24,
+      "description": "candidate squared-code norms q=28"
+    },
+    {
+      "source_index": 208,
+      "target_index": 210,
+      "weight_tensors": [
+        "quantizer.layers.28.codebook.embed"
+      ],
+      "connections": 262144,
+      "routes": 576,
+      "source_endpoint_bins": 24,
+      "target_endpoint_bins": 24,
+      "description": "input-dependent argmax lookup alternatives, q=28"
+    },
+    {
+      "source_index": 206,
+      "target_index": 211,
+      "weight_tensors": [],
+      "connections": 256,
+      "routes": 24,
+      "source_endpoint_bins": 24,
+      "target_endpoint_bins": 24,
+      "description": "residual subtraction path"
+    },
+    {
+      "source_index": 210,
+      "target_index": 211,
+      "weight_tensors": [],
+      "connections": 256,
+      "routes": 24,
+      "source_endpoint_bins": 24,
+      "target_endpoint_bins": 24,
+      "description": "selected code subtraction after input-dependent lookup"
+    },
+    {
+      "source_index": 207,
+      "target_index": 212,
+      "weight_tensors": [],
+      "connections": 256,
+      "routes": 24,
+      "source_endpoint_bins": 24,
+      "target_endpoint_bins": 24,
+      "description": "quantized sum carry"
+    },
+    {
+      "source_index": 210,
+      "target_index": 212,
+      "weight_tensors": [],
+      "connections": 256,
+      "routes": 24,
+      "source_endpoint_bins": 24,
+      "target_endpoint_bins": 24,
+      "description": "selected code contribution"
+    },
+    {
+      "source_index": 211,
+      "target_index": 213,
+      "weight_tensors": [
+        "quantizer.layers.29.codebook.embed"
+      ],
+      "connections": 262144,
+      "routes": 576,
+      "source_endpoint_bins": 24,
+      "target_endpoint_bins": 24,
+      "description": "Euclidean score dot product, framewise, q=29; all 1024 candidates"
+    },
+    {
+      "source_index": 211,
+      "target_index": 213,
+      "weight_tensors": [],
+      "connections": 262144,
+      "routes": 576,
+      "source_endpoint_bins": 24,
+      "target_endpoint_bins": 24,
+      "description": "shared squared-input norm across all code candidates"
+    },
+    {
+      "source_index": 214,
+      "target_index": 213,
+      "weight_tensors": [
+        "quantizer.layers.29.codebook.embed"
+      ],
+      "connections": 262144,
+      "routes": 24,
+      "source_endpoint_bins": 1,
+      "target_endpoint_bins": 24,
+      "description": "candidate squared-code norms q=29"
+    },
+    {
+      "source_index": 213,
+      "target_index": 215,
+      "weight_tensors": [
+        "quantizer.layers.29.codebook.embed"
+      ],
+      "connections": 262144,
+      "routes": 576,
+      "source_endpoint_bins": 24,
+      "target_endpoint_bins": 24,
+      "description": "input-dependent argmax lookup alternatives, q=29"
+    },
+    {
+      "source_index": 211,
+      "target_index": 216,
+      "weight_tensors": [],
+      "connections": 256,
+      "routes": 24,
+      "source_endpoint_bins": 24,
+      "target_endpoint_bins": 24,
+      "description": "residual subtraction path"
+    },
+    {
+      "source_index": 215,
+      "target_index": 216,
+      "weight_tensors": [],
+      "connections": 256,
+      "routes": 24,
+      "source_endpoint_bins": 24,
+      "target_endpoint_bins": 24,
+      "description": "selected code subtraction after input-dependent lookup"
+    },
+    {
+      "source_index": 212,
+      "target_index": 217,
+      "weight_tensors": [],
+      "connections": 256,
+      "routes": 24,
+      "source_endpoint_bins": 24,
+      "target_endpoint_bins": 24,
+      "description": "quantized sum carry"
+    },
+    {
+      "source_index": 215,
+      "target_index": 217,
+      "weight_tensors": [],
+      "connections": 256,
+      "routes": 24,
+      "source_endpoint_bins": 24,
+      "target_endpoint_bins": 24,
+      "description": "selected code contribution"
+    },
+    {
+      "source_index": 216,
+      "target_index": 218,
+      "weight_tensors": [
+        "quantizer.layers.30.codebook.embed"
+      ],
+      "connections": 262144,
+      "routes": 576,
+      "source_endpoint_bins": 24,
+      "target_endpoint_bins": 24,
+      "description": "Euclidean score dot product, framewise, q=30; all 1024 candidates"
+    },
+    {
+      "source_index": 216,
+      "target_index": 218,
+      "weight_tensors": [],
+      "connections": 262144,
+      "routes": 576,
+      "source_endpoint_bins": 24,
+      "target_endpoint_bins": 24,
+      "description": "shared squared-input norm across all code candidates"
+    },
+    {
+      "source_index": 219,
+      "target_index": 218,
+      "weight_tensors": [
+        "quantizer.layers.30.codebook.embed"
+      ],
+      "connections": 262144,
+      "routes": 24,
+      "source_endpoint_bins": 1,
+      "target_endpoint_bins": 24,
+      "description": "candidate squared-code norms q=30"
+    },
+    {
+      "source_index": 218,
+      "target_index": 220,
+      "weight_tensors": [
+        "quantizer.layers.30.codebook.embed"
+      ],
+      "connections": 262144,
+      "routes": 576,
+      "source_endpoint_bins": 24,
+      "target_endpoint_bins": 24,
+      "description": "input-dependent argmax lookup alternatives, q=30"
+    },
+    {
+      "source_index": 216,
+      "target_index": 221,
+      "weight_tensors": [],
+      "connections": 256,
+      "routes": 24,
+      "source_endpoint_bins": 24,
+      "target_endpoint_bins": 24,
+      "description": "residual subtraction path"
+    },
+    {
+      "source_index": 220,
+      "target_index": 221,
+      "weight_tensors": [],
+      "connections": 256,
+      "routes": 24,
+      "source_endpoint_bins": 24,
+      "target_endpoint_bins": 24,
+      "description": "selected code subtraction after input-dependent lookup"
+    },
+    {
+      "source_index": 217,
+      "target_index": 222,
+      "weight_tensors": [],
+      "connections": 256,
+      "routes": 24,
+      "source_endpoint_bins": 24,
+      "target_endpoint_bins": 24,
+      "description": "quantized sum carry"
+    },
+    {
+      "source_index": 220,
+      "target_index": 222,
+      "weight_tensors": [],
+      "connections": 256,
+      "routes": 24,
+      "source_endpoint_bins": 24,
+      "target_endpoint_bins": 24,
+      "description": "selected code contribution"
+    },
+    {
+      "source_index": 221,
+      "target_index": 223,
+      "weight_tensors": [
+        "quantizer.layers.31.codebook.embed"
+      ],
+      "connections": 262144,
+      "routes": 576,
+      "source_endpoint_bins": 24,
+      "target_endpoint_bins": 24,
+      "description": "Euclidean score dot product, framewise, q=31; all 1024 candidates"
+    },
+    {
+      "source_index": 221,
+      "target_index": 223,
+      "weight_tensors": [],
+      "connections": 262144,
+      "routes": 576,
+      "source_endpoint_bins": 24,
+      "target_endpoint_bins": 24,
+      "description": "shared squared-input norm across all code candidates"
+    },
+    {
+      "source_index": 224,
+      "target_index": 223,
+      "weight_tensors": [
+        "quantizer.layers.31.codebook.embed"
+      ],
+      "connections": 262144,
+      "routes": 24,
+      "source_endpoint_bins": 1,
+      "target_endpoint_bins": 24,
+      "description": "candidate squared-code norms q=31"
+    },
+    {
+      "source_index": 223,
+      "target_index": 225,
+      "weight_tensors": [
+        "quantizer.layers.31.codebook.embed"
+      ],
+      "connections": 262144,
+      "routes": 576,
+      "source_endpoint_bins": 24,
+      "target_endpoint_bins": 24,
+      "description": "input-dependent argmax lookup alternatives, q=31"
+    },
+    {
+      "source_index": 221,
+      "target_index": 226,
+      "weight_tensors": [],
+      "connections": 256,
+      "routes": 24,
+      "source_endpoint_bins": 24,
+      "target_endpoint_bins": 24,
+      "description": "residual subtraction path"
+    },
+    {
+      "source_index": 225,
+      "target_index": 226,
+      "weight_tensors": [],
+      "connections": 256,
+      "routes": 24,
+      "source_endpoint_bins": 24,
+      "target_endpoint_bins": 24,
+      "description": "selected code subtraction after input-dependent lookup"
+    },
+    {
+      "source_index": 222,
+      "target_index": 227,
+      "weight_tensors": [],
+      "connections": 256,
+      "routes": 24,
+      "source_endpoint_bins": 24,
+      "target_endpoint_bins": 24,
+      "description": "quantized sum carry"
+    },
+    {
+      "source_index": 225,
+      "target_index": 227,
+      "weight_tensors": [],
+      "connections": 256,
+      "routes": 24,
+      "source_endpoint_bins": 24,
+      "target_endpoint_bins": 24,
+      "description": "selected code contribution"
+    },
+    {
+      "source_index": 227,
+      "target_index": 228,
+      "weight_tensors": [
+        "decoder.layers.0.conv.weight_v",
+        "decoder.layers.0.conv.weight_g"
+      ],
+      "connections": 327680,
+      "routes": 576,
+      "source_endpoint_bins": 24,
+      "target_endpoint_bins": 24,
+      "description": "causal reflect Conv1d k=7, dilation=1, stride=1, input=2, output=2"
+    },
+    {
+      "source_index": 229,
+      "target_index": 228,
+      "weight_tensors": [
+        "decoder.layers.0.conv.bias"
+      ],
+      "connections": 1024,
+      "routes": 24,
+      "source_endpoint_bins": 1,
+      "target_endpoint_bins": 24,
+      "description": "bias broadcast over 2 time steps"
+    },
+    {
+      "source_index": 228,
+      "target_index": 234,
+      "weight_tensors": [
+        "decoder.layers.1.lstm.weight_ih_l0"
+      ],
+      "connections": 1048576,
+      "routes": 576,
+      "source_endpoint_bins": 24,
+      "target_endpoint_bins": 24,
+      "description": "LSTM ih matrix t=0 layer=0"
+    },
+    {
+      "source_index": 230,
+      "target_index": 234,
+      "weight_tensors": [
+        "decoder.layers.1.lstm.weight_hh_l0"
+      ],
+      "connections": 1048576,
+      "routes": 576,
+      "source_endpoint_bins": 24,
+      "target_endpoint_bins": 24,
+      "description": "LSTM hh matrix t=0 layer=0"
+    },
+    {
+      "source_index": 235,
+      "target_index": 234,
+      "weight_tensors": [
+        "decoder.layers.1.lstm.bias_ih_l0"
+      ],
+      "connections": 2048,
+      "routes": 24,
+      "source_endpoint_bins": 1,
+      "target_endpoint_bins": 24,
+      "description": "LSTM bias"
+    },
+    {
+      "source_index": 236,
+      "target_index": 234,
+      "weight_tensors": [
+        "decoder.layers.1.lstm.bias_hh_l0"
+      ],
+      "connections": 2048,
+      "routes": 24,
+      "source_endpoint_bins": 1,
+      "target_endpoint_bins": 24,
+      "description": "LSTM bias"
+    },
+    {
+      "source_index": 234,
+      "target_index": 237,
+      "weight_tensors": [],
+      "connections": 1536,
+      "routes": 72,
+      "source_endpoint_bins": 18,
+      "target_endpoint_bins": 24,
+      "description": "LSTM gate-to-cell"
+    },
+    {
+      "source_index": 231,
+      "target_index": 237,
+      "weight_tensors": [],
+      "connections": 512,
+      "routes": 24,
+      "source_endpoint_bins": 24,
+      "target_endpoint_bins": 24,
+      "description": "LSTM cell recurrence"
+    },
+    {
+      "source_index": 234,
+      "target_index": 238,
+      "weight_tensors": [],
+      "connections": 512,
+      "routes": 24,
+      "source_endpoint_bins": 6,
+      "target_endpoint_bins": 24,
+      "description": "LSTM output gate"
+    },
+    {
+      "source_index": 237,
+      "target_index": 238,
+      "weight_tensors": [],
+      "connections": 512,
+      "routes": 24,
+      "source_endpoint_bins": 24,
+      "target_endpoint_bins": 24,
+      "description": "cell-to-hidden"
+    },
+    {
+      "source_index": 238,
+      "target_index": 239,
+      "weight_tensors": [
+        "decoder.layers.1.lstm.weight_ih_l1"
+      ],
+      "connections": 1048576,
+      "routes": 576,
+      "source_endpoint_bins": 24,
+      "target_endpoint_bins": 24,
+      "description": "LSTM ih matrix t=0 layer=1"
+    },
+    {
+      "source_index": 232,
+      "target_index": 239,
+      "weight_tensors": [
+        "decoder.layers.1.lstm.weight_hh_l1"
+      ],
+      "connections": 1048576,
+      "routes": 576,
+      "source_endpoint_bins": 24,
+      "target_endpoint_bins": 24,
+      "description": "LSTM hh matrix t=0 layer=1"
+    },
+    {
+      "source_index": 240,
+      "target_index": 239,
+      "weight_tensors": [
+        "decoder.layers.1.lstm.bias_ih_l1"
+      ],
+      "connections": 2048,
+      "routes": 24,
+      "source_endpoint_bins": 1,
+      "target_endpoint_bins": 24,
+      "description": "LSTM bias"
+    },
+    {
+      "source_index": 241,
+      "target_index": 239,
+      "weight_tensors": [
+        "decoder.layers.1.lstm.bias_hh_l1"
+      ],
+      "connections": 2048,
+      "routes": 24,
+      "source_endpoint_bins": 1,
+      "target_endpoint_bins": 24,
+      "description": "LSTM bias"
+    },
+    {
+      "source_index": 239,
+      "target_index": 242,
+      "weight_tensors": [],
+      "connections": 1536,
+      "routes": 72,
+      "source_endpoint_bins": 18,
+      "target_endpoint_bins": 24,
+      "description": "LSTM gate-to-cell"
+    },
+    {
+      "source_index": 233,
+      "target_index": 242,
+      "weight_tensors": [],
+      "connections": 512,
+      "routes": 24,
+      "source_endpoint_bins": 24,
+      "target_endpoint_bins": 24,
+      "description": "LSTM cell recurrence"
+    },
+    {
+      "source_index": 239,
+      "target_index": 243,
+      "weight_tensors": [],
+      "connections": 512,
+      "routes": 24,
+      "source_endpoint_bins": 6,
+      "target_endpoint_bins": 24,
+      "description": "LSTM output gate"
+    },
+    {
+      "source_index": 242,
+      "target_index": 243,
+      "weight_tensors": [],
+      "connections": 512,
+      "routes": 24,
+      "source_endpoint_bins": 24,
+      "target_endpoint_bins": 24,
+      "description": "cell-to-hidden"
+    },
+    {
+      "source_index": 228,
+      "target_index": 244,
+      "weight_tensors": [],
+      "connections": 512,
+      "routes": 24,
+      "source_endpoint_bins": 24,
+      "target_endpoint_bins": 24,
+      "description": "LSTM residual input"
+    },
+    {
+      "source_index": 243,
+      "target_index": 244,
+      "weight_tensors": [],
+      "connections": 512,
+      "routes": 24,
+      "source_endpoint_bins": 24,
+      "target_endpoint_bins": 24,
+      "description": "LSTM output residual"
+    },
+    {
+      "source_index": 228,
+      "target_index": 245,
+      "weight_tensors": [
+        "decoder.layers.1.lstm.weight_ih_l0"
+      ],
+      "connections": 1048576,
+      "routes": 576,
+      "source_endpoint_bins": 24,
+      "target_endpoint_bins": 24,
+      "description": "LSTM ih matrix t=1 layer=0"
+    },
+    {
+      "source_index": 238,
+      "target_index": 245,
+      "weight_tensors": [
+        "decoder.layers.1.lstm.weight_hh_l0"
+      ],
+      "connections": 1048576,
+      "routes": 576,
+      "source_endpoint_bins": 24,
+      "target_endpoint_bins": 24,
+      "description": "LSTM hh matrix t=1 layer=0"
+    },
+    {
+      "source_index": 246,
+      "target_index": 245,
+      "weight_tensors": [
+        "decoder.layers.1.lstm.bias_ih_l0"
+      ],
+      "connections": 2048,
+      "routes": 24,
+      "source_endpoint_bins": 1,
+      "target_endpoint_bins": 24,
+      "description": "LSTM bias"
+    },
+    {
+      "source_index": 247,
+      "target_index": 245,
+      "weight_tensors": [
+        "decoder.layers.1.lstm.bias_hh_l0"
+      ],
+      "connections": 2048,
+      "routes": 24,
+      "source_endpoint_bins": 1,
+      "target_endpoint_bins": 24,
+      "description": "LSTM bias"
+    },
+    {
+      "source_index": 245,
+      "target_index": 248,
+      "weight_tensors": [],
+      "connections": 1536,
+      "routes": 72,
+      "source_endpoint_bins": 18,
+      "target_endpoint_bins": 24,
+      "description": "LSTM gate-to-cell"
+    },
+    {
+      "source_index": 237,
+      "target_index": 248,
+      "weight_tensors": [],
+      "connections": 512,
+      "routes": 24,
+      "source_endpoint_bins": 24,
+      "target_endpoint_bins": 24,
+      "description": "LSTM cell recurrence"
+    },
+    {
+      "source_index": 245,
+      "target_index": 249,
+      "weight_tensors": [],
+      "connections": 512,
+      "routes": 24,
+      "source_endpoint_bins": 6,
+      "target_endpoint_bins": 24,
+      "description": "LSTM output gate"
+    },
+    {
+      "source_index": 248,
+      "target_index": 249,
+      "weight_tensors": [],
+      "connections": 512,
+      "routes": 24,
+      "source_endpoint_bins": 24,
+      "target_endpoint_bins": 24,
+      "description": "cell-to-hidden"
+    },
+    {
+      "source_index": 249,
+      "target_index": 250,
+      "weight_tensors": [
+        "decoder.layers.1.lstm.weight_ih_l1"
+      ],
+      "connections": 1048576,
+      "routes": 576,
+      "source_endpoint_bins": 24,
+      "target_endpoint_bins": 24,
+      "description": "LSTM ih matrix t=1 layer=1"
+    },
+    {
+      "source_index": 243,
+      "target_index": 250,
+      "weight_tensors": [
+        "decoder.layers.1.lstm.weight_hh_l1"
+      ],
+      "connections": 1048576,
+      "routes": 576,
+      "source_endpoint_bins": 24,
+      "target_endpoint_bins": 24,
+      "description": "LSTM hh matrix t=1 layer=1"
+    },
+    {
+      "source_index": 251,
+      "target_index": 250,
+      "weight_tensors": [
+        "decoder.layers.1.lstm.bias_ih_l1"
+      ],
+      "connections": 2048,
+      "routes": 24,
+      "source_endpoint_bins": 1,
+      "target_endpoint_bins": 24,
+      "description": "LSTM bias"
+    },
+    {
+      "source_index": 252,
+      "target_index": 250,
+      "weight_tensors": [
+        "decoder.layers.1.lstm.bias_hh_l1"
+      ],
+      "connections": 2048,
+      "routes": 24,
+      "source_endpoint_bins": 1,
+      "target_endpoint_bins": 24,
+      "description": "LSTM bias"
+    },
+    {
+      "source_index": 250,
+      "target_index": 253,
+      "weight_tensors": [],
+      "connections": 1536,
+      "routes": 72,
+      "source_endpoint_bins": 18,
+      "target_endpoint_bins": 24,
+      "description": "LSTM gate-to-cell"
+    },
+    {
+      "source_index": 242,
+      "target_index": 253,
+      "weight_tensors": [],
+      "connections": 512,
+      "routes": 24,
+      "source_endpoint_bins": 24,
+      "target_endpoint_bins": 24,
+      "description": "LSTM cell recurrence"
+    },
+    {
+      "source_index": 250,
+      "target_index": 254,
+      "weight_tensors": [],
+      "connections": 512,
+      "routes": 24,
+      "source_endpoint_bins": 6,
+      "target_endpoint_bins": 24,
+      "description": "LSTM output gate"
+    },
+    {
+      "source_index": 253,
+      "target_index": 254,
+      "weight_tensors": [],
+      "connections": 512,
+      "routes": 24,
+      "source_endpoint_bins": 24,
+      "target_endpoint_bins": 24,
+      "description": "cell-to-hidden"
+    },
+    {
+      "source_index": 228,
+      "target_index": 255,
+      "weight_tensors": [],
+      "connections": 512,
+      "routes": 32,
+      "source_endpoint_bins": 24,
+      "target_endpoint_bins": 24,
+      "description": "LSTM residual input"
+    },
+    {
+      "source_index": 254,
+      "target_index": 255,
+      "weight_tensors": [],
+      "connections": 512,
+      "routes": 24,
+      "source_endpoint_bins": 24,
+      "target_endpoint_bins": 24,
+      "description": "LSTM output residual"
+    },
+    {
+      "source_index": 244,
+      "target_index": 256,
+      "weight_tensors": [],
+      "connections": 512,
+      "routes": 24,
+      "source_endpoint_bins": 24,
+      "target_endpoint_bins": 24,
+      "description": "time-slot assembly"
+    },
+    {
+      "source_index": 255,
+      "target_index": 256,
+      "weight_tensors": [],
+      "connections": 512,
+      "routes": 32,
+      "source_endpoint_bins": 24,
+      "target_endpoint_bins": 24,
+      "description": "time-slot assembly"
+    },
+    {
+      "source_index": 256,
+      "target_index": 257,
+      "weight_tensors": [
+        "decoder.layers.3.conv.weight_v",
+        "decoder.layers.3.conv.weight_g"
+      ],
+      "connections": 3145728,
+      "routes": 576,
+      "source_endpoint_bins": 24,
+      "target_endpoint_bins": 24,
+      "description": "transposed convolution k=16, stride=8, trim=(0,8)"
+    },
+    {
+      "source_index": 258,
+      "target_index": 257,
+      "weight_tensors": [
+        "decoder.layers.3.conv.bias"
+      ],
+      "connections": 4096,
+      "routes": 24,
+      "source_endpoint_bins": 1,
+      "target_endpoint_bins": 24,
+      "description": "bias broadcast over 16 time steps"
+    },
+    {
+      "source_index": 257,
+      "target_index": 259,
+      "weight_tensors": [
+        "decoder.layers.4.block.1.conv.weight_v",
+        "decoder.layers.4.block.1.conv.weight_g"
+      ],
+      "connections": 1572864,
+      "routes": 576,
+      "source_endpoint_bins": 24,
+      "target_endpoint_bins": 24,
+      "description": "causal reflect Conv1d k=3, dilation=1, stride=1, input=16, output=16"
+    },
+    {
+      "source_index": 260,
+      "target_index": 259,
+      "weight_tensors": [
+        "decoder.layers.4.block.1.conv.bias"
+      ],
+      "connections": 2048,
+      "routes": 24,
+      "source_endpoint_bins": 1,
+      "target_endpoint_bins": 24,
+      "description": "bias broadcast over 16 time steps"
+    },
+    {
+      "source_index": 259,
+      "target_index": 261,
+      "weight_tensors": [
+        "decoder.layers.4.block.3.conv.weight_v",
+        "decoder.layers.4.block.3.conv.weight_g"
+      ],
+      "connections": 524288,
+      "routes": 576,
+      "source_endpoint_bins": 24,
+      "target_endpoint_bins": 24,
+      "description": "causal reflect Conv1d k=1, dilation=1, stride=1, input=16, output=16"
+    },
+    {
+      "source_index": 262,
+      "target_index": 261,
+      "weight_tensors": [
+        "decoder.layers.4.block.3.conv.bias"
+      ],
+      "connections": 4096,
+      "routes": 24,
+      "source_endpoint_bins": 1,
+      "target_endpoint_bins": 24,
+      "description": "bias broadcast over 16 time steps"
+    },
+    {
+      "source_index": 257,
+      "target_index": 263,
+      "weight_tensors": [
+        "decoder.layers.4.shortcut.conv.weight_v",
+        "decoder.layers.4.shortcut.conv.weight_g"
+      ],
+      "connections": 1048576,
+      "routes": 576,
+      "source_endpoint_bins": 24,
+      "target_endpoint_bins": 24,
+      "description": "causal reflect Conv1d k=1, dilation=1, stride=1, input=16, output=16"
+    },
+    {
+      "source_index": 264,
+      "target_index": 263,
+      "weight_tensors": [
+        "decoder.layers.4.shortcut.conv.bias"
+      ],
+      "connections": 4096,
+      "routes": 24,
+      "source_endpoint_bins": 1,
+      "target_endpoint_bins": 24,
+      "description": "bias broadcast over 16 time steps"
+    },
+    {
+      "source_index": 263,
+      "target_index": 265,
+      "weight_tensors": [],
+      "connections": 4096,
+      "routes": 24,
+      "source_endpoint_bins": 24,
+      "target_endpoint_bins": 24,
+      "description": "residual shortcut projection branch"
+    },
+    {
+      "source_index": 261,
+      "target_index": 265,
+      "weight_tensors": [],
+      "connections": 4096,
+      "routes": 24,
+      "source_endpoint_bins": 24,
+      "target_endpoint_bins": 24,
+      "description": "residual conv branch"
+    },
+    {
+      "source_index": 265,
+      "target_index": 266,
+      "weight_tensors": [
+        "decoder.layers.6.conv.weight_v",
+        "decoder.layers.6.conv.weight_g"
+      ],
+      "connections": 5079040,
+      "routes": 576,
+      "source_endpoint_bins": 24,
+      "target_endpoint_bins": 24,
+      "description": "transposed convolution k=10, stride=5, trim=(0,5)"
+    },
+    {
+      "source_index": 267,
+      "target_index": 266,
+      "weight_tensors": [
+        "decoder.layers.6.conv.bias"
+      ],
+      "connections": 10240,
+      "routes": 24,
+      "source_endpoint_bins": 1,
+      "target_endpoint_bins": 24,
+      "description": "bias broadcast over 80 time steps"
+    },
+    {
+      "source_index": 266,
+      "target_index": 268,
+      "weight_tensors": [
+        "decoder.layers.7.block.1.conv.weight_v",
+        "decoder.layers.7.block.1.conv.weight_g"
+      ],
+      "connections": 1966080,
+      "routes": 576,
+      "source_endpoint_bins": 24,
+      "target_endpoint_bins": 24,
+      "description": "causal reflect Conv1d k=3, dilation=1, stride=1, input=80, output=80"
+    },
+    {
+      "source_index": 269,
+      "target_index": 268,
+      "weight_tensors": [
+        "decoder.layers.7.block.1.conv.bias"
+      ],
+      "connections": 5120,
+      "routes": 24,
+      "source_endpoint_bins": 1,
+      "target_endpoint_bins": 24,
+      "description": "bias broadcast over 80 time steps"
+    },
+    {
+      "source_index": 268,
+      "target_index": 270,
+      "weight_tensors": [
+        "decoder.layers.7.block.3.conv.weight_v",
+        "decoder.layers.7.block.3.conv.weight_g"
+      ],
+      "connections": 655360,
+      "routes": 576,
+      "source_endpoint_bins": 24,
+      "target_endpoint_bins": 24,
+      "description": "causal reflect Conv1d k=1, dilation=1, stride=1, input=80, output=80"
+    },
+    {
+      "source_index": 271,
+      "target_index": 270,
+      "weight_tensors": [
+        "decoder.layers.7.block.3.conv.bias"
+      ],
+      "connections": 10240,
+      "routes": 24,
+      "source_endpoint_bins": 1,
+      "target_endpoint_bins": 24,
+      "description": "bias broadcast over 80 time steps"
+    },
+    {
+      "source_index": 266,
+      "target_index": 272,
+      "weight_tensors": [
+        "decoder.layers.7.shortcut.conv.weight_v",
+        "decoder.layers.7.shortcut.conv.weight_g"
+      ],
+      "connections": 1310720,
+      "routes": 576,
+      "source_endpoint_bins": 24,
+      "target_endpoint_bins": 24,
+      "description": "causal reflect Conv1d k=1, dilation=1, stride=1, input=80, output=80"
+    },
+    {
+      "source_index": 273,
+      "target_index": 272,
+      "weight_tensors": [
+        "decoder.layers.7.shortcut.conv.bias"
+      ],
+      "connections": 10240,
+      "routes": 24,
+      "source_endpoint_bins": 1,
+      "target_endpoint_bins": 24,
+      "description": "bias broadcast over 80 time steps"
+    },
+    {
+      "source_index": 272,
+      "target_index": 274,
+      "weight_tensors": [],
+      "connections": 10240,
+      "routes": 24,
+      "source_endpoint_bins": 24,
+      "target_endpoint_bins": 24,
+      "description": "residual shortcut projection branch"
+    },
+    {
+      "source_index": 270,
+      "target_index": 274,
+      "weight_tensors": [],
+      "connections": 10240,
+      "routes": 24,
+      "source_endpoint_bins": 24,
+      "target_endpoint_bins": 24,
+      "description": "residual conv branch"
+    },
+    {
+      "source_index": 274,
+      "target_index": 275,
+      "weight_tensors": [
+        "decoder.layers.9.conv.weight_v",
+        "decoder.layers.9.conv.weight_g"
+      ],
+      "connections": 5210112,
+      "routes": 576,
+      "source_endpoint_bins": 24,
+      "target_endpoint_bins": 24,
+      "description": "transposed convolution k=8, stride=4, trim=(0,4)"
+    },
+    {
+      "source_index": 276,
+      "target_index": 275,
+      "weight_tensors": [
+        "decoder.layers.9.conv.bias"
+      ],
+      "connections": 20480,
+      "routes": 24,
+      "source_endpoint_bins": 1,
+      "target_endpoint_bins": 24,
+      "description": "bias broadcast over 320 time steps"
+    },
+    {
+      "source_index": 275,
+      "target_index": 277,
+      "weight_tensors": [
+        "decoder.layers.10.block.1.conv.weight_v",
+        "decoder.layers.10.block.1.conv.weight_g"
+      ],
+      "connections": 1966080,
+      "routes": 576,
+      "source_endpoint_bins": 24,
+      "target_endpoint_bins": 24,
+      "description": "causal reflect Conv1d k=3, dilation=1, stride=1, input=320, output=320"
+    },
+    {
+      "source_index": 278,
+      "target_index": 277,
+      "weight_tensors": [
+        "decoder.layers.10.block.1.conv.bias"
+      ],
+      "connections": 10240,
+      "routes": 24,
+      "source_endpoint_bins": 1,
+      "target_endpoint_bins": 24,
+      "description": "bias broadcast over 320 time steps"
+    },
+    {
+      "source_index": 277,
+      "target_index": 279,
+      "weight_tensors": [
+        "decoder.layers.10.block.3.conv.weight_v",
+        "decoder.layers.10.block.3.conv.weight_g"
+      ],
+      "connections": 655360,
+      "routes": 576,
+      "source_endpoint_bins": 24,
+      "target_endpoint_bins": 24,
+      "description": "causal reflect Conv1d k=1, dilation=1, stride=1, input=320, output=320"
+    },
+    {
+      "source_index": 280,
+      "target_index": 279,
+      "weight_tensors": [
+        "decoder.layers.10.block.3.conv.bias"
+      ],
+      "connections": 20480,
+      "routes": 24,
+      "source_endpoint_bins": 1,
+      "target_endpoint_bins": 24,
+      "description": "bias broadcast over 320 time steps"
+    },
+    {
+      "source_index": 275,
+      "target_index": 281,
+      "weight_tensors": [
+        "decoder.layers.10.shortcut.conv.weight_v",
+        "decoder.layers.10.shortcut.conv.weight_g"
+      ],
+      "connections": 1310720,
+      "routes": 576,
+      "source_endpoint_bins": 24,
+      "target_endpoint_bins": 24,
+      "description": "causal reflect Conv1d k=1, dilation=1, stride=1, input=320, output=320"
+    },
+    {
+      "source_index": 282,
+      "target_index": 281,
+      "weight_tensors": [
+        "decoder.layers.10.shortcut.conv.bias"
+      ],
+      "connections": 20480,
+      "routes": 24,
+      "source_endpoint_bins": 1,
+      "target_endpoint_bins": 24,
+      "description": "bias broadcast over 320 time steps"
+    },
+    {
+      "source_index": 281,
+      "target_index": 283,
+      "weight_tensors": [],
+      "connections": 20480,
+      "routes": 24,
+      "source_endpoint_bins": 24,
+      "target_endpoint_bins": 24,
+      "description": "residual shortcut projection branch"
+    },
+    {
+      "source_index": 279,
+      "target_index": 283,
+      "weight_tensors": [],
+      "connections": 20480,
+      "routes": 24,
+      "source_endpoint_bins": 24,
+      "target_endpoint_bins": 24,
+      "description": "residual conv branch"
+    },
+    {
+      "source_index": 283,
+      "target_index": 284,
+      "weight_tensors": [
+        "decoder.layers.12.conv.weight_v",
+        "decoder.layers.12.conv.weight_g"
+      ],
+      "connections": 2617344,
+      "routes": 576,
+      "source_endpoint_bins": 24,
+      "target_endpoint_bins": 24,
+      "description": "transposed convolution k=4, stride=2, trim=(0,2)"
+    },
+    {
+      "source_index": 285,
+      "target_index": 284,
+      "weight_tensors": [
+        "decoder.layers.12.conv.bias"
+      ],
+      "connections": 20480,
+      "routes": 24,
+      "source_endpoint_bins": 1,
+      "target_endpoint_bins": 24,
+      "description": "bias broadcast over 640 time steps"
+    },
+    {
+      "source_index": 284,
+      "target_index": 286,
+      "weight_tensors": [
+        "decoder.layers.13.block.1.conv.weight_v",
+        "decoder.layers.13.block.1.conv.weight_g"
+      ],
+      "connections": 983040,
+      "routes": 576,
+      "source_endpoint_bins": 24,
+      "target_endpoint_bins": 24,
+      "description": "causal reflect Conv1d k=3, dilation=1, stride=1, input=640, output=640"
+    },
+    {
+      "source_index": 287,
+      "target_index": 286,
+      "weight_tensors": [
+        "decoder.layers.13.block.1.conv.bias"
+      ],
+      "connections": 10240,
+      "routes": 24,
+      "source_endpoint_bins": 1,
+      "target_endpoint_bins": 24,
+      "description": "bias broadcast over 640 time steps"
+    },
+    {
+      "source_index": 286,
+      "target_index": 288,
+      "weight_tensors": [
+        "decoder.layers.13.block.3.conv.weight_v",
+        "decoder.layers.13.block.3.conv.weight_g"
+      ],
+      "connections": 327680,
+      "routes": 576,
+      "source_endpoint_bins": 24,
+      "target_endpoint_bins": 24,
+      "description": "causal reflect Conv1d k=1, dilation=1, stride=1, input=640, output=640"
+    },
+    {
+      "source_index": 289,
+      "target_index": 288,
+      "weight_tensors": [
+        "decoder.layers.13.block.3.conv.bias"
+      ],
+      "connections": 20480,
+      "routes": 24,
+      "source_endpoint_bins": 1,
+      "target_endpoint_bins": 24,
+      "description": "bias broadcast over 640 time steps"
+    },
+    {
+      "source_index": 284,
+      "target_index": 290,
+      "weight_tensors": [
+        "decoder.layers.13.shortcut.conv.weight_v",
+        "decoder.layers.13.shortcut.conv.weight_g"
+      ],
+      "connections": 655360,
+      "routes": 576,
+      "source_endpoint_bins": 24,
+      "target_endpoint_bins": 24,
+      "description": "causal reflect Conv1d k=1, dilation=1, stride=1, input=640, output=640"
+    },
+    {
+      "source_index": 291,
+      "target_index": 290,
+      "weight_tensors": [
+        "decoder.layers.13.shortcut.conv.bias"
+      ],
+      "connections": 20480,
+      "routes": 24,
+      "source_endpoint_bins": 1,
+      "target_endpoint_bins": 24,
+      "description": "bias broadcast over 640 time steps"
+    },
+    {
+      "source_index": 290,
+      "target_index": 292,
+      "weight_tensors": [],
+      "connections": 20480,
+      "routes": 24,
+      "source_endpoint_bins": 24,
+      "target_endpoint_bins": 24,
+      "description": "residual shortcut projection branch"
+    },
+    {
+      "source_index": 288,
+      "target_index": 292,
+      "weight_tensors": [],
+      "connections": 20480,
+      "routes": 24,
+      "source_endpoint_bins": 24,
+      "target_endpoint_bins": 24,
+      "description": "residual conv branch"
+    },
+    {
+      "source_index": 292,
+      "target_index": 293,
+      "weight_tensors": [
+        "decoder.layers.15.conv.weight_v",
+        "decoder.layers.15.conv.weight_g"
+      ],
+      "connections": 143360,
+      "routes": 576,
+      "source_endpoint_bins": 24,
+      "target_endpoint_bins": 24,
+      "description": "causal reflect Conv1d k=7, dilation=1, stride=1, input=640, output=640"
+    },
+    {
+      "source_index": 294,
+      "target_index": 293,
+      "weight_tensors": [
+        "decoder.layers.15.conv.bias"
+      ],
+      "connections": 640,
+      "routes": 24,
+      "source_endpoint_bins": 1,
+      "target_endpoint_bins": 24,
+      "description": "bias broadcast over 640 time steps"
+    }
+  ]
+}

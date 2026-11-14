@@ -340,3 +340,15 @@ h1,
   font-family: "Exo 2", var(--fontFamily-sans);
   font-weight: 400;
 }
+
+/* Let opted-in image galleries extend beyond the reading column. */
+.blog-post--wide-images section > p:has(.gatsby-resp-image-wrapper) {
+  position: relative;
+  left: 50%;
+  width: min(1260px, calc(100vw - 2 * var(--spacing-5)));
+  transform: translateX(-50%);
+}
+
+.blog-post--wide-images .gatsby-resp-image-wrapper {
+  max-width: none !important;
+}

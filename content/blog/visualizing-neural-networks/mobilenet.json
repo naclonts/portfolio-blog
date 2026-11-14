@@ -1,0 +1,1497 @@
+{
+  "renderer": "Datashader hammer_bundle",
+  "mode": "full spatial",
+  "model": "MobileNetV2",
+  "checkpoint": "data/models/mobilenet/pytorch_model.bin",
+  "image": "mobilenet.png",
+  "width": 3200,
+  "height": 1800,
+  "input_shape": [
+    3,
+    224,
+    224
+  ],
+  "column_count": 55,
+  "neuron_count": 6830921,
+  "weighted_edge_count": 299677584,
+  "structural_edge_count": 279104,
+  "spatial_bins_per_layer": 24,
+  "sampling": false,
+  "padding": "TensorFlow SAME (config tf_padding=true), asymmetric when stride requires it",
+  "strides": "Stem convolution stride 2; bottleneck downsample layers 0, 2, 5, 12 stride 2; other convolutions stride 1, from canonical MobileNetV2 stage schedule. Output stride 32.",
+  "aggregation": "Every legal weight use is accumulated into 24\u00d724 bins using flattened channel\u00d7height\u00d7width neuron indices, matching the CIFAR renderer. Kernel tap, channel pair, and valid spatial position are all counted; depthwise groups preserve same-channel connectivity. Identity residuals, global average pooling, and classifier connections are included. No per-edge sampling; bundles aggregate routes.",
+  "edges": [
+    {
+      "source": "input",
+      "target": "stem conv",
+      "tensor": "mobilenet_v2.conv_stem.first_conv.convolution.weight",
+      "kind": "conv",
+      "connections": 10773600,
+      "parameter_count": 864,
+      "channels_in": 3,
+      "channels_out": 32,
+      "source_hw": [
+        224,
+        224
+      ],
+      "target_hw": [
+        112,
+        112
+      ],
+      "kernel": [
+        3,
+        3
+      ],
+      "stride": 2
+    },
+    {
+      "source": "stem conv",
+      "target": "stem depthwise",
+      "tensor": "mobilenet_v2.conv_stem.conv_3x3.convolution.weight",
+      "kind": "depthwise",
+      "connections": 3569792,
+      "parameter_count": 288,
+      "channels_in": 32,
+      "channels_out": 32,
+      "source_hw": [
+        112,
+        112
+      ],
+      "target_hw": [
+        112,
+        112
+      ],
+      "kernel": [
+        3,
+        3
+      ],
+      "stride": 1
+    },
+    {
+      "source": "stem depthwise",
+      "target": "stem reduce",
+      "tensor": "mobilenet_v2.conv_stem.reduce_1x1.convolution.weight",
+      "kind": "pointwise",
+      "connections": 6422528,
+      "parameter_count": 512,
+      "channels_in": 32,
+      "channels_out": 16,
+      "source_hw": [
+        112,
+        112
+      ],
+      "target_hw": [
+        112,
+        112
+      ],
+      "kernel": [
+        1,
+        1
+      ],
+      "stride": 1
+    },
+    {
+      "source": "stem reduce",
+      "target": "B01 expand",
+      "tensor": "mobilenet_v2.layer.0.expand_1x1.convolution.weight",
+      "kind": "pointwise",
+      "connections": 19267584,
+      "parameter_count": 1536,
+      "channels_in": 16,
+      "channels_out": 96,
+      "source_hw": [
+        112,
+        112
+      ],
+      "target_hw": [
+        112,
+        112
+      ],
+      "kernel": [
+        1,
+        1
+      ],
+      "stride": 1
+    },
+    {
+      "source": "B01 expand",
+      "target": "B01 depthwise",
+      "tensor": "mobilenet_v2.layer.0.conv_3x3.convolution.weight",
+      "kind": "depthwise",
+      "connections": 2677344,
+      "parameter_count": 864,
+      "channels_in": 96,
+      "channels_out": 96,
+      "source_hw": [
+        112,
+        112
+      ],
+      "target_hw": [
+        56,
+        56
+      ],
+      "kernel": [
+        3,
+        3
+      ],
+      "stride": 2
+    },
+    {
+      "source": "B01 depthwise",
+      "target": "B01 project",
+      "tensor": "mobilenet_v2.layer.0.reduce_1x1.convolution.weight",
+      "kind": "pointwise",
+      "connections": 7225344,
+      "parameter_count": 2304,
+      "channels_in": 96,
+      "channels_out": 24,
+      "source_hw": [
+        56,
+        56
+      ],
+      "target_hw": [
+        56,
+        56
+      ],
+      "kernel": [
+        1,
+        1
+      ],
+      "stride": 1
+    },
+    {
+      "source": "B01 project",
+      "target": "B02 expand",
+      "tensor": "mobilenet_v2.layer.1.expand_1x1.convolution.weight",
+      "kind": "pointwise",
+      "connections": 10838016,
+      "parameter_count": 3456,
+      "channels_in": 24,
+      "channels_out": 144,
+      "source_hw": [
+        56,
+        56
+      ],
+      "target_hw": [
+        56,
+        56
+      ],
+      "kernel": [
+        1,
+        1
+      ],
+      "stride": 1
+    },
+    {
+      "source": "B02 expand",
+      "target": "B02 depthwise",
+      "tensor": "mobilenet_v2.layer.1.conv_3x3.convolution.weight",
+      "kind": "depthwise",
+      "connections": 3968064,
+      "parameter_count": 1296,
+      "channels_in": 144,
+      "channels_out": 144,
+      "source_hw": [
+        56,
+        56
+      ],
+      "target_hw": [
+        56,
+        56
+      ],
+      "kernel": [
+        3,
+        3
+      ],
+      "stride": 1
+    },
+    {
+      "source": "B02 depthwise",
+      "target": "B02 project",
+      "tensor": "mobilenet_v2.layer.1.reduce_1x1.convolution.weight",
+      "kind": "pointwise",
+      "connections": 10838016,
+      "parameter_count": 3456,
+      "channels_in": 144,
+      "channels_out": 24,
+      "source_hw": [
+        56,
+        56
+      ],
+      "target_hw": [
+        56,
+        56
+      ],
+      "kernel": [
+        1,
+        1
+      ],
+      "stride": 1
+    },
+    {
+      "source": "B01 project",
+      "target": "B02 project",
+      "tensor": null,
+      "kind": "residual_identity",
+      "connections": 75264,
+      "parameter_count": 0,
+      "channels_in": 24,
+      "channels_out": 24,
+      "source_hw": [
+        56,
+        56
+      ],
+      "target_hw": [
+        56,
+        56
+      ],
+      "kernel": [
+        1,
+        1
+      ],
+      "stride": 1
+    },
+    {
+      "source": "B02 project",
+      "target": "B03 expand",
+      "tensor": "mobilenet_v2.layer.2.expand_1x1.convolution.weight",
+      "kind": "pointwise",
+      "connections": 10838016,
+      "parameter_count": 3456,
+      "channels_in": 24,
+      "channels_out": 144,
+      "source_hw": [
+        56,
+        56
+      ],
+      "target_hw": [
+        56,
+        56
+      ],
+      "kernel": [
+        1,
+        1
+      ],
+      "stride": 1
+    },
+    {
+      "source": "B03 expand",
+      "target": "B03 depthwise",
+      "tensor": "mobilenet_v2.layer.2.conv_3x3.convolution.weight",
+      "kind": "depthwise",
+      "connections": 992016,
+      "parameter_count": 1296,
+      "channels_in": 144,
+      "channels_out": 144,
+      "source_hw": [
+        56,
+        56
+      ],
+      "target_hw": [
+        28,
+        28
+      ],
+      "kernel": [
+        3,
+        3
+      ],
+      "stride": 2
+    },
+    {
+      "source": "B03 depthwise",
+      "target": "B03 project",
+      "tensor": "mobilenet_v2.layer.2.reduce_1x1.convolution.weight",
+      "kind": "pointwise",
+      "connections": 3612672,
+      "parameter_count": 4608,
+      "channels_in": 144,
+      "channels_out": 32,
+      "source_hw": [
+        28,
+        28
+      ],
+      "target_hw": [
+        28,
+        28
+      ],
+      "kernel": [
+        1,
+        1
+      ],
+      "stride": 1
+    },
+    {
+      "source": "B03 project",
+      "target": "B04 expand",
+      "tensor": "mobilenet_v2.layer.3.expand_1x1.convolution.weight",
+      "kind": "pointwise",
+      "connections": 4816896,
+      "parameter_count": 6144,
+      "channels_in": 32,
+      "channels_out": 192,
+      "source_hw": [
+        28,
+        28
+      ],
+      "target_hw": [
+        28,
+        28
+      ],
+      "kernel": [
+        1,
+        1
+      ],
+      "stride": 1
+    },
+    {
+      "source": "B04 expand",
+      "target": "B04 depthwise",
+      "tensor": "mobilenet_v2.layer.3.conv_3x3.convolution.weight",
+      "kind": "depthwise",
+      "connections": 1291008,
+      "parameter_count": 1728,
+      "channels_in": 192,
+      "channels_out": 192,
+      "source_hw": [
+        28,
+        28
+      ],
+      "target_hw": [
+        28,
+        28
+      ],
+      "kernel": [
+        3,
+        3
+      ],
+      "stride": 1
+    },
+    {
+      "source": "B04 depthwise",
+      "target": "B04 project",
+      "tensor": "mobilenet_v2.layer.3.reduce_1x1.convolution.weight",
+      "kind": "pointwise",
+      "connections": 4816896,
+      "parameter_count": 6144,
+      "channels_in": 192,
+      "channels_out": 32,
+      "source_hw": [
+        28,
+        28
+      ],
+      "target_hw": [
+        28,
+        28
+      ],
+      "kernel": [
+        1,
+        1
+      ],
+      "stride": 1
+    },
+    {
+      "source": "B03 project",
+      "target": "B04 project",
+      "tensor": null,
+      "kind": "residual_identity",
+      "connections": 25088,
+      "parameter_count": 0,
+      "channels_in": 32,
+      "channels_out": 32,
+      "source_hw": [
+        28,
+        28
+      ],
+      "target_hw": [
+        28,
+        28
+      ],
+      "kernel": [
+        1,
+        1
+      ],
+      "stride": 1
+    },
+    {
+      "source": "B04 project",
+      "target": "B05 expand",
+      "tensor": "mobilenet_v2.layer.4.expand_1x1.convolution.weight",
+      "kind": "pointwise",
+      "connections": 4816896,
+      "parameter_count": 6144,
+      "channels_in": 32,
+      "channels_out": 192,
+      "source_hw": [
+        28,
+        28
+      ],
+      "target_hw": [
+        28,
+        28
+      ],
+      "kernel": [
+        1,
+        1
+      ],
+      "stride": 1
+    },
+    {
+      "source": "B05 expand",
+      "target": "B05 depthwise",
+      "tensor": "mobilenet_v2.layer.4.conv_3x3.convolution.weight",
+      "kind": "depthwise",
+      "connections": 1291008,
+      "parameter_count": 1728,
+      "channels_in": 192,
+      "channels_out": 192,
+      "source_hw": [
+        28,
+        28
+      ],
+      "target_hw": [
+        28,
+        28
+      ],
+      "kernel": [
+        3,
+        3
+      ],
+      "stride": 1
+    },
+    {
+      "source": "B05 depthwise",
+      "target": "B05 project",
+      "tensor": "mobilenet_v2.layer.4.reduce_1x1.convolution.weight",
+      "kind": "pointwise",
+      "connections": 4816896,
+      "parameter_count": 6144,
+      "channels_in": 192,
+      "channels_out": 32,
+      "source_hw": [
+        28,
+        28
+      ],
+      "target_hw": [
+        28,
+        28
+      ],
+      "kernel": [
+        1,
+        1
+      ],
+      "stride": 1
+    },
+    {
+      "source": "B04 project",
+      "target": "B05 project",
+      "tensor": null,
+      "kind": "residual_identity",
+      "connections": 25088,
+      "parameter_count": 0,
+      "channels_in": 32,
+      "channels_out": 32,
+      "source_hw": [
+        28,
+        28
+      ],
+      "target_hw": [
+        28,
+        28
+      ],
+      "kernel": [
+        1,
+        1
+      ],
+      "stride": 1
+    },
+    {
+      "source": "B05 project",
+      "target": "B06 expand",
+      "tensor": "mobilenet_v2.layer.5.expand_1x1.convolution.weight",
+      "kind": "pointwise",
+      "connections": 4816896,
+      "parameter_count": 6144,
+      "channels_in": 32,
+      "channels_out": 192,
+      "source_hw": [
+        28,
+        28
+      ],
+      "target_hw": [
+        28,
+        28
+      ],
+      "kernel": [
+        1,
+        1
+      ],
+      "stride": 1
+    },
+    {
+      "source": "B06 expand",
+      "target": "B06 depthwise",
+      "tensor": "mobilenet_v2.layer.5.conv_3x3.convolution.weight",
+      "kind": "depthwise",
+      "connections": 322752,
+      "parameter_count": 1728,
+      "channels_in": 192,
+      "channels_out": 192,
+      "source_hw": [
+        28,
+        28
+      ],
+      "target_hw": [
+        14,
+        14
+      ],
+      "kernel": [
+        3,
+        3
+      ],
+      "stride": 2
+    },
+    {
+      "source": "B06 depthwise",
+      "target": "B06 project",
+      "tensor": "mobilenet_v2.layer.5.reduce_1x1.convolution.weight",
+      "kind": "pointwise",
+      "connections": 2408448,
+      "parameter_count": 12288,
+      "channels_in": 192,
+      "channels_out": 64,
+      "source_hw": [
+        14,
+        14
+      ],
+      "target_hw": [
+        14,
+        14
+      ],
+      "kernel": [
+        1,
+        1
+      ],
+      "stride": 1
+    },
+    {
+      "source": "B06 project",
+      "target": "B07 expand",
+      "tensor": "mobilenet_v2.layer.6.expand_1x1.convolution.weight",
+      "kind": "pointwise",
+      "connections": 4816896,
+      "parameter_count": 24576,
+      "channels_in": 64,
+      "channels_out": 384,
+      "source_hw": [
+        14,
+        14
+      ],
+      "target_hw": [
+        14,
+        14
+      ],
+      "kernel": [
+        1,
+        1
+      ],
+      "stride": 1
+    },
+    {
+      "source": "B07 expand",
+      "target": "B07 depthwise",
+      "tensor": "mobilenet_v2.layer.6.conv_3x3.convolution.weight",
+      "kind": "depthwise",
+      "connections": 614400,
+      "parameter_count": 3456,
+      "channels_in": 384,
+      "channels_out": 384,
+      "source_hw": [
+        14,
+        14
+      ],
+      "target_hw": [
+        14,
+        14
+      ],
+      "kernel": [
+        3,
+        3
+      ],
+      "stride": 1
+    },
+    {
+      "source": "B07 depthwise",
+      "target": "B07 project",
+      "tensor": "mobilenet_v2.layer.6.reduce_1x1.convolution.weight",
+      "kind": "pointwise",
+      "connections": 4816896,
+      "parameter_count": 24576,
+      "channels_in": 384,
+      "channels_out": 64,
+      "source_hw": [
+        14,
+        14
+      ],
+      "target_hw": [
+        14,
+        14
+      ],
+      "kernel": [
+        1,
+        1
+      ],
+      "stride": 1
+    },
+    {
+      "source": "B06 project",
+      "target": "B07 project",
+      "tensor": null,
+      "kind": "residual_identity",
+      "connections": 12544,
+      "parameter_count": 0,
+      "channels_in": 64,
+      "channels_out": 64,
+      "source_hw": [
+        14,
+        14
+      ],
+      "target_hw": [
+        14,
+        14
+      ],
+      "kernel": [
+        1,
+        1
+      ],
+      "stride": 1
+    },
+    {
+      "source": "B07 project",
+      "target": "B08 expand",
+      "tensor": "mobilenet_v2.layer.7.expand_1x1.convolution.weight",
+      "kind": "pointwise",
+      "connections": 4816896,
+      "parameter_count": 24576,
+      "channels_in": 64,
+      "channels_out": 384,
+      "source_hw": [
+        14,
+        14
+      ],
+      "target_hw": [
+        14,
+        14
+      ],
+      "kernel": [
+        1,
+        1
+      ],
+      "stride": 1
+    },
+    {
+      "source": "B08 expand",
+      "target": "B08 depthwise",
+      "tensor": "mobilenet_v2.layer.7.conv_3x3.convolution.weight",
+      "kind": "depthwise",
+      "connections": 614400,
+      "parameter_count": 3456,
+      "channels_in": 384,
+      "channels_out": 384,
+      "source_hw": [
+        14,
+        14
+      ],
+      "target_hw": [
+        14,
+        14
+      ],
+      "kernel": [
+        3,
+        3
+      ],
+      "stride": 1
+    },
+    {
+      "source": "B08 depthwise",
+      "target": "B08 project",
+      "tensor": "mobilenet_v2.layer.7.reduce_1x1.convolution.weight",
+      "kind": "pointwise",
+      "connections": 4816896,
+      "parameter_count": 24576,
+      "channels_in": 384,
+      "channels_out": 64,
+      "source_hw": [
+        14,
+        14
+      ],
+      "target_hw": [
+        14,
+        14
+      ],
+      "kernel": [
+        1,
+        1
+      ],
+      "stride": 1
+    },
+    {
+      "source": "B07 project",
+      "target": "B08 project",
+      "tensor": null,
+      "kind": "residual_identity",
+      "connections": 12544,
+      "parameter_count": 0,
+      "channels_in": 64,
+      "channels_out": 64,
+      "source_hw": [
+        14,
+        14
+      ],
+      "target_hw": [
+        14,
+        14
+      ],
+      "kernel": [
+        1,
+        1
+      ],
+      "stride": 1
+    },
+    {
+      "source": "B08 project",
+      "target": "B09 expand",
+      "tensor": "mobilenet_v2.layer.8.expand_1x1.convolution.weight",
+      "kind": "pointwise",
+      "connections": 4816896,
+      "parameter_count": 24576,
+      "channels_in": 64,
+      "channels_out": 384,
+      "source_hw": [
+        14,
+        14
+      ],
+      "target_hw": [
+        14,
+        14
+      ],
+      "kernel": [
+        1,
+        1
+      ],
+      "stride": 1
+    },
+    {
+      "source": "B09 expand",
+      "target": "B09 depthwise",
+      "tensor": "mobilenet_v2.layer.8.conv_3x3.convolution.weight",
+      "kind": "depthwise",
+      "connections": 614400,
+      "parameter_count": 3456,
+      "channels_in": 384,
+      "channels_out": 384,
+      "source_hw": [
+        14,
+        14
+      ],
+      "target_hw": [
+        14,
+        14
+      ],
+      "kernel": [
+        3,
+        3
+      ],
+      "stride": 1
+    },
+    {
+      "source": "B09 depthwise",
+      "target": "B09 project",
+      "tensor": "mobilenet_v2.layer.8.reduce_1x1.convolution.weight",
+      "kind": "pointwise",
+      "connections": 4816896,
+      "parameter_count": 24576,
+      "channels_in": 384,
+      "channels_out": 64,
+      "source_hw": [
+        14,
+        14
+      ],
+      "target_hw": [
+        14,
+        14
+      ],
+      "kernel": [
+        1,
+        1
+      ],
+      "stride": 1
+    },
+    {
+      "source": "B08 project",
+      "target": "B09 project",
+      "tensor": null,
+      "kind": "residual_identity",
+      "connections": 12544,
+      "parameter_count": 0,
+      "channels_in": 64,
+      "channels_out": 64,
+      "source_hw": [
+        14,
+        14
+      ],
+      "target_hw": [
+        14,
+        14
+      ],
+      "kernel": [
+        1,
+        1
+      ],
+      "stride": 1
+    },
+    {
+      "source": "B09 project",
+      "target": "B10 expand",
+      "tensor": "mobilenet_v2.layer.9.expand_1x1.convolution.weight",
+      "kind": "pointwise",
+      "connections": 4816896,
+      "parameter_count": 24576,
+      "channels_in": 64,
+      "channels_out": 384,
+      "source_hw": [
+        14,
+        14
+      ],
+      "target_hw": [
+        14,
+        14
+      ],
+      "kernel": [
+        1,
+        1
+      ],
+      "stride": 1
+    },
+    {
+      "source": "B10 expand",
+      "target": "B10 depthwise",
+      "tensor": "mobilenet_v2.layer.9.conv_3x3.convolution.weight",
+      "kind": "depthwise",
+      "connections": 614400,
+      "parameter_count": 3456,
+      "channels_in": 384,
+      "channels_out": 384,
+      "source_hw": [
+        14,
+        14
+      ],
+      "target_hw": [
+        14,
+        14
+      ],
+      "kernel": [
+        3,
+        3
+      ],
+      "stride": 1
+    },
+    {
+      "source": "B10 depthwise",
+      "target": "B10 project",
+      "tensor": "mobilenet_v2.layer.9.reduce_1x1.convolution.weight",
+      "kind": "pointwise",
+      "connections": 7225344,
+      "parameter_count": 36864,
+      "channels_in": 384,
+      "channels_out": 96,
+      "source_hw": [
+        14,
+        14
+      ],
+      "target_hw": [
+        14,
+        14
+      ],
+      "kernel": [
+        1,
+        1
+      ],
+      "stride": 1
+    },
+    {
+      "source": "B10 project",
+      "target": "B11 expand",
+      "tensor": "mobilenet_v2.layer.10.expand_1x1.convolution.weight",
+      "kind": "pointwise",
+      "connections": 10838016,
+      "parameter_count": 55296,
+      "channels_in": 96,
+      "channels_out": 576,
+      "source_hw": [
+        14,
+        14
+      ],
+      "target_hw": [
+        14,
+        14
+      ],
+      "kernel": [
+        1,
+        1
+      ],
+      "stride": 1
+    },
+    {
+      "source": "B11 expand",
+      "target": "B11 depthwise",
+      "tensor": "mobilenet_v2.layer.10.conv_3x3.convolution.weight",
+      "kind": "depthwise",
+      "connections": 921600,
+      "parameter_count": 5184,
+      "channels_in": 576,
+      "channels_out": 576,
+      "source_hw": [
+        14,
+        14
+      ],
+      "target_hw": [
+        14,
+        14
+      ],
+      "kernel": [
+        3,
+        3
+      ],
+      "stride": 1
+    },
+    {
+      "source": "B11 depthwise",
+      "target": "B11 project",
+      "tensor": "mobilenet_v2.layer.10.reduce_1x1.convolution.weight",
+      "kind": "pointwise",
+      "connections": 10838016,
+      "parameter_count": 55296,
+      "channels_in": 576,
+      "channels_out": 96,
+      "source_hw": [
+        14,
+        14
+      ],
+      "target_hw": [
+        14,
+        14
+      ],
+      "kernel": [
+        1,
+        1
+      ],
+      "stride": 1
+    },
+    {
+      "source": "B10 project",
+      "target": "B11 project",
+      "tensor": null,
+      "kind": "residual_identity",
+      "connections": 18816,
+      "parameter_count": 0,
+      "channels_in": 96,
+      "channels_out": 96,
+      "source_hw": [
+        14,
+        14
+      ],
+      "target_hw": [
+        14,
+        14
+      ],
+      "kernel": [
+        1,
+        1
+      ],
+      "stride": 1
+    },
+    {
+      "source": "B11 project",
+      "target": "B12 expand",
+      "tensor": "mobilenet_v2.layer.11.expand_1x1.convolution.weight",
+      "kind": "pointwise",
+      "connections": 10838016,
+      "parameter_count": 55296,
+      "channels_in": 96,
+      "channels_out": 576,
+      "source_hw": [
+        14,
+        14
+      ],
+      "target_hw": [
+        14,
+        14
+      ],
+      "kernel": [
+        1,
+        1
+      ],
+      "stride": 1
+    },
+    {
+      "source": "B12 expand",
+      "target": "B12 depthwise",
+      "tensor": "mobilenet_v2.layer.11.conv_3x3.convolution.weight",
+      "kind": "depthwise",
+      "connections": 921600,
+      "parameter_count": 5184,
+      "channels_in": 576,
+      "channels_out": 576,
+      "source_hw": [
+        14,
+        14
+      ],
+      "target_hw": [
+        14,
+        14
+      ],
+      "kernel": [
+        3,
+        3
+      ],
+      "stride": 1
+    },
+    {
+      "source": "B12 depthwise",
+      "target": "B12 project",
+      "tensor": "mobilenet_v2.layer.11.reduce_1x1.convolution.weight",
+      "kind": "pointwise",
+      "connections": 10838016,
+      "parameter_count": 55296,
+      "channels_in": 576,
+      "channels_out": 96,
+      "source_hw": [
+        14,
+        14
+      ],
+      "target_hw": [
+        14,
+        14
+      ],
+      "kernel": [
+        1,
+        1
+      ],
+      "stride": 1
+    },
+    {
+      "source": "B11 project",
+      "target": "B12 project",
+      "tensor": null,
+      "kind": "residual_identity",
+      "connections": 18816,
+      "parameter_count": 0,
+      "channels_in": 96,
+      "channels_out": 96,
+      "source_hw": [
+        14,
+        14
+      ],
+      "target_hw": [
+        14,
+        14
+      ],
+      "kernel": [
+        1,
+        1
+      ],
+      "stride": 1
+    },
+    {
+      "source": "B12 project",
+      "target": "B13 expand",
+      "tensor": "mobilenet_v2.layer.12.expand_1x1.convolution.weight",
+      "kind": "pointwise",
+      "connections": 10838016,
+      "parameter_count": 55296,
+      "channels_in": 96,
+      "channels_out": 576,
+      "source_hw": [
+        14,
+        14
+      ],
+      "target_hw": [
+        14,
+        14
+      ],
+      "kernel": [
+        1,
+        1
+      ],
+      "stride": 1
+    },
+    {
+      "source": "B13 expand",
+      "target": "B13 depthwise",
+      "tensor": "mobilenet_v2.layer.12.conv_3x3.convolution.weight",
+      "kind": "depthwise",
+      "connections": 230400,
+      "parameter_count": 5184,
+      "channels_in": 576,
+      "channels_out": 576,
+      "source_hw": [
+        14,
+        14
+      ],
+      "target_hw": [
+        7,
+        7
+      ],
+      "kernel": [
+        3,
+        3
+      ],
+      "stride": 2
+    },
+    {
+      "source": "B13 depthwise",
+      "target": "B13 project",
+      "tensor": "mobilenet_v2.layer.12.reduce_1x1.convolution.weight",
+      "kind": "pointwise",
+      "connections": 4515840,
+      "parameter_count": 92160,
+      "channels_in": 576,
+      "channels_out": 160,
+      "source_hw": [
+        7,
+        7
+      ],
+      "target_hw": [
+        7,
+        7
+      ],
+      "kernel": [
+        1,
+        1
+      ],
+      "stride": 1
+    },
+    {
+      "source": "B13 project",
+      "target": "B14 expand",
+      "tensor": "mobilenet_v2.layer.13.expand_1x1.convolution.weight",
+      "kind": "pointwise",
+      "connections": 7526400,
+      "parameter_count": 153600,
+      "channels_in": 160,
+      "channels_out": 960,
+      "source_hw": [
+        7,
+        7
+      ],
+      "target_hw": [
+        7,
+        7
+      ],
+      "kernel": [
+        1,
+        1
+      ],
+      "stride": 1
+    },
+    {
+      "source": "B14 expand",
+      "target": "B14 depthwise",
+      "tensor": "mobilenet_v2.layer.13.conv_3x3.convolution.weight",
+      "kind": "depthwise",
+      "connections": 346560,
+      "parameter_count": 8640,
+      "channels_in": 960,
+      "channels_out": 960,
+      "source_hw": [
+        7,
+        7
+      ],
+      "target_hw": [
+        7,
+        7
+      ],
+      "kernel": [
+        3,
+        3
+      ],
+      "stride": 1
+    },
+    {
+      "source": "B14 depthwise",
+      "target": "B14 project",
+      "tensor": "mobilenet_v2.layer.13.reduce_1x1.convolution.weight",
+      "kind": "pointwise",
+      "connections": 7526400,
+      "parameter_count": 153600,
+      "channels_in": 960,
+      "channels_out": 160,
+      "source_hw": [
+        7,
+        7
+      ],
+      "target_hw": [
+        7,
+        7
+      ],
+      "kernel": [
+        1,
+        1
+      ],
+      "stride": 1
+    },
+    {
+      "source": "B13 project",
+      "target": "B14 project",
+      "tensor": null,
+      "kind": "residual_identity",
+      "connections": 7840,
+      "parameter_count": 0,
+      "channels_in": 160,
+      "channels_out": 160,
+      "source_hw": [
+        7,
+        7
+      ],
+      "target_hw": [
+        7,
+        7
+      ],
+      "kernel": [
+        1,
+        1
+      ],
+      "stride": 1
+    },
+    {
+      "source": "B14 project",
+      "target": "B15 expand",
+      "tensor": "mobilenet_v2.layer.14.expand_1x1.convolution.weight",
+      "kind": "pointwise",
+      "connections": 7526400,
+      "parameter_count": 153600,
+      "channels_in": 160,
+      "channels_out": 960,
+      "source_hw": [
+        7,
+        7
+      ],
+      "target_hw": [
+        7,
+        7
+      ],
+      "kernel": [
+        1,
+        1
+      ],
+      "stride": 1
+    },
+    {
+      "source": "B15 expand",
+      "target": "B15 depthwise",
+      "tensor": "mobilenet_v2.layer.14.conv_3x3.convolution.weight",
+      "kind": "depthwise",
+      "connections": 346560,
+      "parameter_count": 8640,
+      "channels_in": 960,
+      "channels_out": 960,
+      "source_hw": [
+        7,
+        7
+      ],
+      "target_hw": [
+        7,
+        7
+      ],
+      "kernel": [
+        3,
+        3
+      ],
+      "stride": 1
+    },
+    {
+      "source": "B15 depthwise",
+      "target": "B15 project",
+      "tensor": "mobilenet_v2.layer.14.reduce_1x1.convolution.weight",
+      "kind": "pointwise",
+      "connections": 7526400,
+      "parameter_count": 153600,
+      "channels_in": 960,
+      "channels_out": 160,
+      "source_hw": [
+        7,
+        7
+      ],
+      "target_hw": [
+        7,
+        7
+      ],
+      "kernel": [
+        1,
+        1
+      ],
+      "stride": 1
+    },
+    {
+      "source": "B14 project",
+      "target": "B15 project",
+      "tensor": null,
+      "kind": "residual_identity",
+      "connections": 7840,
+      "parameter_count": 0,
+      "channels_in": 160,
+      "channels_out": 160,
+      "source_hw": [
+        7,
+        7
+      ],
+      "target_hw": [
+        7,
+        7
+      ],
+      "kernel": [
+        1,
+        1
+      ],
+      "stride": 1
+    },
+    {
+      "source": "B15 project",
+      "target": "B16 expand",
+      "tensor": "mobilenet_v2.layer.15.expand_1x1.convolution.weight",
+      "kind": "pointwise",
+      "connections": 7526400,
+      "parameter_count": 153600,
+      "channels_in": 160,
+      "channels_out": 960,
+      "source_hw": [
+        7,
+        7
+      ],
+      "target_hw": [
+        7,
+        7
+      ],
+      "kernel": [
+        1,
+        1
+      ],
+      "stride": 1
+    },
+    {
+      "source": "B16 expand",
+      "target": "B16 depthwise",
+      "tensor": "mobilenet_v2.layer.15.conv_3x3.convolution.weight",
+      "kind": "depthwise",
+      "connections": 346560,
+      "parameter_count": 8640,
+      "channels_in": 960,
+      "channels_out": 960,
+      "source_hw": [
+        7,
+        7
+      ],
+      "target_hw": [
+        7,
+        7
+      ],
+      "kernel": [
+        3,
+        3
+      ],
+      "stride": 1
+    },
+    {
+      "source": "B16 depthwise",
+      "target": "B16 project",
+      "tensor": "mobilenet_v2.layer.15.reduce_1x1.convolution.weight",
+      "kind": "pointwise",
+      "connections": 15052800,
+      "parameter_count": 307200,
+      "channels_in": 960,
+      "channels_out": 320,
+      "source_hw": [
+        7,
+        7
+      ],
+      "target_hw": [
+        7,
+        7
+      ],
+      "kernel": [
+        1,
+        1
+      ],
+      "stride": 1
+    },
+    {
+      "source": "B16 project",
+      "target": "final 1\u00d71",
+      "tensor": "mobilenet_v2.conv_1x1.convolution.weight",
+      "kind": "pointwise",
+      "connections": 20070400,
+      "parameter_count": 409600,
+      "channels_in": 320,
+      "channels_out": 1280,
+      "source_hw": [
+        7,
+        7
+      ],
+      "target_hw": [
+        7,
+        7
+      ],
+      "kernel": [
+        1,
+        1
+      ],
+      "stride": 1
+    },
+    {
+      "source": "final 1\u00d71",
+      "target": "global average pool",
+      "tensor": null,
+      "kind": "pool",
+      "connections": 62720,
+      "parameter_count": 0,
+      "channels_in": 1280,
+      "channels_out": 1280,
+      "source_hw": [
+        7,
+        7
+      ],
+      "target_hw": [
+        1,
+        1
+      ],
+      "kernel": [
+        7,
+        7
+      ],
+      "stride": 1
+    },
+    {
+      "source": "global average pool",
+      "target": "classifier",
+      "tensor": "classifier.weight",
+      "kind": "dense",
+      "connections": 1281280,
+      "parameter_count": 1281280,
+      "channels_in": 1280,
+      "channels_out": 1001,
+      "source_hw": [
+        1,
+        1
+      ],
+      "target_hw": [
+        1,
+        1
+      ],
+      "kernel": [
+        1,
+        1
+      ],
+      "stride": 1
+    }
+  ]
+}

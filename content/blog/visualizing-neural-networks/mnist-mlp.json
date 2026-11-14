@@ -1,0 +1,42 @@
+{
+  "renderer": "Datashader hammer_bundle",
+  "format_version": 1,
+  "mode": "bundled",
+  "model": "MNIST MLP",
+  "column_count": 4,
+  "image": "mnist-mlp.png",
+  "width": 3200,
+  "height": 1800,
+  "neuron_count": 1306,
+  "weighted_edge_count": 268800,
+  "structural_edge_count": 0,
+  "sampling": false,
+  "spatial_bins_per_layer": 24,
+  "neuron_overlay": false,
+  "layer_labels": "every operator column",
+  "semantics": "All valid spatial weight uses accumulated by source/target spatial bins before bundling. Bundles aggregate connections, not individually resolved edges. Intensity uses absolute weight mass with per-graph-edge exposure; color denotes stage. Neuron counts describe the full graph; endpoints aggregate into spatial bins. No artificial neuron-column overlay. Sparse paths have a visibility floor; exposure differs between learned and structural graph edges.",
+  "edges": [
+    {
+      "source": "input",
+      "target": "input_layer",
+      "weight": "input_layer.weight",
+      "connections": 200704,
+      "routes": 576
+    },
+    {
+      "source": "input_layer",
+      "target": "mid_layer",
+      "weight": "mid_layer.weight",
+      "connections": 65536,
+      "routes": 576
+    },
+    {
+      "source": "mid_layer",
+      "target": "output_layer",
+      "weight": "output_layer.weight",
+      "connections": 2560,
+      "routes": 240
+    }
+  ],
+  "scope": "784 \u2192 256 \u2192 256 \u2192 10 \u00b7 every dense connection"
+}

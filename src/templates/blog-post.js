@@ -14,7 +14,7 @@ const BlogPostTemplate = ({
   return (
     <Layout location={location} title={siteTitle}>
       <article
-        className="blog-post"
+        className={post.frontmatter.wideImages ? "blog-post blog-post--wide-images" : "blog-post"}
         itemScope
         itemType="http://schema.org/Article"
       >
@@ -94,6 +94,7 @@ export const pageQuery = graphql`
         title
         date(formatString: "MMMM DD, YYYY")
         description
+        wideImages
       }
     }
     previous: markdownRemark(id: { eq: $previousPostId }) {

@@ -43,7 +43,8 @@ module.exports = {
           {
             resolve: `gatsby-remark-images`,
             options: {
-              maxWidth: 630,
+              maxWidth: 1260,
+              quality: 90,
             },
           },
           {
@@ -52,7 +53,13 @@ module.exports = {
               wrapperStyle: `margin-bottom: 1.0725rem`,
             },
           },
-          `gatsby-remark-copy-linked-files`,
+          {
+            resolve: `gatsby-remark-copy-linked-files`,
+            options: {
+              // Publish originals linked from thumbnails as well as other files.
+              ignoreFileExtensions: [],
+            },
+          },
           `gatsby-remark-autolink-headers`,
           `gatsby-remark-prismjs`,
         ],
