@@ -92,8 +92,24 @@ Looking for more guidance? Full documentation for Gatsby lives [on the website](
 
 ## 💫 Deploy
 
-[Build, Deploy, and Host On Netlify](https://netlify.com)
+Build the site locally:
 
-The fastest way to combine your favorite tools and APIs to build the fastest sites, stores, and apps for the web. And also the best place to build, deploy, and host your Gatsby sites.
+```shell
+npm ci # Required on a fresh checkout or when dependencies change
+npm run build
+```
+
+`npm run build` runs `gatsby build` and generates the production site in `public/`.
+
+To update an existing static-site deployment, run the following locally, replacing the SSH user, host, and destination path with your own:
+
+```shell
+npm run build &&
+rsync -avz public/ USER@HOST:/PATH/TO/WEB/ROOT/
+```
+
+The trailing slash in `public/` copies its contents directly into the destination. Use the directory your web server already serves (which may itself be a `public/` directory). This requires SSH access, write permission to the destination, and `rsync` on both machines. An existing static web server normally needs no restart after an update.
+
+This command overwrites matching files and leaves destination-only files in place.
 
 <!-- AUTO-GENERATED-CONTENT:END -->
