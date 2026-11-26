@@ -4,6 +4,7 @@ date: "2026-11-13T12:00:00.000-08:00"
 wideImages: true
 darkMode: true
 linksInNewTab: true
+description: "Model weights make pretty art."
 ---
 
 - [Gallery](#gallery)
