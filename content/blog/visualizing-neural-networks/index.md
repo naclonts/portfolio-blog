@@ -43,6 +43,12 @@ linksInNewTab: true
 
 [![MusicGen Small text conditioning and audio-token generation connections](./thumbnails/musicgen-small.jpg)](./musicgen-small.png)
 
+*MusicGen Small · Text conditioning across computational stages*
+
+[![MusicGen Small with the text encoder above the audio-token decoder, showing text conditioning connections to subsequent stages](./thumbnails/musicgen-small-operation-tracks.jpg)](./musicgen-small-operation-tracks-hires.png)
+
+_This view places the text encoder above the audio-token decoder, making it easier to see how the text encoder output feeds into each subsequent decoder stage._
+
 
 ## What is this?
 
